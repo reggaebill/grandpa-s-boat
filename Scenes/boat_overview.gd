@@ -10,7 +10,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_button_pressed(body: Node) -> void:
-	print("back")
+func go_to_hull() -> void:
 	SceneTransition.change_scene("res://Scenes/level_2.tscn")

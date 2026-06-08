@@ -35,5 +35,6 @@ folder_colors={
 "res://Assets/": "red",
 "res://Scenes/": "orange",
 "res://Scripts/": "green",
-"res://Shaders/": "purple"
+"res://Shaders/": "purple",
+"res://Themes/": "pink"
 }
