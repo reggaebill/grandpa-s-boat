@@ -25,6 +25,7 @@ offset_bottom = 1083.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=1083941025]
 position = Vector2(1194, 632)
