@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://wong2bncfsxe"]
+
+[ext_resource type="Script" uid="uid://d05d6upkk85ok" path="res://Scripts/engine.gd" id="1_4dnpw"]
+[ext_resource type="Texture2D" uid="uid://dy4k5pnp1ofg1" path="res://Assets/FPO/broken motor.jpeg" id="1_sutch"]
+[ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_2xonk"]
+[ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_lj1rd"]
+
+[node name="Main" type="Node2D" unique_id=1608301749]
+script = ExtResource("1_4dnpw")
+
+[node name="BG" type="Node2D" parent="." unique_id=1582299281]
+
+[node name="ColorRect" type="ColorRect" parent="BG" unique_id=1283021363]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 1923.0
+offset_bottom = 1083.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=1529416044]
+position = Vector2(881, 292)
+scale = Vector2(3.673, 3)
+texture = ExtResource("1_sutch")
+
+[node name="Control" type="Control" parent="." unique_id=1582329204]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = 5.0
+offset_right = 1926.9999
+offset_bottom = 1095.0
+
+[node name="Back Button" type="TextureButton" parent="Control" unique_id=1411761968]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -289.0
+offset_right = 531.0
+offset_bottom = 223.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_2xonk")
+texture_pressed = ExtResource("4_lj1rd")
+
+[connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]

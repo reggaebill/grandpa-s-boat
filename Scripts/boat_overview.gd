@@ -18,4 +18,9 @@ func _on_hull_pressed() -> void:
 
 func _on_engine_pressed() -> void:
 	print("engine")
-	
+	SceneTransition.change_scene("res://Scenes/Engine.tscn")
+
+
+func _on_cb_radio_pressed() -> void:
+	print("cb radio")
+	SceneTransition.change_scene("res://Scenes/CB Radio.tscn")

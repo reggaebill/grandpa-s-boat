@@ -21,7 +21,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=32911788]
-position = Vector2(976.5001, 540)
+position = Vector2(960.5001, 540)
 scale = Vector2(3.1683006, 2.6764705)
 texture = ExtResource("2_o6tlf")
 metadata/_edit_lock_ = true
@@ -29,7 +29,8 @@ metadata/_edit_lock_ = true
 [node name="Control" type="Control" parent="." unique_id=1712471840]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1948.0
+offset_left = -9.0
+offset_right = 1939.0
 offset_bottom = 1090.0
 
 [node name="Back Button" type="TextureButton" parent="Control" unique_id=261422162]

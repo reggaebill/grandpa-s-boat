@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c6mlv80o4yky1"]
+
+[ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/cb_radio.gd" id="1_pnfa1"]
+[ext_resource type="Texture2D" uid="uid://coqo6hpxn8bu0" path="res://Assets/FPO/radio interior.jpg" id="2_hr1t4"]
+[ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
+[ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_uvcak"]
+
+[node name="Main" type="Node2D" unique_id=747834159]
+script = ExtResource("1_pnfa1")
+
+[node name="BG" type="Node2D" parent="." unique_id=771772868]
+
+[node name="ColorRect" type="ColorRect" parent="BG" unique_id=521915668]
+visible = false
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=391656527]
+position = Vector2(960.5001, 540)
+scale = Vector2(4, 3.378)
+texture = ExtResource("2_hr1t4")
+
+[node name="Control" type="Control" parent="." unique_id=2041451175]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -9.0
+offset_right = 1939.0
+offset_bottom = 1090.0
+
+[node name="Back Button" type="TextureButton" parent="Control" unique_id=1098783756]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -289.0
+offset_right = 531.0
+offset_bottom = 223.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_xbm3r")
+texture_pressed = ExtResource("4_uvcak")
+
+[connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]
