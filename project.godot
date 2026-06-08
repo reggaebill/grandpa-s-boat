@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneTransition="*uid://bby3blenpcawq"
+SceneTransition="*uid://ce66gbhqpjgn1"
 
 [display]
 

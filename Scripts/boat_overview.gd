@@ -7,8 +7,15 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
-func go_to_hull() -> void:
-	SceneTransition.change_scene("res://Scenes/level_2.tscn")
+
+
+func _on_hull_pressed() -> void:
+	print("hull")
+	SceneTransition.change_scene("res://Scenes/hull.tscn")
+
+func _on_engine_pressed() -> void:
+	print("engine")
+	

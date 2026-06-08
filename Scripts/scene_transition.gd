@@ -1,11 +1,11 @@
 extends CanvasLayer
-@onready var animation = $AnimationPlayer
+@onready var animation = get_node("AnimationPlayer")
 
 func change_scene(target: String) -> void:
-	animation.play("scene_transition")
+	animation.play("basic_fade")
 	await animation.animation_finished
 	get_tree().change_scene_to_file(target)
-	animation.play_backwards("scene_transition")
+	animation.play_backwards("basic_fade")
 
 # func reset():
 # 	animation.play("try_again")
@@ -24,3 +24,7 @@ func change_scene(target: String) -> void:
 # 	await animation.animation_finished
 # 	animation.play_backwards("quick")
 # 	get_tree().change_scene_to_file("res://Scenes/open_cine.tscn")
+
+
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
+	pass # Replace with function body.
