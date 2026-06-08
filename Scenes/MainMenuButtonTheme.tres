@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://d4mslk06tm77e"]
+
+[ext_resource type="FontFile" uid="uid://ll8u73k67l5r" path="res://Assets/Fonts/myoldrem.ttf" id="1_hcol2"]
+
+[resource]
+default_font = ExtResource("1_hcol2")
+default_font_size = 62
