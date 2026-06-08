@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dgo1rnt4cpduo"]
 
-[ext_resource type="Theme" uid="uid://d4mslk06tm77e" path="res://Scenes/MainMenuButtonTheme.tres" id="1_1ehe0"]
-[ext_resource type="StyleBox" uid="uid://dswlao14uquso" path="res://Scenes/MainMenuButtonStyleNormal.tres" id="2_ce3w2"]
-[ext_resource type="StyleBox" uid="uid://balf24c77qpm0" path="res://Scenes/MainMenuButtonStylePressed.tres" id="3_n45e2"]
-[ext_resource type="StyleBox" uid="uid://cme33scadn1v2" path="res://Scenes/MainMenuButtonStyleHover.tres" id="4_ce3w2"]
+[ext_resource type="Theme" uid="uid://d4mslk06tm77e" path="res://Themes/MainMenuButtonTheme.tres" id="1_ce3w2"]
+[ext_resource type="StyleBox" uid="uid://dswlao14uquso" path="res://Themes/MainMenuButtonStyleNormal.tres" id="2_n45e2"]
+[ext_resource type="StyleBox" uid="uid://balf24c77qpm0" path="res://Themes/MainMenuButtonStylePressed.tres" id="3_opfnp"]
+[ext_resource type="StyleBox" uid="uid://cme33scadn1v2" path="res://Themes/MainMenuButtonStyleHover.tres" id="4_cp0ys"]
 
 [node name="MainMenu" type="Control" unique_id=1447786421]
 layout_mode = 3
@@ -40,37 +40,37 @@ theme_override_constants/separation = 20
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("1_1ehe0")
+theme = ExtResource("1_ce3w2")
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_colors/font_hover_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
-theme_override_styles/normal = ExtResource("2_ce3w2")
-theme_override_styles/pressed = ExtResource("3_n45e2")
-theme_override_styles/hover = ExtResource("4_ce3w2")
+theme_override_styles/normal = ExtResource("2_n45e2")
+theme_override_styles/pressed = ExtResource("3_opfnp")
+theme_override_styles/hover = ExtResource("4_cp0ys")
 text = "START"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=363124011]
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("1_1ehe0")
+theme = ExtResource("1_ce3w2")
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_colors/font_hover_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
-theme_override_styles/normal = ExtResource("2_ce3w2")
-theme_override_styles/pressed = ExtResource("3_n45e2")
-theme_override_styles/hover = ExtResource("4_ce3w2")
+theme_override_styles/normal = ExtResource("2_n45e2")
+theme_override_styles/pressed = ExtResource("3_opfnp")
+theme_override_styles/hover = ExtResource("4_cp0ys")
 text = "OPTIONS"
 
 [node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=597098418]
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("1_1ehe0")
+theme = ExtResource("1_ce3w2")
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_colors/font_hover_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
-theme_override_styles/normal = ExtResource("2_ce3w2")
-theme_override_styles/pressed = ExtResource("3_n45e2")
-theme_override_styles/hover = ExtResource("4_ce3w2")
+theme_override_styles/normal = ExtResource("2_n45e2")
+theme_override_styles/pressed = ExtResource("3_opfnp")
+theme_override_styles/hover = ExtResource("4_cp0ys")
 text = "PLACEHOLDER"
