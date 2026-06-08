@@ -15,8 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Grandpa's Boat"
+run/main_scene="res://Scenes/Boat Overview.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneTransition="*uid://2jti0qhxnx88"
 
 [display]
 

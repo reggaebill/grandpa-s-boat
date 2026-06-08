@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://2jti0qhxnx88"]
+
+[ext_resource type="Script" uid="uid://bby3blenpcawq" path="res://Scenes/scene_transition.gd" id="1_crfs3"]
+
+[sub_resource type="Animation" id="Animation_xs6k6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_crfs3"]
+resource_name = "basic_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vin40"]
+_data = {
+&"RESET": SubResource("Animation_xs6k6"),
+&"basic_fade": SubResource("Animation_crfs3")
+}
+
+[node name="scene_transition" type="CanvasLayer" unique_id=1212382586]
+script = ExtResource("1_crfs3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1087010484]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2088207194]
+libraries/ = SubResource("AnimationLibrary_vin40")
