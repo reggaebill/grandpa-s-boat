@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://du6is5ovh42sv"]
+[gd_scene load_steps=2 format=3 uid="uid://du6is5ovh42sv"]
+
+[ext_resource type="Script" uid="uid://xi2fxo7p28yy" path="res://Scripts/initial.gd" id="1_6b1b0"]
 
 [node name="Splash Screen" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_6b1b0")
