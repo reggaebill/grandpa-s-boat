@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cav8kvfmghv5u"]
 
 [ext_resource type="Texture2D" uid="uid://dokt0m6suwsdu" path="res://Assets/Boat.jpg" id="1_oqir0"]
-[ext_resource type="Script" path="res://Scenes/boat_overview.gd" id="1_skust"]
+[ext_resource type="Script" uid="uid://c68q5ptf572nr" path="res://Scenes/boat_overview.gd" id="1_skust"]
 [ext_resource type="Texture2D" uid="uid://3qy5qonnxr62" path="res://Assets/FPO/pngtree-old-plank-of-wood-png-file-png-image_10159881.png" id="2_mjnil"]
 [ext_resource type="Texture2D" uid="uid://c60k5xw16u3us" path="res://Assets/FPO/Eo_circle_green_checkmark.svg.png" id="3_skust"]
 [ext_resource type="Texture2D" uid="uid://dvmehtq11i254" path="res://Assets/FPO/pngtree-outboard-boat-motor-with-propeller-png-image_19351156.webp" id="4_cde15"]
