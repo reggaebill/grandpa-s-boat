@@ -22,5 +22,5 @@ func _on_button_button_up():
 	dragging = false
 
 
-func _on_area_2d_tube_1_area_entered(area: Area2D) -> void:
+func _on_area_2d_tube_2_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.

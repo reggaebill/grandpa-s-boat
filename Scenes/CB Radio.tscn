@@ -2,13 +2,22 @@
 
 [ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/CB Radio/cb_radio.gd" id="1_pnfa1"]
 [ext_resource type="Texture2D" uid="uid://dol6g78tacndh" path="res://Assets/Radio/radio bg.jpg" id="2_pnfa1"]
-[ext_resource type="Texture2D" uid="uid://bpopyo1d41815" path="res://Assets/Radio/tube.png" id="3_uvcak"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
+[ext_resource type="Script" uid="uid://csfu11ahoiyrm" path="res://Scripts/CB Radio/area_tube_1.gd" id="4_14p1o"]
 [ext_resource type="Texture2D" uid="uid://dvb4t8el0dqf1" path="res://Assets/FPO/nixie tube.png" id="4_gmwue"]
 [ext_resource type="Texture2D" uid="uid://b6y6ds4n0j7m2" path="res://Assets/Radio/knob.png" id="4_kaavu"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_uvcak"]
 [ext_resource type="Script" uid="uid://byv04htb562tw" path="res://Scripts/CB Radio/tube_1.gd" id="5_gmwue"]
+[ext_resource type="Texture2D" uid="uid://1oyrs5b6wqij" path="res://Assets/FPO/nixie tube copy.png" id="5_mxeft"]
+[ext_resource type="Script" uid="uid://b3ug302twvn85" path="res://Scripts/CB Radio/area_tube_2.gd" id="6_4ch4a"]
+[ext_resource type="Script" uid="uid://c5bvjlfskunic" path="res://Scripts/CB Radio/area_tube_3.gd" id="7_3sx2v"]
 [ext_resource type="Shader" uid="uid://b6bikedpbovig" path="res://Shaders/new_shader.gdshader" id="7_uvcak"]
+[ext_resource type="Script" uid="uid://bjr65n5hdq43m" path="res://Scripts/CB Radio/tube_2.gd" id="10_t1sk8"]
+[ext_resource type="Script" uid="uid://7i58llh1mwmh" path="res://Scripts/CB Radio/tube_3.gd" id="11_2a6jh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3p8nn"]
+radius = 68.0
+height = 312.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uvcak"]
 shader = ExtResource("7_uvcak")
@@ -61,8 +70,44 @@ polygon = PackedVector2Array(19.699997, -46.5, -18.5, -46.5, -24.5, -43.5, -26.8
 
 [node name="Tubes" type="Node2D" parent="." unique_id=195233636]
 
+[node name="AreaTube1" type="Area2D" parent="Tubes" unique_id=825780852 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
+position = Vector2(851, 578)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("4_14p1o")
+tube_1 = NodePath("../Tube1")
+tube_2 = NodePath("../Tube2")
+tube_3 = NodePath("../Tube3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube1" unique_id=64289329]
+position = Vector2(1.6000977, 308.80005)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3p8nn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tubes/AreaTube1" unique_id=463555392]
+texture = ExtResource("5_mxeft")
+
+[node name="AreaTube2" type="Area2D" parent="Tubes" unique_id=2122222060]
+position = Vector2(1022, 581)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("6_4ch4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube2" unique_id=54047103]
+position = Vector2(1.6000977, 308.80005)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3p8nn")
+
+[node name="AreaTube3" type="Area2D" parent="Tubes" unique_id=510286741]
+position = Vector2(1185, 579)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("7_3sx2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube3" unique_id=1992485013]
+position = Vector2(1.6000977, 308.80005)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3p8nn")
+
 [node name="Tube1" type="Sprite2D" parent="Tubes" unique_id=1059021618]
-position = Vector2(1784.6, 822.8)
+position = Vector2(1797, 740)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_gmwue")
 script = ExtResource("5_gmwue")
@@ -75,36 +120,54 @@ offset_right = -99.092545
 offset_bottom = -241.4523
 scale = Vector2(6.426035, 6.8011365)
 
-[node name="StaticBody1" type="StaticBody2D" parent="Tubes" unique_id=2033264146]
-visible = false
-position = Vector2(1790, 830)
+[node name="Area2DTube1" type="Area2D" parent="Tubes/Tube1" unique_id=16875797]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tubes/StaticBody1" unique_id=845378356]
-visible = false
-position = Vector2(-5.4000244, -7.200012)
-polygon = PackedVector2Array(23.5, -88, -20, -88, -28, -84, -30.4, -84, -40.4, -73, -41.9, -73, -43.5, -68.2, -43.5, 88, 43.5, 88, 43.5, -70, 32.5, -81.9, 32.5, -83.3, 23.5, -87.3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/Tube1/Area2DTube1" unique_id=1133184139]
+position = Vector2(1.6000977, 308.80005)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3p8nn")
 
-[node name="StaticBody2" type="StaticBody2D" parent="Tubes" unique_id=1918287592]
-position = Vector2(1375, 939)
+[node name="Tube2" type="Sprite2D" parent="Tubes" unique_id=1818795840]
+position = Vector2(1502, 932)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_gmwue")
+script = ExtResource("10_t1sk8")
 
-[node name="Tube2" type="Sprite2D" parent="Tubes/StaticBody2" unique_id=1299600764]
-position = Vector2(8.600098, 13.799988)
-texture = ExtResource("3_uvcak")
+[node name="Button" type="Button" parent="Tubes/Tube2" unique_id=284021489]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -146.40016
+offset_top = -343.2
+offset_right = -99.092545
+offset_bottom = -241.4523
+scale = Vector2(6.426035, 6.8011365)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tubes/StaticBody2" unique_id=1298498422]
-position = Vector2(8.600098, 13.799988)
-polygon = PackedVector2Array(23.5, -88, -20, -88, -28, -84, -30.4, -84, -40.4, -73, -41.9, -73, -43.5, -68.2, -43.5, 88, 43.5, 88, 43.5, -70, 32.5, -81.9, 32.5, -83.3, 23.5, -87.3)
+[node name="Area2DTube2" type="Area2D" parent="Tubes/Tube2" unique_id=1236977230]
 
-[node name="StaticBody3" type="StaticBody2D" parent="Tubes" unique_id=974427637]
-position = Vector2(1568, 926)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/Tube2/Area2DTube2" unique_id=1321864521]
+position = Vector2(1.6000977, 308.80005)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3p8nn")
 
-[node name="Tube3" type="Sprite2D" parent="Tubes/StaticBody3" unique_id=1655393680]
-position = Vector2(0.5999756, -0.2000122)
-texture = ExtResource("3_uvcak")
+[node name="Tube3" type="Sprite2D" parent="Tubes" unique_id=772386146]
+position = Vector2(1676, 921)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_gmwue")
+script = ExtResource("11_2a6jh")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tubes/StaticBody3" unique_id=678382600]
-position = Vector2(0.5999756, -0.2000122)
-polygon = PackedVector2Array(23.5, -88, -20, -88, -28, -84, -30.4, -84, -40.4, -73, -41.9, -73, -43.5, -68.2, -43.5, 88, 43.5, 88, 43.5, -70, 32.5, -81.9, 32.5, -83.3, 23.5, -87.3)
+[node name="Button" type="Button" parent="Tubes/Tube3" unique_id=133344127]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -146.40016
+offset_top = -343.2
+offset_right = -99.092545
+offset_bottom = -241.4523
+scale = Vector2(6.426035, 6.8011365)
+
+[node name="Area2DTube3" type="Area2D" parent="Tubes/Tube3" unique_id=365542419]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/Tube3/Area2DTube3" unique_id=392643479]
+position = Vector2(1.6000977, 308.80005)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3p8nn")
 
 [node name="Control" type="Control" parent="." unique_id=2041451175]
 layout_mode = 3
@@ -141,7 +204,16 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.49411765)
+metadata/_edit_lock_ = true
 
+[connection signal="area_entered" from="Tubes/AreaTube1" to="Tubes/AreaTube1" method="_on_area_entered"]
 [connection signal="button_down" from="Tubes/Tube1/Button" to="Tubes/Tube1" method="_on_button_button_down"]
 [connection signal="button_up" from="Tubes/Tube1/Button" to="Tubes/Tube1" method="_on_button_button_up"]
+[connection signal="area_entered" from="Tubes/Tube1/Area2DTube1" to="Tubes/Tube1" method="_on_area_2d_tube_1_area_entered"]
+[connection signal="button_down" from="Tubes/Tube2/Button" to="Tubes/Tube2" method="_on_button_button_down"]
+[connection signal="button_up" from="Tubes/Tube2/Button" to="Tubes/Tube2" method="_on_button_button_up"]
+[connection signal="area_entered" from="Tubes/Tube2/Area2DTube2" to="Tubes/Tube2" method="_on_area_2d_area_entered"]
+[connection signal="button_down" from="Tubes/Tube3/Button" to="Tubes/Tube3" method="_on_button_button_down"]
+[connection signal="button_up" from="Tubes/Tube3/Button" to="Tubes/Tube3" method="_on_button_button_up"]
+[connection signal="area_entered" from="Tubes/Tube3/Area2DTube3" to="Tubes/Tube3" method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]
