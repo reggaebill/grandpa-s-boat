@@ -10,13 +10,11 @@ var active_tube = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	litTube.visible = false
-	print(name)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#verify which tube entered and handle accordingly
 	if tube_entered == true and active_tube == tube_2 and tube_2.position.distance_to(position) < 20:	
-		print("tube 2 entered")
 		if tube_2.dragging == false:
 			tube_2.visible = false
 			litTube.visible = true
@@ -33,7 +31,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print("area entered " + area.name)
 	if area.name == "Area2DTube1":
 		active_tube = tube_1
 		tube_entered = true

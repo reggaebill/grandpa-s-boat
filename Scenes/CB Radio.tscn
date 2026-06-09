@@ -24,8 +24,11 @@ shader = ExtResource("7_uvcak")
 shader_parameter/screen_size = Vector2(1920, 1080)
 shader_parameter/pixel_block = Vector2(2, 2)
 
-[node name="Main" type="Node2D" unique_id=747834159]
+[node name="Main" type="Node2D" unique_id=747834159 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
 script = ExtResource("1_pnfa1")
+tube_1 = NodePath("Tubes/AreaTube1")
+tube_2 = NodePath("Tubes/AreaTube2")
+tube_3 = NodePath("Tubes/AreaTube3")
 
 [node name="BG" type="Node2D" parent="." unique_id=771772868]
 
