@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://c6mlv80o4yky1"]
 
-[ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/cb_radio.gd" id="1_pnfa1"]
+[ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/CB Radio/cb_radio.gd" id="1_pnfa1"]
 [ext_resource type="Texture2D" uid="uid://dol6g78tacndh" path="res://Assets/Radio/radio bg.jpg" id="2_pnfa1"]
 [ext_resource type="Texture2D" uid="uid://bpopyo1d41815" path="res://Assets/Radio/tube.png" id="3_uvcak"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
+[ext_resource type="Texture2D" uid="uid://dvb4t8el0dqf1" path="res://Assets/FPO/nixie tube.png" id="4_gmwue"]
 [ext_resource type="Texture2D" uid="uid://b6y6ds4n0j7m2" path="res://Assets/Radio/knob.png" id="4_kaavu"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_uvcak"]
+[ext_resource type="Script" uid="uid://byv04htb562tw" path="res://Scripts/CB Radio/tube_1.gd" id="5_gmwue"]
+[ext_resource type="Shader" uid="uid://b6bikedpbovig" path="res://Shaders/new_shader.gdshader" id="7_uvcak"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uvcak"]
+shader = ExtResource("7_uvcak")
+shader_parameter/screen_size = Vector2(1920, 1080)
+shader_parameter/pixel_block = Vector2(2, 2)
 
 [node name="Main" type="Node2D" unique_id=747834159]
 script = ExtResource("1_pnfa1")
@@ -53,14 +61,26 @@ polygon = PackedVector2Array(19.699997, -46.5, -18.5, -46.5, -24.5, -43.5, -26.8
 
 [node name="Tubes" type="Node2D" parent="." unique_id=195233636]
 
+[node name="Tube1" type="Sprite2D" parent="Tubes" unique_id=1059021618]
+position = Vector2(1784.6, 822.8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_gmwue")
+script = ExtResource("5_gmwue")
+
+[node name="Button" type="Button" parent="Tubes/Tube1" unique_id=1931478244]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -146.40016
+offset_top = -343.2
+offset_right = -99.092545
+offset_bottom = -241.4523
+scale = Vector2(6.426035, 6.8011365)
+
 [node name="StaticBody1" type="StaticBody2D" parent="Tubes" unique_id=2033264146]
+visible = false
 position = Vector2(1790, 830)
 
-[node name="Tube1" type="Sprite2D" parent="Tubes/StaticBody1" unique_id=1059021618]
-position = Vector2(-5.4000244, -7.200012)
-texture = ExtResource("3_uvcak")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tubes/StaticBody1" unique_id=845378356]
+visible = false
 position = Vector2(-5.4000244, -7.200012)
 polygon = PackedVector2Array(23.5, -88, -20, -88, -28, -84, -30.4, -84, -40.4, -73, -41.9, -73, -43.5, -68.2, -43.5, 88, 43.5, 88, 43.5, -70, 32.5, -81.9, 32.5, -83.3, 23.5, -87.3)
 
@@ -92,6 +112,7 @@ anchors_preset = 0
 offset_left = -9.0
 offset_right = 1939.0
 offset_bottom = 1090.0
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="Back Button" type="TextureButton" parent="Control" unique_id=1098783756]
@@ -108,4 +129,19 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_xbm3r")
 texture_pressed = ExtResource("4_uvcak")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=128106442]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1117586695]
+top_level = true
+material = SubResource("ShaderMaterial_uvcak")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.49411765)
+
+[connection signal="button_down" from="Tubes/Tube1/Button" to="Tubes/Tube1" method="_on_button_button_down"]
+[connection signal="button_up" from="Tubes/Tube1/Button" to="Tubes/Tube1" method="_on_button_button_up"]
 [connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]
