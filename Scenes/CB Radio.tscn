@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c6mlv80o4yky1"]
 
 [ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/cb_radio.gd" id="1_pnfa1"]
-[ext_resource type="Texture2D" uid="uid://coqo6hpxn8bu0" path="res://Assets/FPO/radio interior.jpg" id="2_hr1t4"]
+[ext_resource type="Texture2D" uid="uid://dol6g78tacndh" path="res://Assets/Radio/radio bg.jpg" id="2_pnfa1"]
+[ext_resource type="Texture2D" uid="uid://bpopyo1d41815" path="res://Assets/Radio/tube.png" id="3_uvcak"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
+[ext_resource type="Texture2D" uid="uid://b6y6ds4n0j7m2" path="res://Assets/Radio/knob.png" id="4_kaavu"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_uvcak"]
 
 [node name="Main" type="Node2D" unique_id=747834159]
@@ -22,8 +24,67 @@ size_flags_horizontal = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=391656527]
 position = Vector2(960.5001, 540)
-scale = Vector2(4, 3.378)
-texture = ExtResource("2_hr1t4")
+texture = ExtResource("2_pnfa1")
+metadata/_edit_lock_ = true
+
+[node name="Knobs" type="Node2D" parent="." unique_id=826647854]
+
+[node name="StaticBody_knobR" type="StaticBody2D" parent="Knobs" unique_id=1741065818]
+position = Vector2(1240, 791)
+
+[node name="knobR_Sprite" type="Sprite2D" parent="Knobs/StaticBody_knobR" unique_id=1296542531]
+position = Vector2(0.19995117, 0.4000244)
+texture = ExtResource("4_kaavu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Knobs/StaticBody_knobR" unique_id=1110906174]
+position = Vector2(0.19995117, 0.4000244)
+polygon = PackedVector2Array(19.699997, -46.5, -18.5, -46.5, -24.5, -43.5, -26.8, -43.5, -37.8, -32.5, -39.3, -32.5, -47, -16.2, -47, 17.400002, -40, 29, -40, 31.5, -19.5, 46.5, 20.599998, 46.5, 29.599998, 40.5, 31.900002, 40.5, 38.9, 32.5, 40.199997, 32.5, 47, 18.900002, 47, -20.2, 41, -29.2, 41, -31.4, 29, -41.5, 29, -42.9)
+
+[node name="StaticBody2D_knobL" type="StaticBody2D" parent="Knobs" unique_id=1317529750]
+position = Vector2(539, 794)
+
+[node name="knobL_Sprite" type="Sprite2D" parent="Knobs/StaticBody2D_knobL" unique_id=1424425316]
+position = Vector2(0.2000122, -2.5999756)
+texture = ExtResource("4_kaavu")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Knobs/StaticBody2D_knobL" unique_id=1843552738]
+position = Vector2(0.2000122, -2.5999756)
+polygon = PackedVector2Array(19.699997, -46.5, -18.5, -46.5, -24.5, -43.5, -26.8, -43.5, -37.8, -32.5, -39.3, -32.5, -47, -16.2, -47, 17.400002, -40, 29, -40, 31.5, -19.5, 46.5, 20.599998, 46.5, 29.599998, 40.5, 31.900002, 40.5, 38.9, 32.5, 40.199997, 32.5, 47, 18.900002, 47, -20.2, 41, -29.2, 41, -31.4, 29, -41.5, 29, -42.9)
+
+[node name="Tubes" type="Node2D" parent="." unique_id=195233636]
+
+[node name="StaticBody1" type="StaticBody2D" parent="Tubes" unique_id=2033264146]
+position = Vector2(1790, 830)
+
+[node name="Tube1" type="Sprite2D" parent="Tubes/StaticBody1" unique_id=1059021618]
+position = Vector2(-5.4000244, -7.200012)
+texture = ExtResource("3_uvcak")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tubes/StaticBody1" unique_id=845378356]
+position = Vector2(-5.4000244, -7.200012)
+polygon = PackedVector2Array(23.5, -88, -20, -88, -28, -84, -30.4, -84, -40.4, -73, -41.9, -73, -43.5, -68.2, -43.5, 88, 43.5, 88, 43.5, -70, 32.5, -81.9, 32.5, -83.3, 23.5, -87.3)
+
+[node name="StaticBody2" type="StaticBody2D" parent="Tubes" unique_id=1918287592]
+position = Vector2(1375, 939)
+
+[node name="Tube2" type="Sprite2D" parent="Tubes/StaticBody2" unique_id=1299600764]
+position = Vector2(8.600098, 13.799988)
+texture = ExtResource("3_uvcak")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tubes/StaticBody2" unique_id=1298498422]
+position = Vector2(8.600098, 13.799988)
+polygon = PackedVector2Array(23.5, -88, -20, -88, -28, -84, -30.4, -84, -40.4, -73, -41.9, -73, -43.5, -68.2, -43.5, 88, 43.5, 88, 43.5, -70, 32.5, -81.9, 32.5, -83.3, 23.5, -87.3)
+
+[node name="StaticBody3" type="StaticBody2D" parent="Tubes" unique_id=974427637]
+position = Vector2(1568, 926)
+
+[node name="Tube3" type="Sprite2D" parent="Tubes/StaticBody3" unique_id=1655393680]
+position = Vector2(0.5999756, -0.2000122)
+texture = ExtResource("3_uvcak")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tubes/StaticBody3" unique_id=678382600]
+position = Vector2(0.5999756, -0.2000122)
+polygon = PackedVector2Array(23.5, -88, -20, -88, -28, -84, -30.4, -84, -40.4, -73, -41.9, -73, -43.5, -68.2, -43.5, 88, 43.5, 88, 43.5, -70, 32.5, -81.9, 32.5, -83.3, 23.5, -87.3)
 
 [node name="Control" type="Control" parent="." unique_id=2041451175]
 layout_mode = 3
@@ -31,6 +92,7 @@ anchors_preset = 0
 offset_left = -9.0
 offset_right = 1939.0
 offset_bottom = 1090.0
+metadata/_edit_lock_ = true
 
 [node name="Back Button" type="TextureButton" parent="Control" unique_id=1098783756]
 layout_mode = 1
