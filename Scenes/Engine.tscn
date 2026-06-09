@@ -66,7 +66,7 @@ texture = ExtResource("6_lj1rd")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=1320934354]
 position = Vector2(827, 852)
 rotation = -0.4660029
-polygon = PackedVector2Array(88.87036, -136.63843, 90.860535, 157.63354, -75.50665, 159.03064, -77.49161, -137.47748)
+polygon = PackedVector2Array(89.76373, -136.18909, 91.75391, 158.08289, -76.400024, 158.5813, -78.39023, -135.69073)
 
 [node name="Buttons" type="Node2D" parent="." unique_id=1209985947]
 
