@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/CB Radio/cb_radio.gd" id="1_pnfa1"]
 [ext_resource type="Texture2D" uid="uid://dol6g78tacndh" path="res://Assets/Radio/radio bg.jpg" id="2_pnfa1"]
+[ext_resource type="Script" uid="uid://d1ndvblgq5c0e" path="res://Scripts/CB Radio/knob_l.gd" id="3_4ch4a"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
 [ext_resource type="Script" uid="uid://csfu11ahoiyrm" path="res://Scripts/CB Radio/area_tube_1.gd" id="4_14p1o"]
 [ext_resource type="Texture2D" uid="uid://dvb4t8el0dqf1" path="res://Assets/FPO/nixie tube.png" id="4_gmwue"]
 [ext_resource type="Texture2D" uid="uid://b6y6ds4n0j7m2" path="res://Assets/Radio/knob.png" id="4_kaavu"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_uvcak"]
+[ext_resource type="Script" uid="uid://bvx0timt70cn7" path="res://Scripts/CB Radio/knob_r.gd" id="5_3sx2v"]
 [ext_resource type="Script" uid="uid://byv04htb562tw" path="res://Scripts/CB Radio/tube_1.gd" id="5_gmwue"]
 [ext_resource type="Texture2D" uid="uid://1oyrs5b6wqij" path="res://Assets/FPO/nixie tube copy.png" id="5_mxeft"]
 [ext_resource type="Script" uid="uid://b3ug302twvn85" path="res://Scripts/CB Radio/area_tube_2.gd" id="6_4ch4a"]
@@ -31,6 +33,7 @@ tube_2 = NodePath("Tubes/AreaTube2")
 tube_3 = NodePath("Tubes/AreaTube3")
 
 [node name="BG" type="Node2D" parent="." unique_id=771772868]
+metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="BG" unique_id=521915668]
 visible = false
@@ -48,30 +51,53 @@ texture = ExtResource("2_pnfa1")
 metadata/_edit_lock_ = true
 
 [node name="Knobs" type="Node2D" parent="." unique_id=826647854]
+position = Vector2(0, -2)
+metadata/_edit_lock_ = true
 
-[node name="StaticBody_knobR" type="StaticBody2D" parent="Knobs" unique_id=1741065818]
-position = Vector2(1240, 791)
+[node name="KnobL" type="Control" parent="Knobs" unique_id=1591192200]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 498.0
+offset_top = 757.0
+offset_right = 538.0
+offset_bottom = 797.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+script = ExtResource("3_4ch4a")
 
-[node name="knobR_Sprite" type="Sprite2D" parent="Knobs/StaticBody_knobR" unique_id=1296542531]
-position = Vector2(0.19995117, 0.4000244)
+[node name="knobL_Sprite" type="Sprite2D" parent="Knobs/KnobL" unique_id=1424425316]
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_kaavu")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Knobs/StaticBody_knobR" unique_id=1110906174]
-position = Vector2(0.19995117, 0.4000244)
-polygon = PackedVector2Array(19.699997, -46.5, -18.5, -46.5, -24.5, -43.5, -26.8, -43.5, -37.8, -32.5, -39.3, -32.5, -47, -16.2, -47, 17.400002, -40, 29, -40, 31.5, -19.5, 46.5, 20.599998, 46.5, 29.599998, 40.5, 31.900002, 40.5, 38.9, 32.5, 40.199997, 32.5, 47, 18.900002, 47, -20.2, 41, -29.2, 41, -31.4, 29, -41.5, 29, -42.9)
+[node name="KnobR" type="Control" parent="Knobs" unique_id=212571931]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1228.0
+offset_top = 766.0
+offset_right = 1268.0
+offset_bottom = 806.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+script = ExtResource("5_3sx2v")
 
-[node name="StaticBody2D_knobL" type="StaticBody2D" parent="Knobs" unique_id=1317529750]
-position = Vector2(539, 794)
-
-[node name="knobL_Sprite" type="Sprite2D" parent="Knobs/StaticBody2D_knobL" unique_id=1424425316]
-position = Vector2(0.2000122, -2.5999756)
+[node name="knobR_Sprite" type="Sprite2D" parent="Knobs/KnobR" unique_id=1296542531]
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_kaavu")
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Knobs/StaticBody2D_knobL" unique_id=1843552738]
-position = Vector2(0.2000122, -2.5999756)
-polygon = PackedVector2Array(19.699997, -46.5, -18.5, -46.5, -24.5, -43.5, -26.8, -43.5, -37.8, -32.5, -39.3, -32.5, -47, -16.2, -47, 17.400002, -40, 29, -40, 31.5, -19.5, 46.5, 20.599998, 46.5, 29.599998, 40.5, 31.900002, 40.5, 38.9, 32.5, 40.199997, 32.5, 47, 18.900002, 47, -20.2, 41, -29.2, 41, -31.4, 29, -41.5, 29, -42.9)
 
 [node name="Tubes" type="Node2D" parent="." unique_id=195233636]
+metadata/_edit_lock_ = true
 
 [node name="AreaTube1" type="Area2D" parent="Tubes" unique_id=825780852 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
 position = Vector2(851, 578)
@@ -80,6 +106,7 @@ script = ExtResource("4_14p1o")
 tube_1 = NodePath("../Tube1")
 tube_2 = NodePath("../Tube2")
 tube_3 = NodePath("../Tube3")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube1" unique_id=64289329]
 position = Vector2(1.6000977, 308.80005)
@@ -96,6 +123,7 @@ script = ExtResource("6_4ch4a")
 tube_1 = NodePath("../Tube1")
 tube_2 = NodePath("../Tube2")
 tube_3 = NodePath("../Tube3")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube2" unique_id=54047103]
 position = Vector2(1.6000977, 308.80005)
@@ -112,6 +140,7 @@ script = ExtResource("7_3sx2v")
 tube_1 = NodePath("../Tube1")
 tube_2 = NodePath("../Tube2")
 tube_3 = NodePath("../Tube3")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube3" unique_id=1992485013]
 position = Vector2(1.6000977, 308.80005)
@@ -191,7 +220,6 @@ offset_left = -9.0
 offset_right = 1939.0
 offset_bottom = 1090.0
 mouse_filter = 2
-metadata/_edit_lock_ = true
 
 [node name="Back Button" type="TextureButton" parent="Control" unique_id=1098783756]
 layout_mode = 1
