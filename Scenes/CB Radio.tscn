@@ -86,25 +86,37 @@ shape = SubResource("CapsuleShape2D_3p8nn")
 [node name="Sprite2D" type="Sprite2D" parent="Tubes/AreaTube1" unique_id=463555392]
 texture = ExtResource("5_mxeft")
 
-[node name="AreaTube2" type="Area2D" parent="Tubes" unique_id=2122222060]
+[node name="AreaTube2" type="Area2D" parent="Tubes" unique_id=2122222060 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
 position = Vector2(1022, 581)
 scale = Vector2(0.25, 0.25)
 script = ExtResource("6_4ch4a")
+tube_1 = NodePath("../Tube1")
+tube_2 = NodePath("../Tube2")
+tube_3 = NodePath("../Tube3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube2" unique_id=54047103]
 position = Vector2(1.6000977, 308.80005)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
 
-[node name="AreaTube3" type="Area2D" parent="Tubes" unique_id=510286741]
+[node name="Sprite2D" type="Sprite2D" parent="Tubes/AreaTube2" unique_id=1339923045]
+texture = ExtResource("5_mxeft")
+
+[node name="AreaTube3" type="Area2D" parent="Tubes" unique_id=510286741 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
 position = Vector2(1185, 579)
 scale = Vector2(0.25, 0.25)
 script = ExtResource("7_3sx2v")
+tube_1 = NodePath("../Tube1")
+tube_2 = NodePath("../Tube2")
+tube_3 = NodePath("../Tube3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube3" unique_id=1992485013]
 position = Vector2(1.6000977, 308.80005)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tubes/AreaTube3" unique_id=1803103010]
+texture = ExtResource("5_mxeft")
 
 [node name="Tube1" type="Sprite2D" parent="Tubes" unique_id=1059021618]
 position = Vector2(1797, 740)
@@ -207,6 +219,8 @@ color = Color(1, 1, 1, 0.49411765)
 metadata/_edit_lock_ = true
 
 [connection signal="area_entered" from="Tubes/AreaTube1" to="Tubes/AreaTube1" method="_on_area_entered"]
+[connection signal="area_entered" from="Tubes/AreaTube2" to="Tubes/AreaTube2" method="_on_area_entered"]
+[connection signal="area_entered" from="Tubes/AreaTube3" to="Tubes/AreaTube3" method="_on_area_entered"]
 [connection signal="button_down" from="Tubes/Tube1/Button" to="Tubes/Tube1" method="_on_button_button_down"]
 [connection signal="button_up" from="Tubes/Tube1/Button" to="Tubes/Tube1" method="_on_button_button_up"]
 [connection signal="area_entered" from="Tubes/Tube1/Area2DTube1" to="Tubes/Tube1" method="_on_area_2d_tube_1_area_entered"]
