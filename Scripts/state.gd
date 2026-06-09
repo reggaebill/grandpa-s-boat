@@ -3,3 +3,8 @@ extends Node
 
 # Item flag variables.
 var newWires:= false
+
+# Engine states.
+var enginePartsPurchased:= true
+var engineFixed:= false
+var cardCollected:= false
