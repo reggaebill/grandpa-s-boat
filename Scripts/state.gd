@@ -5,6 +5,6 @@ extends Node
 var newWires:= false
 
 # Engine states.
-var enginePartsPurchased:= true
+var enginePartsPurchased:= false
 var engineFixed:= false
 var cardCollected:= false
