@@ -14,6 +14,7 @@
 script = ExtResource("1_4dnpw")
 
 [node name="BG" type="Node2D" parent="." unique_id=1582299281]
+metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="BG" unique_id=1283021363]
 custom_minimum_size = Vector2(1920, 1080)
@@ -26,15 +27,20 @@ mouse_filter = 2
 texture = ExtResource("2_2xonk")
 centered = false
 
-[node name="Collectible" type="Node2D" parent="." unique_id=1291949957]
+[node name="Collectible" type="Node2D" parent="BG" unique_id=1291949957]
 
-[node name="Sprite2D" type="Sprite2D" parent="Collectible" unique_id=491316213]
-position = Vector2(1201, 339)
-rotation = 0.6981317
+[node name="TextureButton" type="TextureButton" parent="BG/Collectible" unique_id=610215588]
+offset_left = 963.0
+offset_top = 910.0
+offset_right = 1737.0
+offset_bottom = 1934.0
+rotation = 1.7191494
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("5_2xonk")
+texture_normal = ExtResource("5_2xonk")
+stretch_mode = 0
 
 [node name="ControlPanel" type="Node2D" parent="." unique_id=1289540857]
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ControlPanel" unique_id=1366562303]
 
@@ -59,33 +65,19 @@ polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 7
 
 [node name="OldParts" type="Node2D" parent="." unique_id=536447384]
 
-[node name="GreenWireOld" type="StaticBody2D" parent="OldParts" unique_id=1139210455]
-
-[node name="Sprite2D" type="Sprite2D" parent="OldParts/GreenWireOld" unique_id=1730085122]
-position = Vector2(938, 659)
-texture = ExtResource("5_uh4uw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OldParts/GreenWireOld" unique_id=269880679]
-polygon = PackedVector2Array(888, 776, 933, 762, 941, 745, 940, 732, 955, 717, 968, 688, 946, 657, 935, 624, 936, 584, 959, 548, 968, 509, 988, 509, 988, 532, 984, 562, 971, 589, 960, 602, 964, 629, 984, 659, 989, 664, 989, 712, 977, 742, 963, 752, 961, 773, 950, 786, 930, 794, 907, 793, 903, 799, 889, 797)
-
-[node name="YellowWireOld" type="StaticBody2D" parent="OldParts" unique_id=1186383265]
-
-[node name="Sprite2D" type="Sprite2D" parent="OldParts/YellowWireOld" unique_id=34046183]
-position = Vector2(889, 555)
+[node name="YellowWireOld" type="Sprite2D" parent="OldParts" unique_id=1392784660]
+position = Vector2(892, 544)
 texture = ExtResource("6_q1a0s")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OldParts/YellowWireOld" unique_id=374403211]
-polygon = PackedVector2Array(841, 709, 869, 692, 885, 661, 890, 643, 889, 621, 878, 597, 873, 557, 863, 529, 838, 489, 838, 426, 880, 387, 911, 368, 916, 353, 939, 355, 941, 376, 925, 399, 913, 401, 860, 448, 857, 457, 870, 488, 887, 508, 895, 522, 896, 542, 904, 578, 914, 610, 916, 661, 907, 686, 894, 714, 872, 726, 859, 748, 837, 738)
+[node name="GreenWireOld" type="Sprite2D" parent="OldParts" unique_id=1323218034]
+position = Vector2(967.99994, 687.00006)
+rotation = 0.34906584
+texture = ExtResource("5_uh4uw")
 
-[node name="RedWireOld" type="StaticBody2D" parent="OldParts" unique_id=1997191044]
-
-[node name="Sprite2D" type="Sprite2D" parent="OldParts/RedWireOld" unique_id=474634624]
-position = Vector2(1040, 831.00006)
-rotation = 1.0471976
+[node name="RedWireOld" type="Sprite2D" parent="OldParts" unique_id=2023497113]
+position = Vector2(1036, 843)
+rotation = 1.1170107
 texture = ExtResource("7_vlc3s")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OldParts/RedWireOld" unique_id=1597696924]
-polygon = PackedVector2Array(915, 848, 928, 842, 934, 836, 976, 809, 1008, 807, 1020, 820, 1027, 833, 1024, 854, 1039, 856, 1052, 834, 1080, 816, 1102, 815, 1121, 838, 1106, 849, 1080, 845, 1065, 865, 1065, 869, 1026, 886, 1008, 883, 995, 860, 997, 838, 969, 835, 959, 847, 934, 863, 924, 866)
 
 [node name="Control" type="Control" parent="." unique_id=1582329204]
 layout_mode = 3
