@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://g35vreguxese" path="res://Assets/Engine/BaseballPackArt.jpg" id="5_2xonk"]
 [ext_resource type="Texture2D" uid="uid://0d6pnx28mf1d" path="res://Assets/Engine/WiringBoard.png" id="6_lj1rd"]
 
-[node name="Main" type="Node2D" unique_id=1608301749]
+[node name="EnginePuzzle" type="Node2D" unique_id=1608301749]
 script = ExtResource("1_4dnpw")
 
 [node name="BG" type="Node2D" parent="." unique_id=1582299281]
@@ -63,10 +63,16 @@ rotation = -0.4712389
 scale = Vector2(0.84, 0.7375)
 texture = ExtResource("6_lj1rd")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=1320934354]
-position = Vector2(827, 852)
-rotation = -0.4660029
-polygon = PackedVector2Array(89.76373, -136.18909, 91.75391, 158.08289, -76.400024, 158.5813, -78.39023, -135.69073)
+[node name="Contact1" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=1348765460]
+polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 793, 764)
+
+[node name="Contact2" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=567601018]
+position = Vector2(35, 69)
+polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 793, 764)
+
+[node name="Contact3" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=727127748]
+position = Vector2(69, 136)
+polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 793, 764)
 
 [node name="Buttons" type="Node2D" parent="." unique_id=1209985947]
 
