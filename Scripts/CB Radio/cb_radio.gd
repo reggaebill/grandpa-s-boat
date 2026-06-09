@@ -1,6 +1,7 @@
 extends Node2D
 
-var checker = 0
+var tube_checker = 0
+var CB_Radio_complete = false
 var tubes_complete = false
 var knobs_complete = false
 @export var tube_1 : Area2D 
@@ -16,9 +17,18 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if tube_1.litTube.visible == true and tube_2.litTube.visible == true and tube_3.litTube.visible == true:
 		tubes_complete = true
-		if checker < 1:
-			checker = 1
+		if tube_checker < 1:
+			tube_checker = 1
 			print("tubes complete")
+	# if knob_1.knobTurned == true and knob_2.knobTurned == true and knob_3.knobTurned == true:
+	# 	knobs_complete = true
+	# 	if tube_checker < 2:
+	# 		tube_checker = 2
+	# 		print("knobs complete")
+	
+	if tubes_complete == true and knobs_complete == true:
+		CB_Radio_complete = true
+
 
 
 

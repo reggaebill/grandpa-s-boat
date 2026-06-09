@@ -14,17 +14,21 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#verify which tube entered and handle accordingly
-	if tube_entered == true and active_tube == tube_1 and tube_1.position.distance_to(position) < 20:	
+	if tube_entered == true and active_tube == tube_1 and tube_1.position.distance_to(position) < 35:	
 		if tube_1.dragging == false:
 			tube_1.visible = false
 			litTube.visible = true
-	elif tube_entered == true and active_tube == tube_2 and tube_2.position.distance_to(position) < 20:
+	elif tube_entered == true and active_tube == tube_2 and tube_2.position.distance_to(position) < 35:
 		if litTube.visible == true:
 			pass
-		elif tube_3.dragging == false:
+		elif tube_2.dragging == true:
+			pass
+		elif tube_2.dragging == false:
 			tube_2.position = position
-	elif tube_entered == true and active_tube == tube_3 and tube_3.position.distance_to(position) < 20:
+	elif tube_entered == true and active_tube == tube_3 and tube_3.position.distance_to(position) < 35:
 		if litTube.visible == true:
+			pass
+		elif tube_3.dragging == true:
 			pass
 		elif tube_3.dragging == false:
 			tube_3.position = position
