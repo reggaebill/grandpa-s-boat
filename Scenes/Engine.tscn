@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dmkqqwglxmhrc" path="res://Assets/Engine/RedWireFrayed.png" id="7_vlc3s"]
 [ext_resource type="Texture2D" uid="uid://dhiachvjfw05g" path="res://Assets/Engine/Toolbox.png" id="9_xir5k"]
 [ext_resource type="Texture2D" uid="uid://loqpkd86sf1v" path="res://Assets/Engine/YellowWireSpool.png" id="10_3i2ip"]
+[ext_resource type="Script" uid="uid://b3cb4ms8j0okm" path="res://Scripts/Engine/yellow_wire.gd" id="11_35l8k"]
 [ext_resource type="Texture2D" uid="uid://djeo0klwwue5x" path="res://Assets/Engine/GreenWireSpool.png" id="11_r4klq"]
 [ext_resource type="Texture2D" uid="uid://cc4mhs2wxdg5k" path="res://Assets/Engine/RedWireSpool.png" id="12_35l8k"]
 [ext_resource type="Texture2D" uid="uid://g7mafrdpx870" path="res://Assets/Engine/YellowWireNew.png" id="13_r4klq"]
@@ -52,22 +53,22 @@ stretch_mode = 0
 [node name="ControlPanel" type="Node2D" parent="." unique_id=1289540857]
 metadata/_edit_lock_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="ControlPanel" unique_id=1366562303]
+[node name="Area2D" type="Area2D" parent="ControlPanel" unique_id=1397829522]
 
-[node name="ControlBoard" type="Sprite2D" parent="ControlPanel/StaticBody2D" unique_id=1905216785]
+[node name="ControlBoard" type="Sprite2D" parent="ControlPanel/Area2D" unique_id=1905216785]
 position = Vector2(838, 859)
-rotation = -0.4712389
+rotation = -0.47123894
 scale = Vector2(0.84, 0.7375)
 texture = ExtResource("6_lj1rd")
 
-[node name="Contact1" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=1348765460]
+[node name="Contact1" type="CollisionPolygon2D" parent="ControlPanel/Area2D" unique_id=1348765460]
 polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 793, 764)
 
-[node name="Contact2" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=567601018]
+[node name="Contact2" type="CollisionPolygon2D" parent="ControlPanel/Area2D" unique_id=567601018]
 position = Vector2(35, 69)
 polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 793, 764)
 
-[node name="Contact3" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=727127748]
+[node name="Contact3" type="CollisionPolygon2D" parent="ControlPanel/Area2D" unique_id=727127748]
 position = Vector2(69, 136)
 polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 793, 764)
 
@@ -115,6 +116,7 @@ texture = ExtResource("9_xir5k")
 [node name="YellowWire" type="Sprite2D" parent="ReplacementParts" unique_id=1951123215]
 position = Vector2(295, 701)
 texture = ExtResource("10_3i2ip")
+script = ExtResource("11_35l8k")
 
 [node name="Button" type="Button" parent="ReplacementParts/YellowWire" unique_id=2058369684]
 modulate = Color(1, 1, 1, 0)
@@ -223,4 +225,6 @@ texture_normal = ExtResource("3_2xonk")
 texture_pressed = ExtResource("4_lj1rd")
 
 [connection signal="pressed" from="Collectible/CardPack" to="." method="_on_card_pack_pressed"]
+[connection signal="button_down" from="ReplacementParts/YellowWire/Button" to="ReplacementParts/YellowWire" method="_on_button_button_down"]
+[connection signal="button_up" from="ReplacementParts/YellowWire/Button" to="ReplacementParts/YellowWire" method="_on_button_button_up"]
 [connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]

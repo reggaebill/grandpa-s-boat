@@ -5,7 +5,7 @@ extends Node2D
 @onready var cardPack: TextureButton = $Collectible/CardPack
 @onready var replacementParts: Node2D = $ReplacementParts
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	# Check the collectible status.
 	if State.cardCollected == true:
@@ -17,6 +17,7 @@ func _ready() -> void:
 	newParts.hide()
 	replacementParts.hide()
 	print(State.enginePartsPurchased)
+	# Check State flags to see what should be showing.
 	if State.enginePartsPurchased == false:
 		oldParts.show()
 		newParts.hide()
@@ -27,11 +28,7 @@ func _ready() -> void:
 	else:
 		oldParts.hide()
 		newParts.show()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
+		
 
 func _on_back_button_pressed() -> void:
 	print("back")
@@ -41,3 +38,4 @@ func _on_back_button_pressed() -> void:
 func _on_card_pack_pressed() -> void:
 	State.cardCollected = true
 	cardPack.hide()
+	
