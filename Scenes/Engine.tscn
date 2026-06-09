@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_2xonk"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_lj1rd"]
 [ext_resource type="Texture2D" uid="uid://g35vreguxese" path="res://Assets/Engine/BaseballPackArt.jpg" id="5_2xonk"]
+[ext_resource type="Texture2D" uid="uid://0d6pnx28mf1d" path="res://Assets/Engine/WiringBoard.png" id="6_lj1rd"]
 
 [node name="Main" type="Node2D" unique_id=1608301749]
 script = ExtResource("1_4dnpw")
@@ -52,7 +53,20 @@ rotation = 0.6981317
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_2xonk")
 
-[node name="Wiring" type="Node2D" parent="." unique_id=1289540857]
+[node name="ControlPanel" type="Node2D" parent="." unique_id=1289540857]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ControlPanel" unique_id=1366562303]
+
+[node name="ControlBoard" type="Sprite2D" parent="ControlPanel/StaticBody2D" unique_id=1905216785]
+position = Vector2(838, 859)
+rotation = -0.4712389
+scale = Vector2(0.84, 0.7375)
+texture = ExtResource("6_lj1rd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ControlPanel/StaticBody2D" unique_id=1320934354]
+position = Vector2(827, 852)
+rotation = -0.4660029
+polygon = PackedVector2Array(88.87036, -136.63843, 90.860535, 157.63354, -75.50665, 159.03064, -77.49161, -137.47748)
 
 [node name="Buttons" type="Node2D" parent="." unique_id=1209985947]
 
