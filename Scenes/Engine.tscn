@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://wong2bncfsxe"]
 
-[ext_resource type="Script" path="res://Scripts/engine.gd" id="1_4dnpw"]
+[ext_resource type="Script" uid="uid://d05d6upkk85ok" path="res://Scripts/engine.gd" id="1_4dnpw"]
 [ext_resource type="Texture2D" uid="uid://s5ndfvtkqums" path="res://Assets/Engine/EngineBG.png" id="2_2xonk"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_2xonk"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_lj1rd"]
 [ext_resource type="Texture2D" uid="uid://g35vreguxese" path="res://Assets/Engine/BaseballPackArt.jpg" id="5_2xonk"]
 [ext_resource type="Texture2D" uid="uid://bfv46377bgg8n" path="res://Assets/Engine/GreenWireFrayed.png" id="5_uh4uw"]
+[ext_resource type="Texture2D" uid="uid://uir83o2ye5vj" path="res://Assets/Engine/Hole.png" id="5_xkf5k"]
 [ext_resource type="Texture2D" uid="uid://0d6pnx28mf1d" path="res://Assets/Engine/WiringBoard.png" id="6_lj1rd"]
 [ext_resource type="Texture2D" uid="uid://c4fucrf3kv6y0" path="res://Assets/Engine/YellowWireFrayed.png" id="6_q1a0s"]
 [ext_resource type="Texture2D" uid="uid://dmkqqwglxmhrc" path="res://Assets/Engine/RedWireFrayed.png" id="7_vlc3s"]
+[ext_resource type="Texture2D" uid="uid://dhiachvjfw05g" path="res://Assets/Engine/Toolbox.png" id="9_xir5k"]
+[ext_resource type="Texture2D" uid="uid://loqpkd86sf1v" path="res://Assets/Engine/YellowWireSpool.png" id="10_3i2ip"]
+[ext_resource type="Texture2D" uid="uid://djeo0klwwue5x" path="res://Assets/Engine/GreenWireSpool.png" id="11_r4klq"]
+[ext_resource type="Texture2D" uid="uid://cc4mhs2wxdg5k" path="res://Assets/Engine/RedWireSpool.png" id="12_35l8k"]
 
 [node name="EnginePuzzle" type="Node2D" unique_id=1608301749]
 script = ExtResource("1_4dnpw")
@@ -63,6 +68,23 @@ polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 7
 
 [node name="Buttons" type="Node2D" parent="." unique_id=1209985947]
 
+[node name="Holes" type="Node2D" parent="." unique_id=1817471282]
+
+[node name="Hole1" type="Sprite2D" parent="Holes" unique_id=1187675426]
+position = Vector2(943, 349)
+rotation = -0.58119464
+texture = ExtResource("5_xkf5k")
+
+[node name="Hole2" type="Sprite2D" parent="Holes" unique_id=2117797146]
+position = Vector2(1070, 553)
+rotation = -0.9302605
+texture = ExtResource("5_xkf5k")
+
+[node name="Hole3" type="Sprite2D" parent="Holes" unique_id=1757842343]
+position = Vector2(1115, 869)
+rotation = 0.9302605
+texture = ExtResource("5_xkf5k")
+
 [node name="OldParts" type="Node2D" parent="." unique_id=536447384]
 
 [node name="YellowWireOld" type="Sprite2D" parent="OldParts" unique_id=1392784660]
@@ -78,6 +100,33 @@ texture = ExtResource("5_uh4uw")
 position = Vector2(1036, 843)
 rotation = 1.1170107
 texture = ExtResource("7_vlc3s")
+
+[node name="NewParts" type="Node2D" parent="." unique_id=1251941109]
+
+[node name="Toolbox" type="Sprite2D" parent="NewParts" unique_id=482272771]
+position = Vector2(415, 675)
+texture = ExtResource("9_xir5k")
+
+[node name="TextureButton" type="TextureButton" parent="NewParts" unique_id=1498571400]
+offset_left = 250.0
+offset_top = 640.0
+offset_right = 340.0
+offset_bottom = 760.0
+texture_normal = ExtResource("10_3i2ip")
+
+[node name="TextureButton2" type="TextureButton" parent="NewParts" unique_id=1433483583]
+offset_left = 362.0
+offset_top = 691.0
+offset_right = 452.0
+offset_bottom = 811.0
+texture_normal = ExtResource("11_r4klq")
+
+[node name="TextureButton3" type="TextureButton" parent="NewParts" unique_id=1947589090]
+offset_left = 489.0
+offset_top = 640.0
+offset_right = 579.0
+offset_bottom = 760.0
+texture_normal = ExtResource("12_35l8k")
 
 [node name="Control" type="Control" parent="." unique_id=1582329204]
 layout_mode = 3
