@@ -235,9 +235,10 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_xbm3r")
 texture_pressed = ExtResource("4_uvcak")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=128106442]
+[node name="Shader" type="CanvasLayer" parent="." unique_id=128106442]
+visible = false
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1117586695]
+[node name="ColorRect" type="ColorRect" parent="Shader" unique_id=1117586695]
 top_level = true
 material = SubResource("ShaderMaterial_uvcak")
 anchors_preset = 15
