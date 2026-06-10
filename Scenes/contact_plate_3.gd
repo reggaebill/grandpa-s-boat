@@ -1,10 +1,10 @@
 extends Area2D
 
-## Contact plate 1, only accepts yellow wire.
+## Contact plate 3, only accepts red wire.
 
 var wire_entered = false
 var active_wire = null
-signal yellowWireComplete
+signal redWireComplete
 
 @export var yellowWire: Sprite2D
 @export var greenWire: Sprite2D
@@ -20,28 +20,11 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	#verify which wire entered and handle accordingly
-	if wire_entered == true and active_wire == yellowWire:
-		if yellowWire.dragging == false:
-			yellowWire.visible = false
-			wireNewY.visible = true
-			yellowWireComplete.emit()
-			
-	#elif wire_entered == true and active_wire == greenWire:
-		#if wireNewG.visible == true:
-			#pass
-		#elif greenWire.dragging == true:
-			#pass
-		#elif greenWire.dragging == false:
-			#greenWire.position = position
-	#elif wire_entered == true and active_wire == redWire:
-		#if wireNewR.visible == true:
-			#pass
-		#elif redWire.dragging == true:
-			#pass
-		#elif redWire.dragging == false:
-			#redWire.position = position
-
-
+	if wire_entered == true and active_wire == redWire:
+		if redWire.dragging == false:
+			redWire.visible = false
+			wireNewR.visible = true
+			redWireComplete.emit()
 
 func _on_area_entered(area: Area2D) -> void:
 	wire_entered = true
@@ -52,7 +35,6 @@ func _on_area_entered(area: Area2D) -> void:
 		active_wire = greenWire
 	elif area.name == "Area2DWireR":
 		active_wire = redWire
-
 
 func _on_area_exited(_area: Area2D) -> void:
 	wire_entered = false
