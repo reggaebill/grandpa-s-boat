@@ -11,6 +11,11 @@ func _process(delta: float) -> void:
 	pass
 
 
+
 func _on_start_button_pressed() -> void:
 	print("start")
 	SceneTransition.change_scene("res://Scenes/Boat Overview.tscn")
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()

@@ -64,7 +64,7 @@ theme_override_styles/pressed = ExtResource("3_opfnp")
 theme_override_styles/hover = ExtResource("4_cp0ys")
 text = "OPTIONS"
 
-[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=597098418]
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=597098418]
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -75,6 +75,7 @@ theme_override_colors/font_hover_color = Color(0.9843137, 0.7764706, 0.5921569, 
 theme_override_styles/normal = ExtResource("2_n45e2")
 theme_override_styles/pressed = ExtResource("3_opfnp")
 theme_override_styles/hover = ExtResource("4_cp0ys")
-text = "PLACEHOLDER"
+text = "QUIT"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
