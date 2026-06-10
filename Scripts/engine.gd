@@ -28,8 +28,13 @@ func _ready() -> void:
 	else:
 		oldParts.hide()
 		newParts.show()
-		
-
+	# Temp statement to override the above flags.
+	oldParts.hide()
+	replacementParts.show()
+	newParts.show()
+	$NewParts/GreenWireNew.hide()
+	$NewParts/RedWireNew.hide()
+	$NewParts/YellowWireNew.hide()
 func _on_back_button_pressed() -> void:
 	print("back")
 	SceneTransition.change_scene("res://Scenes/Boat Overview.tscn")
