@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_2xonk"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_lj1rd"]
 [ext_resource type="Texture2D" uid="uid://g35vreguxese" path="res://Assets/Engine/BaseballPackArt.jpg" id="5_2xonk"]
+[ext_resource type="Script" uid="uid://bgma8l2eme7f4" path="res://Scripts/Engine/contact_plate_1.gd" id="5_7luyh"]
 [ext_resource type="Texture2D" uid="uid://bfv46377bgg8n" path="res://Assets/Engine/GreenWireFrayed.png" id="5_uh4uw"]
 [ext_resource type="Texture2D" uid="uid://uir83o2ye5vj" path="res://Assets/Engine/Hole.png" id="5_xkf5k"]
 [ext_resource type="Texture2D" uid="uid://0d6pnx28mf1d" path="res://Assets/Engine/WiringBoard.png" id="6_lj1rd"]
@@ -53,22 +54,30 @@ stretch_mode = 0
 [node name="ControlPanel" type="Node2D" parent="." unique_id=1289540857]
 metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="ControlPanel" unique_id=1397829522]
-
-[node name="ControlBoard" type="Sprite2D" parent="ControlPanel/Area2D" unique_id=1905216785]
+[node name="ControlBoard" type="Sprite2D" parent="ControlPanel" unique_id=1905216785]
 position = Vector2(838, 859)
 rotation = -0.47123894
 scale = Vector2(0.84, 0.7375)
 texture = ExtResource("6_lj1rd")
 
-[node name="Contact1" type="CollisionPolygon2D" parent="ControlPanel/Area2D" unique_id=1348765460]
+[node name="ContactPlate1" type="Area2D" parent="ControlPanel" unique_id=1397829522 node_paths=PackedStringArray("yellowWire", "greenWire", "redWire")]
+script = ExtResource("5_7luyh")
+yellowWire = NodePath("../../ReplacementParts/YellowWire")
+greenWire = NodePath("../../ReplacementParts/GreenWire")
+redWire = NodePath("../../ReplacementParts/RedWire")
+
+[node name="Contact1" type="CollisionPolygon2D" parent="ControlPanel/ContactPlate1" unique_id=1348765460]
 polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 793, 764)
 
-[node name="Contact2" type="CollisionPolygon2D" parent="ControlPanel/Area2D" unique_id=567601018]
+[node name="ContactPlate2" type="Area2D" parent="ControlPanel" unique_id=1171866604]
+
+[node name="Contact2" type="CollisionPolygon2D" parent="ControlPanel/ContactPlate2" unique_id=567601018]
 position = Vector2(35, 69)
 polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 793, 764)
 
-[node name="Contact3" type="CollisionPolygon2D" parent="ControlPanel/Area2D" unique_id=727127748]
+[node name="ContactPlate3" type="Area2D" parent="ControlPanel" unique_id=1523692284]
+
+[node name="Contact3" type="CollisionPolygon2D" parent="ControlPanel/ContactPlate3" unique_id=727127748]
 position = Vector2(69, 136)
 polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 793, 764)
 
@@ -92,6 +101,7 @@ rotation = 0.9302605
 texture = ExtResource("5_xkf5k")
 
 [node name="OldParts" type="Node2D" parent="." unique_id=536447384]
+visible = false
 
 [node name="YellowWireOld" type="Sprite2D" parent="OldParts" unique_id=1392784660]
 position = Vector2(892, 544)
@@ -184,7 +194,6 @@ position = Vector2(35, -30)
 shape = SubResource("CircleShape2D_mmagb")
 
 [node name="NewParts" type="Node2D" parent="." unique_id=1559232889]
-visible = false
 
 [node name="YellowWireNew" type="Sprite2D" parent="NewParts" unique_id=573597392]
 position = Vector2(886, 542)
