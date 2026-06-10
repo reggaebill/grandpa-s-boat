@@ -29,9 +29,10 @@ metadata/_edit_lock_ = true
 [node name="Control" type="Control" parent="." unique_id=1712471840]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -9.0
-offset_right = 1939.0
+offset_left = -3.0
+offset_right = 1945.0
 offset_bottom = 1090.0
+metadata/_edit_lock_ = true
 
 [node name="Back Button" type="TextureButton" parent="Control" unique_id=261422162]
 layout_mode = 1
