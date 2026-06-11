@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://bs56ofahwimj1"]
 
+[ext_resource type="Script" uid="uid://dgq4qa8kijql4" path="res://Scripts/Cabin/cabin.gd" id="1_f8aqm"]
 [ext_resource type="Texture2D" uid="uid://cd0ljk013n2ow" path="res://Assets/Cabin/CabinWithGrips.png" id="1_ms4um"]
 [ext_resource type="Texture2D" uid="uid://7slminc5osp7" path="res://Assets/Cabin/CabinWithWheel.png" id="2_c28uo"]
+[ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_h4odu"]
+[ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_f8aqm"]
 
 [node name="Cabin" type="Node2D" unique_id=300197136]
+script = ExtResource("1_f8aqm")
 
 [node name="BG" type="Node2D" parent="." unique_id=2054531103]
 
@@ -12,5 +16,32 @@ position = Vector2(960, 540)
 texture = ExtResource("1_ms4um")
 
 [node name="CabinBGWheel" type="Sprite2D" parent="BG" unique_id=1104283931]
+visible = false
 position = Vector2(960, 540)
 texture = ExtResource("2_c28uo")
+
+[node name="Control" type="Control" parent="." unique_id=474373832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Back Button" type="TextureButton" parent="Control" unique_id=1559229803]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 816.0
+offset_right = 520.0
+offset_bottom = 1328.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_h4odu")
+texture_pressed = ExtResource("4_f8aqm")
+
+[connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]

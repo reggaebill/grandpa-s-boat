@@ -24,3 +24,8 @@ func _on_engine_pressed() -> void:
 func _on_cb_radio_pressed() -> void:
 	print("cb radio")
 	SceneTransition.change_scene("res://Scenes/CB Radio.tscn")
+
+
+func _on_cabin_pressed() -> void:
+	print("cabin")
+	SceneTransition.change_scene("res://Scenes/cabin.tscn")

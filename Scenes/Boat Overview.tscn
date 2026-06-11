@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dvmehtq11i254" path="res://Assets/FPO/pngtree-outboard-boat-motor-with-propeller-png-image_19351156.webp" id="4_cde15"]
 [ext_resource type="Texture2D" uid="uid://dhbcbnqgnroka" path="res://Assets/FPO/radio.png" id="6_cde15"]
 [ext_resource type="Shader" uid="uid://b6bikedpbovig" path="res://Shaders/new_shader.gdshader" id="7_3uoi3"]
+[ext_resource type="Texture2D" uid="uid://ck5a6tdaf8fdb" path="res://Assets/Cabin/WheelSprite.png" id="7_utpnu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3uoi3"]
 shader = ExtResource("7_3uoi3")
@@ -81,6 +82,16 @@ scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("6_cde15")
 texture_pressed = ExtResource("3_skust")
 
+[node name="Cabin" type="TextureButton" parent="Interactives" unique_id=388062359]
+layout_mode = 0
+offset_left = 1440.0
+offset_top = 231.0
+offset_right = 1678.0
+offset_bottom = 418.0
+texture_normal = ExtResource("7_utpnu")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=964618026]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1843290395]
@@ -93,7 +104,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.49411765)
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Interactives/Hull" to="." method="_on_hull_pressed"]
 [connection signal="pressed" from="Interactives/Engine" to="." method="_on_engine_pressed"]
 [connection signal="pressed" from="Interactives/CB Radio" to="." method="_on_cb_radio_pressed"]
+[connection signal="pressed" from="Interactives/Cabin" to="." method="_on_cabin_pressed"]
