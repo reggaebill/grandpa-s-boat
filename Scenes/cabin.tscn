@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bs56ofahwimj1"]
+
+[ext_resource type="Texture2D" uid="uid://cd0ljk013n2ow" path="res://Assets/Cabin/CabinWithGrips.png" id="1_ms4um"]
+[ext_resource type="Texture2D" uid="uid://7slminc5osp7" path="res://Assets/Cabin/CabinWithWheel.png" id="2_c28uo"]
+
+[node name="Cabin" type="Node2D" unique_id=300197136]
+
+[node name="BG" type="Node2D" parent="." unique_id=2054531103]
+
+[node name="CabinBGVise" type="Sprite2D" parent="BG" unique_id=404555482]
+position = Vector2(960, 540)
+texture = ExtResource("1_ms4um")
+
+[node name="CabinBGWheel" type="Sprite2D" parent="BG" unique_id=1104283931]
+position = Vector2(960, 540)
+texture = ExtResource("2_c28uo")
