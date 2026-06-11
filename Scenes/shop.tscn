@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://deeygy2syy7nm"]
+
+[ext_resource type="Texture2D" uid="uid://cinwndfoic74v" path="res://Assets/Shop/ShopPlaceHolder.png" id="1_a0mxf"]
+[ext_resource type="Script" uid="uid://cwcws2v4vjkcb" path="res://Scripts/Shop/shop.gd" id="1_fdj0q"]
+[ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_k6jq0"]
+[ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_3ps1r"]
+
+[node name="Shop" type="Node2D" unique_id=1201752019]
+script = ExtResource("1_fdj0q")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=163102446]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_a0mxf")
+
+[node name="Control" type="Control" parent="." unique_id=1355136731]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -9.0
+offset_right = 1939.0
+offset_bottom = 1090.0
+mouse_filter = 2
+
+[node name="Back Button" type="TextureButton" parent="Control" unique_id=50630714]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -289.0
+offset_right = 531.0
+offset_bottom = 223.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_k6jq0")
+texture_pressed = ExtResource("4_3ps1r")
+
+[connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]
