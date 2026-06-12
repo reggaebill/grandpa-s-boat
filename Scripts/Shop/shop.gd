@@ -5,11 +5,13 @@ extends Node2D
 
 func _ready() -> void:
 	# When scene loads, set the money display to show whatever is stored in state.gd.
-	moneyAmount.text = str("$",State.money)
+	moneyAmount.text = str("$", State.money)
 
 func _on_back_button_pressed() -> void:
 	print("back")
 	SceneTransition.change_scene("res://Scenes/Boat Overview.tscn")
 
 func _on_sell_button_pressed() -> void:
-	pass # Replace with function body.
+	if State.cardCollected and not State.cardSold:
+		moneyAmount.text = str("$", State.money + 10)
+		State.cardSold = true
