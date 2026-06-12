@@ -2,18 +2,117 @@
 
 [ext_resource type="Texture2D" uid="uid://cinwndfoic74v" path="res://Assets/Shop/ShopPlaceHolder.png" id="1_a0mxf"]
 [ext_resource type="Script" uid="uid://cwcws2v4vjkcb" path="res://Scripts/Shop/shop.gd" id="1_fdj0q"]
+[ext_resource type="FontFile" uid="uid://2gv1dikmg3s8" path="res://Assets/Fonts/SpecialElite.ttf" id="3_3ps1r"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_k6jq0"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_3ps1r"]
+[ext_resource type="FontFile" uid="uid://ll8u73k67l5r" path="res://Assets/Fonts/myoldrem.ttf" id="6_3ps1r"]
+
+[sub_resource type="Theme" id="Theme_ymrm4"]
+default_font = ExtResource("6_3ps1r")
+default_font_size = 110
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8dlv"]
+bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(1, 0.92941177, 0.84313726, 0.20784314)
+shadow_offset = Vector2(-8, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyrku"]
+bg_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(1, 0.92941177, 0.84313726, 0.20784314)
+shadow_offset = Vector2(-8, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xp22"]
+bg_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(1, 0.92941177, 0.84313726, 0.20784314)
+shadow_offset = Vector2(-8, 10)
 
 [node name="Shop" type="Node2D" unique_id=1201752019]
 script = ExtResource("1_fdj0q")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=163102446]
+[node name="BG" type="TextureRect" parent="." unique_id=163102446]
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("1_a0mxf")
+
+[node name="MoneyCounter" type="ColorRect" parent="." unique_id=265761217]
+offset_left = 1625.0
+offset_top = 901.0
+offset_right = 1890.0
+offset_bottom = 1062.0
+color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+
+[node name="MoneyMargin" type="MarginContainer" parent="MoneyCounter" unique_id=33424175]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MoneyCounter/MoneyMargin" unique_id=1856722649]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 18
+
+[node name="Label" type="Label" parent="MoneyCounter/MoneyMargin/HBoxContainer" unique_id=1715197560]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16470589)
+theme_override_colors/font_outline_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = ExtResource("3_3ps1r")
+theme_override_font_sizes/font_size = 120
+text = "$00"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SellButton" type="Button" parent="." unique_id=634305762]
+offset_left = 640.0
+offset_top = 832.0
+offset_right = 1152.0
+offset_bottom = 1024.0
+theme = SubResource("Theme_ymrm4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s8dlv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tyrku")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5xp22")
+text = "Sell Junk"
 
 [node name="Control" type="Control" parent="." unique_id=1355136731]
 layout_mode = 3
@@ -22,6 +121,7 @@ offset_left = -9.0
 offset_right = 1939.0
 offset_bottom = 1090.0
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="Back Button" type="TextureButton" parent="Control" unique_id=50630714]
 layout_mode = 1
@@ -37,4 +137,5 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_k6jq0")
 texture_pressed = ExtResource("4_3ps1r")
 
+[connection signal="pressed" from="SellButton" to="." method="_on_sell_button_pressed"]
 [connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]
