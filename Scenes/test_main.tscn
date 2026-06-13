@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://bkjg1w25orjlf"]
+
+[ext_resource type="Texture2D" uid="uid://dvb4t8el0dqf1" path="res://Assets/FPO/nixie tube.png" id="1_fd4u4"]
+[ext_resource type="Script" uid="uid://crranxqfwh7ke" path="res://Scenes/Test/control.gd" id="2_8i55r"]
+[ext_resource type="Script" uid="uid://0n45quvbwhav" path="res://Scenes/Test/rigid_body_2d.gd" id="3_8i55r"]
+[ext_resource type="Texture2D" uid="uid://b6y6ds4n0j7m2" path="res://Assets/Radio/knob.png" id="3_ricvt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8i55r"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ricvt"]
+
+[node name="TestMain" type="Node2D" unique_id=960788998]
+
+[node name="BG" type="Node2D" parent="." unique_id=1761345202]
+
+[node name="ColorRect" type="ColorRect" parent="BG" unique_id=1965500403]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 1920.0
+offset_bottom = 1081.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.1285155, 0.16631313, 0.33468467, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="BG" unique_id=281247877]
+visible = false
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_right = 1920.0
+offset_bottom = 1082.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0.2874999, 0.75, 0.46666667)
+
+[node name="Junk" type="Node2D" parent="." unique_id=837700569]
+
+[node name="Sprite2D" type="Sprite2D" parent="Junk" unique_id=2030926692]
+position = Vector2(377, 705)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_fd4u4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Junk" unique_id=78239622]
+position = Vector2(1577.9999, 439.00003)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_fd4u4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Junk" unique_id=826164470]
+position = Vector2(675, 265.00003)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_fd4u4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Junk" unique_id=2047773949]
+position = Vector2(1284, 877)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_fd4u4")
+
+[node name="Wave Top" type="Node2D" parent="." unique_id=1559796191]
+
+[node name="ColorRect" type="ColorRect" parent="Wave Top" unique_id=1298028842]
+visible = false
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 1920.0
+offset_bottom = 1081.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.1285155, 0.16631313, 0.33468467, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Wave Top" unique_id=338395295]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_right = 1920.0
+offset_bottom = 1082.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0.2874999, 0.75, 0.46666667)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=275337036]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Node2D" unique_id=1821339298]
+position = Vector2(1055, 595)
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_8i55r")
+gravity_scale = 0.0
+angular_damp = 48.396
+script = ExtResource("3_8i55r")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/RigidBody2D" unique_id=1967613024]
+position = Vector2(2.9000244, -3.5999756)
+texture = ExtResource("3_ricvt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/RigidBody2D" unique_id=1009659445]
+position = Vector2(2.9000244, -3.5999756)
+polygon = PackedVector2Array(19, -44.4, -8.400002, -46.5, -11, -46.5, -11, -45.1, -13.099998, -44.5, -16.6, -44.5, -26.5, -37.5, -28.9, -37.5, -37.9, -26.5, -39.4, -26.5, -42.4, -18.5, -43.8, -18.5, -46, 1.4000015, -46, 10, -37, 27, -37, 29.400002, -26, 38.4, -26, 39.9, -9.400002, 46.5, 10.400002, 46.5, 23.400002, 40.5, 25.800003, 40.5, 35.800003, 30.5, 37.300003, 30.5, 45.300003, 11.5, 47, 11.5, 47, -10, 38, -27.1, 38, -29.4, 27, -38.5, 27, -39.9, 19, -43)
+
+[node name="Button" type="Button" parent="Node2D/RigidBody2D" unique_id=839138138]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.099976
+offset_top = -38.599976
+offset_right = 465.90002
+offset_bottom = 461.39996
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+metadata/_edit_use_anchors_ = true
+
+[node name="Magnet" type="RigidBody2D" parent="Node2D" unique_id=221793826]
+position = Vector2(1058, 654)
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_ricvt")
+gravity_scale = 0.0
+inertia = 60.44
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Magnet" unique_id=697511230]
+position = Vector2(-1, 0)
+texture = ExtResource("3_ricvt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Magnet" unique_id=1895908921]
+position = Vector2(-1, -2)
+polygon = PackedVector2Array(19, -44.4, -8.400002, -46.5, -11, -46.5, -11, -45.1, -13.099998, -44.5, -16.6, -44.5, -26.5, -37.5, -28.9, -37.5, -37.9, -26.5, -39.4, -26.5, -42.4, -18.5, -43.8, -18.5, -46, 1.4000015, -46, 10, -37, 27, -37, 29.400002, -26, 38.4, -26, 39.9, -9.400002, 46.5, 10.400002, 46.5, 23.400002, 40.5, 25.800003, 40.5, 35.800003, 30.5, 37.300003, 30.5, 45.300003, 11.5, 47, 11.5, 47, -10, 38, -27.1, 38, -29.4, 27, -38.5, 27, -39.9, 19, -43)
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="Node2D" unique_id=163415556]
+position = Vector2(1055, 594)
+node_a = NodePath("../Magnet")
+node_b = NodePath("../RigidBody2D")
+bias = 0.9
+length = 25.0
+rest_length = 5.0
+stiffness = 0.8
+damping = 0.05
+
+[node name="Control" type="Control" parent="." unique_id=1328558164]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1921.0
+offset_bottom = 1080.0
+script = ExtResource("2_8i55r")
+
+[connection signal="button_down" from="Node2D/RigidBody2D/Button" to="Node2D/RigidBody2D" method="_on_button_button_down"]
+[connection signal="button_up" from="Node2D/RigidBody2D/Button" to="Node2D/RigidBody2D" method="_on_button_button_up"]
