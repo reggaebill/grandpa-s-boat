@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/CB Radio/cb_radio.gd" id="1_pnfa1"]
 [ext_resource type="Texture2D" uid="uid://dol6g78tacndh" path="res://Assets/Radio/radio bg.jpg" id="2_pnfa1"]
 [ext_resource type="Script" uid="uid://d1ndvblgq5c0e" path="res://Scripts/CB Radio/knob_l.gd" id="3_4ch4a"]
+[ext_resource type="Script" uid="uid://tbm5pl0chux7" path="res://Scripts/CB Radio/knobs.gd" id="3_t1sk8"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
 [ext_resource type="Script" uid="uid://csfu11ahoiyrm" path="res://Scripts/CB Radio/area_tube_1.gd" id="4_14p1o"]
 [ext_resource type="Texture2D" uid="uid://dvb4t8el0dqf1" path="res://Assets/FPO/nixie tube.png" id="4_gmwue"]
@@ -16,6 +17,7 @@
 [ext_resource type="Shader" uid="uid://b6bikedpbovig" path="res://Shaders/new_shader.gdshader" id="7_uvcak"]
 [ext_resource type="Script" uid="uid://bjr65n5hdq43m" path="res://Scripts/CB Radio/tube_2.gd" id="10_t1sk8"]
 [ext_resource type="Script" uid="uid://7i58llh1mwmh" path="res://Scripts/CB Radio/tube_3.gd" id="11_2a6jh"]
+[ext_resource type="Texture2D" uid="uid://c60k5xw16u3us" path="res://Assets/FPO/Eo_circle_green_checkmark.svg.png" id="14_3sx2v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3p8nn"]
 radius = 68.0
@@ -26,11 +28,14 @@ shader = ExtResource("7_uvcak")
 shader_parameter/screen_size = Vector2(1920, 1080)
 shader_parameter/pixel_block = Vector2(2, 2)
 
-[node name="Main" type="Node2D" unique_id=747834159 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
+[node name="Main" type="Node2D" unique_id=747834159 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3", "knob_1", "knob_2", "completeCheck")]
 script = ExtResource("1_pnfa1")
 tube_1 = NodePath("Tubes/AreaTube1")
 tube_2 = NodePath("Tubes/AreaTube2")
 tube_3 = NodePath("Tubes/AreaTube3")
+knob_1 = NodePath("Knobs/KnobL")
+knob_2 = NodePath("Knobs/KnobR")
+completeCheck = NodePath("Complete/CompleteSprite")
 
 [node name="BG" type="Node2D" parent="." unique_id=771772868]
 metadata/_edit_lock_ = true
@@ -50,9 +55,13 @@ position = Vector2(960.5001, 540)
 texture = ExtResource("2_pnfa1")
 metadata/_edit_lock_ = true
 
-[node name="Knobs" type="Node2D" parent="." unique_id=826647854]
+[node name="Knobs" type="Node2D" parent="." unique_id=826647854 node_paths=PackedStringArray("knob_1", "knob_2", "knob_button1", "knob_button2")]
 position = Vector2(0, -2)
-metadata/_edit_lock_ = true
+script = ExtResource("3_t1sk8")
+knob_1 = NodePath("KnobL")
+knob_2 = NodePath("KnobR")
+knob_button1 = NodePath("KnobL/Button")
+knob_button2 = NodePath("KnobR/Button")
 
 [node name="KnobL" type="Control" parent="Knobs" unique_id=1591192200]
 layout_mode = 3
@@ -75,6 +84,23 @@ position = Vector2(19.5, 18.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_kaavu")
 
+[node name="knobL_Counter" type="RichTextLabel" parent="Knobs/KnobL" unique_id=992524912]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 2.5
+offset_right = 89.0
+offset_bottom = 42.5
+text = "0"
+
+[node name="Button" type="Button" parent="Knobs/KnobL" unique_id=1365945076]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -2.4999998
+offset_top = -1.5
+offset_right = 17.5
+offset_bottom = 18.5
+scale = Vector2(2.12451, 2.0933473)
+
 [node name="KnobR" type="Control" parent="Knobs" unique_id=212571931]
 layout_mode = 3
 anchors_preset = 8
@@ -95,6 +121,23 @@ script = ExtResource("5_3sx2v")
 position = Vector2(20, 19.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_kaavu")
+
+[node name="knobR_Counter" type="RichTextLabel" parent="Knobs/KnobR" unique_id=1991756467]
+layout_mode = 0
+offset_left = -49.0
+offset_top = -1.5
+offset_right = -9.0
+offset_bottom = 38.5
+text = "0
+"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="Knobs/KnobR" unique_id=1241355808]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(5.2161145, 5.22)
 
 [node name="Tubes" type="Node2D" parent="." unique_id=195233636]
 metadata/_edit_lock_ = true
@@ -213,6 +256,12 @@ position = Vector2(1.6000977, 308.80005)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
 
+[node name="Complete" type="Node2D" parent="." unique_id=1014014516]
+
+[node name="CompleteSprite" type="Sprite2D" parent="Complete" unique_id=1001944805]
+position = Vector2(922, 555)
+texture = ExtResource("14_3sx2v")
+
 [node name="Control" type="Control" parent="." unique_id=2041451175]
 layout_mode = 3
 anchors_preset = 0
@@ -250,6 +299,8 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0.49411765)
 metadata/_edit_lock_ = true
 
+[connection signal="button_down" from="Knobs/KnobL/Button" to="Knobs/KnobL" method="_on_button_button_down"]
+[connection signal="button_down" from="Knobs/KnobR/Button" to="Knobs/KnobR" method="_on_button_button_down"]
 [connection signal="area_entered" from="Tubes/AreaTube1" to="Tubes/AreaTube1" method="_on_area_entered"]
 [connection signal="area_entered" from="Tubes/AreaTube2" to="Tubes/AreaTube2" method="_on_area_entered"]
 [connection signal="area_entered" from="Tubes/AreaTube3" to="Tubes/AreaTube3" method="_on_area_entered"]

@@ -7,10 +7,12 @@ var knobs_complete = false
 @export var tube_1 : Area2D 
 @export var tube_2 : Area2D
 @export var tube_3 : Area2D
-
+@export var knob_1 : Control
+@export var knob_2 : Control
+@export var completeCheck : Sprite2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	completeCheck.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,9 +27,15 @@ func _process(_delta: float) -> void:
 	# 	if tube_checker < 2:
 	# 		tube_checker = 2
 	# 		print("knobs complete")
-	
+	if knob_1.current_number == 6 and knob_2.current_number == 9:
+		knobs_complete = true
+		if tube_checker < 2:
+			tube_checker = 2
+			print("knobs complete")
+
 	if tubes_complete == true and knobs_complete == true:
 		CB_Radio_complete = true
+		completeCheck.visible = true
 
 
 
