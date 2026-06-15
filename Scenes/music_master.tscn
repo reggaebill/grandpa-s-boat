@@ -14,12 +14,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pwu1w")
 
-[node name="DnB" type="AudioStreamPlayer" parent="." unique_id=1639033822]
-stream = ExtResource("4_eix7m")
+[node name="AllSongs" type="Control" parent="." unique_id=743029944]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="morning" type="AudioStreamPlayer" parent="." unique_id=1188912392]
+[node name="morning" type="AudioStreamPlayer" parent="AllSongs" unique_id=1188912392]
 stream = ExtResource("2_eix7m")
 parameters/looping = true
 
-[node name="evening" type="AudioStreamPlayer" parent="." unique_id=2118555076]
+[node name="evening" type="AudioStreamPlayer" parent="AllSongs" unique_id=2118555076]
 stream = ExtResource("3_0dxmn")
+
+[node name="DnB" type="AudioStreamPlayer" parent="AllSongs" unique_id=1639033822]
+stream = ExtResource("4_eix7m")

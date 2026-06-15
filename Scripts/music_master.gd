@@ -3,11 +3,14 @@ var track_1 : AudioStreamPlayer
 var track_2 : AudioStreamPlayer
 var track_3 : AudioStreamPlayer
 
+@onready var totalSongs: Array = $AllSongs.get_children()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	track_1 = $morning
-	track_2 = $evening
-	track_3 = $DnB
+	track_1 = $AllSongs/morning
+	track_2 = $AllSongs/evening
+	track_3 = $AllSongs/DnB
+	print(totalSongs)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
