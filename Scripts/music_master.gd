@@ -1,33 +1,24 @@
 extends Control
-var track_1 : AudioStreamPlayer
-var track_2 : AudioStreamPlayer
-var track_3 : AudioStreamPlayer
 
 @onready var totalSongs: Array = $AllSongs.get_children()
+var currentSong: int = -1
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	track_1 = $AllSongs/morning
-	track_2 = $AllSongs/evening
-	track_3 = $AllSongs/DnB
-	print(totalSongs)
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 	
-
-
+# Play music, connected to clicking on the radio. Loops through all songs in the music_master node, so we can add songs there and the loop will still work.
 func play_music() -> void:
-	if track_1.playing == false and track_2.playing == false:
-		track_1.play()
-	elif track_1.playing == true:
-		track_1.stop()
-		track_2.play()
-	elif track_2.playing == true:
-		track_2.stop()
-		track_3.play()
-	elif track_3.playing:
-		track_3.stop()
-		
+	if currentSong != -1:
+		totalSongs[currentSong].stop()
+	currentSong = (currentSong + 1) % totalSongs.size()
+	if currentSong >= totalSongs.size():
+		currentSong = 0
+	totalSongs[currentSong].play()
+
+# Unused stop function. Signal to this when we have a stop button, if we get that far.
+func stop_music() -> void:
+	totalSongs[currentSong].stop()
