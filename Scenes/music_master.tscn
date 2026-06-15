@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bo84px22cbv0e" path="res://Scripts/music_master.gd" id="1_pwu1w"]
 [ext_resource type="AudioStream" uid="uid://cwbxtgx0jun1y" path="res://Assets/FPO/Morning.mp3" id="2_eix7m"]
 [ext_resource type="AudioStream" uid="uid://dj1jqv4ktx143" path="res://Assets/FPO/Evening.mp3" id="3_0dxmn"]
+[ext_resource type="AudioStream" uid="uid://brn2eruvv8kwg" path="res://Assets/Music/RadioD&B.wav" id="4_eix7m"]
 
 [node name="MusicMaster" type="Control" unique_id=745313441]
 layout_mode = 3
@@ -12,6 +13,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pwu1w")
+
+[node name="DnB" type="AudioStreamPlayer" parent="." unique_id=1639033822]
+stream = ExtResource("4_eix7m")
 
 [node name="morning" type="AudioStreamPlayer" parent="." unique_id=1188912392]
 stream = ExtResource("2_eix7m")

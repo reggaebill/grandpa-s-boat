@@ -1,11 +1,13 @@
 extends Control
 var track_1 : AudioStreamPlayer
 var track_2 : AudioStreamPlayer
+var track_3 : AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	track_1 = $morning
 	track_2 = $evening
+	track_3 = $DnB
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,4 +24,7 @@ func play_music() -> void:
 		track_2.play()
 	elif track_2.playing == true:
 		track_2.stop()
+		track_3.play()
+	elif track_3.playing:
+		track_3.stop()
 		
