@@ -13,7 +13,11 @@ var knobs_complete = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	completeCheck.visible = false
-
+	# Collectible check.
+	if not State.coinCollected:
+		$Collectible/coinButton.show()
+	else:
+		$Collectible/coinButton.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -44,3 +48,8 @@ func _process(_delta: float) -> void:
 
 func _on_back_button_pressed() -> void:
 	SceneTransition.change_scene("res://Scenes/Boat Overview.tscn")
+
+# Collectible button.
+func _on_coin_button_pressed() -> void:
+	State.coinCollected = true
+	$Collectible/coinButton.hide()

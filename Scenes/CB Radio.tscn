@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/CB Radio/cb_radio.gd" id="1_pnfa1"]
 [ext_resource type="Texture2D" uid="uid://dol6g78tacndh" path="res://Assets/Radio/radio bg.jpg" id="2_pnfa1"]
+[ext_resource type="Texture2D" uid="uid://cfixmjsni2m6d" path="res://Assets/Radio/coin.png" id="3_3p8nn"]
 [ext_resource type="Script" uid="uid://d1ndvblgq5c0e" path="res://Scripts/CB Radio/knob_l.gd" id="3_4ch4a"]
 [ext_resource type="Script" uid="uid://tbm5pl0chux7" path="res://Scripts/CB Radio/knobs.gd" id="3_t1sk8"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
@@ -55,6 +56,16 @@ size_flags_horizontal = 4
 position = Vector2(960.5001, 540)
 texture = ExtResource("2_pnfa1")
 metadata/_edit_lock_ = true
+
+[node name="Collectible" type="Node2D" parent="." unique_id=367898156]
+
+[node name="coinButton" type="TextureButton" parent="Collectible" unique_id=860077393]
+offset_left = 1484.0
+offset_top = 857.0
+offset_right = 1740.0
+offset_bottom = 1113.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_3p8nn")
 
 [node name="Knobs" type="Node2D" parent="." unique_id=826647854 node_paths=PackedStringArray("knob_1", "knob_2", "knob_button1", "knob_button2")]
 position = Vector2(0, -2)
@@ -304,6 +315,7 @@ metadata/_edit_lock_ = true
 
 [node name="PauseMenu" parent="Pause" unique_id=1079304872 instance=ExtResource("19_2a6jh")]
 
+[connection signal="pressed" from="Collectible/coinButton" to="." method="_on_coin_button_pressed"]
 [connection signal="button_down" from="Knobs/KnobL/Button" to="Knobs/KnobL" method="_on_button_button_down"]
 [connection signal="button_down" from="Knobs/KnobR/Button" to="Knobs/KnobR" method="_on_button_button_down"]
 [connection signal="area_entered" from="Tubes/AreaTube1" to="Tubes/AreaTube1" method="_on_area_entered"]
