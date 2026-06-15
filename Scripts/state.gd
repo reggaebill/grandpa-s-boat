@@ -18,6 +18,7 @@ var coinCollected:= false
 	# Cabin states.
 var ukuleleCollected:= false
 var wheelPurchased:= false
+var wheelComplete:= false
 
 	# Shop states.
 # Total money should only ever get to 50.

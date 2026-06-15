@@ -5,20 +5,79 @@
 [ext_resource type="Texture2D" uid="uid://7slminc5osp7" path="res://Assets/Cabin/CabinWithWheel.png" id="2_c28uo"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_h4odu"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_f8aqm"]
+[ext_resource type="Texture2D" uid="uid://ck5a6tdaf8fdb" path="res://Assets/Cabin/WheelSprite.png" id="5_cvv4n"]
+[ext_resource type="Texture2D" uid="uid://dn2x31yal8j5q" path="res://Assets/Cabin/Ukulele.png" id="6_74jxe"]
+[ext_resource type="Script" uid="uid://c3juvo42p4b10" path="res://Scripts/Cabin/new_wheel.gd" id="6_bs8s3"]
+[ext_resource type="Script" uid="uid://dr3eyq8nsnuat" path="res://Scripts/Cabin/mount.gd" id="7_iulul"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bs8s3"]
+radius = 62.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iulul"]
+radius = 49.48834
 
 [node name="Cabin" type="Node2D" unique_id=300197136]
 script = ExtResource("1_f8aqm")
 
 [node name="BG" type="Node2D" parent="." unique_id=2054531103]
+metadata/_edit_lock_ = true
 
 [node name="CabinBGVise" type="Sprite2D" parent="BG" unique_id=404555482]
 position = Vector2(960, 540)
 texture = ExtResource("1_ms4um")
+metadata/_edit_lock_ = true
 
 [node name="CabinBGWheel" type="Sprite2D" parent="BG" unique_id=1104283931]
 visible = false
 position = Vector2(960, 540)
 texture = ExtResource("2_c28uo")
+metadata/_edit_lock_ = true
+
+[node name="Collectible" type="Node2D" parent="." unique_id=2099541889]
+
+[node name="UkuleleButton" type="TextureButton" parent="Collectible" unique_id=1473084559]
+offset_left = 1743.0
+offset_top = 851.0
+offset_right = 1999.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("6_74jxe")
+
+[node name="Wheel" type="Node2D" parent="." unique_id=168848664]
+
+[node name="NewWheel" type="Sprite2D" parent="Wheel" unique_id=304369218]
+position = Vector2(712, 264)
+texture = ExtResource("5_cvv4n")
+script = ExtResource("6_bs8s3")
+
+[node name="Button" type="Button" parent="Wheel/NewWheel" unique_id=1068114255]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -333.0
+offset_top = -268.5
+offset_right = -213.0
+offset_bottom = -162.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Area2DWireG" type="Area2D" parent="Wheel/NewWheel" unique_id=1776152172]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wheel/NewWheel/Area2DWireG" unique_id=1896632014]
+position = Vector2(-10, -12)
+shape = SubResource("CircleShape2D_bs8s3")
+
+[node name="Mount" type="Node2D" parent="." unique_id=731363525 node_paths=PackedStringArray("wheelSprite")]
+script = ExtResource("7_iulul")
+wheelSprite = NodePath("../Wheel/NewWheel")
+
+[node name="MountingPoint" type="Area2D" parent="Mount" unique_id=1942094544]
+position = Vector2(1072.5122, 848.76746)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mount/MountingPoint" unique_id=1995326595]
+shape = SubResource("CircleShape2D_iulul")
 
 [node name="Control" type="Control" parent="." unique_id=474373832]
 layout_mode = 3
@@ -44,4 +103,10 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_h4odu")
 texture_pressed = ExtResource("4_f8aqm")
 
+[connection signal="pressed" from="Collectible/UkuleleButton" to="." method="_on_ukulele_button_pressed"]
+[connection signal="button_down" from="Wheel/NewWheel/Button" to="Wheel/NewWheel" method="_on_button_button_down"]
+[connection signal="button_up" from="Wheel/NewWheel/Button" to="Wheel/NewWheel" method="_on_button_button_up"]
+[connection signal="wheelComplete" from="Mount" to="." method="_on_mount_wheel_complete"]
+[connection signal="area_entered" from="Mount/MountingPoint" to="Mount" method="_on_mounting_point_area_entered"]
+[connection signal="area_exited" from="Mount/MountingPoint" to="Mount" method="_on_mounting_point_area_exited"]
 [connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]
