@@ -5,6 +5,8 @@
 [ext_resource type="FontFile" uid="uid://2gv1dikmg3s8" path="res://Assets/Fonts/SpecialElite.ttf" id="3_3ps1r"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_k6jq0"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_3ps1r"]
+[ext_resource type="Texture2D" uid="uid://cjigsogogtxrn" path="res://Assets/Shop/ShopWires.png" id="4_s8dlv"]
+[ext_resource type="Texture2D" uid="uid://i33nw4sc3rr2" path="res://Assets/Shop/ShopWheel.png" id="5_tyrku"]
 [ext_resource type="FontFile" uid="uid://ll8u73k67l5r" path="res://Assets/Fonts/myoldrem.ttf" id="6_3ps1r"]
 
 [sub_resource type="Theme" id="Theme_ymrm4"]
@@ -63,6 +65,72 @@ offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("1_a0mxf")
+
+[node name="Items" type="MarginContainer" parent="." unique_id=382823640]
+offset_left = 258.0
+offset_top = 192.0
+offset_right = 1573.0
+offset_bottom = 689.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Items" unique_id=745738896]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Items/HBoxContainer" unique_id=870664949]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="WiresPrice" type="Label" parent="Items/HBoxContainer/VBoxContainer" unique_id=1206369318]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16470589)
+theme_override_colors/font_outline_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = ExtResource("3_3ps1r")
+theme_override_font_sizes/font_size = 60
+text = "$5"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="WiresButton" type="TextureButton" parent="Items/HBoxContainer/VBoxContainer" unique_id=413367351]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_s8dlv")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Items/HBoxContainer" unique_id=498154248]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="WheelPrice" type="Label" parent="Items/HBoxContainer/VBoxContainer2" unique_id=638232011]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16470589)
+theme_override_colors/font_outline_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = ExtResource("3_3ps1r")
+theme_override_font_sizes/font_size = 60
+text = "$40"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="WheelButton" type="TextureButton" parent="Items/HBoxContainer/VBoxContainer2" unique_id=1919624044]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_tyrku")
 
 [node name="MoneyCounter" type="ColorRect" parent="." unique_id=265761217]
 offset_left = 1625.0
@@ -137,5 +205,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_k6jq0")
 texture_pressed = ExtResource("4_3ps1r")
 
+[connection signal="pressed" from="Items/HBoxContainer/VBoxContainer/WiresButton" to="." method="_on_wires_button_pressed"]
+[connection signal="pressed" from="Items/HBoxContainer/VBoxContainer2/WheelButton" to="." method="_on_wheel_button_pressed"]
 [connection signal="pressed" from="SellButton" to="." method="_on_sell_button_pressed"]
 [connection signal="pressed" from="Control/Back Button" to="." method="_on_back_button_pressed"]
