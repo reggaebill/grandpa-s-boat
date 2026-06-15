@@ -6,6 +6,9 @@ var currentSong: int = -1
 
 func _ready() -> void:
 	pass
+		# This doesn't work yet.
+	#for song in totalSongs:
+		#song.finished.connect(_on_song_finished)
 
 func _process(_delta: float) -> void:
 	pass
@@ -22,3 +25,7 @@ func play_music() -> void:
 # Unused stop function. Signal to this when we have a stop button, if we get that far.
 func stop_music() -> void:
 	totalSongs[currentSong].stop()
+
+# Test func, doesn't work yet.
+func _on_song_finished():
+	print("Done playing.")
