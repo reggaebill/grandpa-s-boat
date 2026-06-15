@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://bjr65n5hdq43m" path="res://Scripts/CB Radio/tube_2.gd" id="10_t1sk8"]
 [ext_resource type="Script" uid="uid://7i58llh1mwmh" path="res://Scripts/CB Radio/tube_3.gd" id="11_2a6jh"]
 [ext_resource type="Texture2D" uid="uid://c60k5xw16u3us" path="res://Assets/FPO/Eo_circle_green_checkmark.svg.png" id="14_3sx2v"]
+[ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="19_2a6jh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3p8nn"]
 radius = 68.0
@@ -298,6 +299,10 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.49411765)
 metadata/_edit_lock_ = true
+
+[node name="Pause" type="CanvasLayer" parent="." unique_id=1779539001]
+
+[node name="PauseMenu" parent="Pause" unique_id=1079304872 instance=ExtResource("19_2a6jh")]
 
 [connection signal="button_down" from="Knobs/KnobL/Button" to="Knobs/KnobL" method="_on_button_button_down"]
 [connection signal="button_down" from="Knobs/KnobR/Button" to="Knobs/KnobR" method="_on_button_button_down"]

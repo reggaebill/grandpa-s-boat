@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ck5a6tdaf8fdb" path="res://Assets/Cabin/WheelSprite.png" id="7_utpnu"]
 [ext_resource type="Texture2D" uid="uid://dkfuaee7gphj1" path="res://Assets/FPO/boombox.webp" id="8_omv04"]
 [ext_resource type="Script" uid="uid://cmjjl25fltlcv" path="res://Scripts/boombox.gd" id="9_x1ki7"]
+[ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="11_x1ki7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3uoi3"]
 shader = ExtResource("7_3uoi3")
@@ -121,6 +122,10 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.49411765)
 metadata/_edit_lock_ = true
+
+[node name="Pause" type="CanvasLayer" parent="." unique_id=1866695734]
+
+[node name="PauseMenu" parent="Pause" unique_id=1079304872 instance=ExtResource("11_x1ki7")]
 
 [connection signal="pressed" from="Interactives/Hull" to="." method="_on_hull_pressed"]
 [connection signal="pressed" from="Interactives/Engine" to="." method="_on_engine_pressed"]
