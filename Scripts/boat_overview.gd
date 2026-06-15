@@ -29,3 +29,8 @@ func _on_cb_radio_pressed() -> void:
 func _on_cabin_pressed() -> void:
 	print("cabin")
 	SceneTransition.change_scene("res://Scenes/cabin.tscn")
+
+
+func _on_store_sign_pressed() -> void:
+	print("shop")
+	SceneTransition.change_scene("res://Scenes/shop.tscn")
