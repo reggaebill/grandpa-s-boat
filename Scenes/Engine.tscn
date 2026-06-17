@@ -24,8 +24,6 @@
 [ext_resource type="Script" uid="uid://q14v63xj7r2r" path="res://Scenes/green_wire.gd" id="16_odbwi"]
 [ext_resource type="Script" uid="uid://by3wlnfrj4gli" path="res://Scenes/red_wire.gd" id="18_c0ads"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="24_xmv2s"]
-[ext_resource type="AudioStream" uid="uid://cd37l6ek5p2tc" path="res://Assets/Engine/EngineSFX/Zap.mp3" id="25_w76hs"]
-[ext_resource type="AudioStream" uid="uid://bml8qoasq4qtj" path="res://Assets/Engine/EngineSFX/EngineStartup.mp3" id="26_big1x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmagb"]
 radius = 13.038404
@@ -264,18 +262,6 @@ texture_pressed = ExtResource("4_lj1rd")
 [node name="Pause" type="CanvasLayer" parent="." unique_id=78236443]
 
 [node name="PauseMenu" parent="Pause" unique_id=1079304872 instance=ExtResource("24_xmv2s")]
-
-[node name="EngineSounds" type="Control" parent="." unique_id=983778976]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Zap" type="AudioStreamPlayer" parent="EngineSounds" unique_id=1343512346]
-stream = ExtResource("25_w76hs")
-
-[node name="EngineStartup" type="AudioStreamPlayer" parent="EngineSounds" unique_id=1307319638]
-stream = ExtResource("26_big1x")
 
 [connection signal="pressed" from="Collectible/CardPack" to="." method="_on_card_pack_pressed"]
 [connection signal="area_entered" from="ControlPanel/ContactPlate1" to="ControlPanel/ContactPlate1" method="_on_area_entered"]

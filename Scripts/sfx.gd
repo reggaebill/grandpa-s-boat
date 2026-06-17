@@ -5,6 +5,11 @@ extends Control
 @onready var cbradio_tubes: AudioStreamPlayer = $cbradio_tubes
 @onready var cbradio_tubeplug: AudioStreamPlayer = $cbradio_tubeplug
 
+@onready var collectible_get: AudioStreamPlayer = $CollectibleGet
+@onready var engine_startup: AudioStreamPlayer = $EngineSounds/EngineStartup
+@onready var zap: AudioStreamPlayer = $EngineSounds/Zap
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
