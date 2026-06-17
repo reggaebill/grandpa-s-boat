@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0oxvsisbmhil"
+path="res://.godot/imported/WavesAmbience.mp3-b7439a9b3d604df386669556b9c67e1d.mp3str"
+
+[deps]
+
+source_file="res://Assets/UI Sfx/WavesAmbience.mp3"
+dest_files=["res://.godot/imported/WavesAmbience.mp3-b7439a9b3d604df386669556b9c67e1d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
