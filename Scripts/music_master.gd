@@ -9,11 +9,11 @@ var currentSong: int = -1
 func _ready() -> void:
 	waves_ambience.play()
 		# This doesn't work yet.
-	#for song in totalSongs:
-		#song.finished.connect(_on_song_finished)
+	for song in totalSongs:
+		song.finished.connect(_on_song_finished)
 
-func _process(_delta: float) -> void:
-	pass
+#func _process(_delta: float) -> void:
+	#pass
 	
 # Play music, connected to clicking on the radio. Loops through all songs in the music_master node, so we can add songs there and the loop will still work.
 func play_music() -> void:
@@ -31,3 +31,4 @@ func stop_music() -> void:
 # Test func, doesn't work yet.
 func _on_song_finished():
 	print("Done playing.")
+	play_music()
