@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhbc2rgpq8w8j"
+path="res://.godot/imported/CollectibleGet.mp3-df0325ad76cd7c77a16192928c915cb0.mp3str"
+
+[deps]
+
+source_file="res://Assets/UI Sfx/CollectibleGet.mp3"
+dest_files=["res://.godot/imported/CollectibleGet.mp3-df0325ad76cd7c77a16192928c915cb0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
