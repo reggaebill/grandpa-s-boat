@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drngggr4spdr0"]
 
 [ext_resource type="Script" uid="uid://bo84px22cbv0e" path="res://Scripts/music_master.gd" id="1_pwu1w"]
+[ext_resource type="AudioStream" uid="uid://bt3xcfi53b56v" path="res://Assets/Music/EPianoInterludeRadio.mp3" id="4_0dxmn"]
 [ext_resource type="AudioStream" uid="uid://brn2eruvv8kwg" path="res://Assets/Music/RadioD&B.wav" id="4_eix7m"]
 [ext_resource type="AudioStream" uid="uid://dje63c7dosdjl" path="res://Assets/Music/SteelDrumsJamRadio.mp3" id="5_0dxmn"]
 
@@ -23,5 +24,8 @@ stream = ExtResource("4_eix7m")
 
 [node name="SteelDrumsJamRadio" type="AudioStreamPlayer" parent="AllSongs" unique_id=182050616]
 stream = ExtResource("5_0dxmn")
+
+[node name="EPianoInterludeRadio" type="AudioStreamPlayer" parent="AllSongs" unique_id=1467406077]
+stream = ExtResource("4_0dxmn")
 
 [node name="Empty" type="AudioStreamPlayer" parent="AllSongs" unique_id=417126550]
