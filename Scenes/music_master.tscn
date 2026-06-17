@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bt3xcfi53b56v" path="res://Assets/Music/EPianoInterludeRadio.mp3" id="4_0dxmn"]
 [ext_resource type="AudioStream" uid="uid://brn2eruvv8kwg" path="res://Assets/Music/RadioD&B.wav" id="4_eix7m"]
 [ext_resource type="AudioStream" uid="uid://dje63c7dosdjl" path="res://Assets/Music/SteelDrumsJamRadio.mp3" id="5_0dxmn"]
+[ext_resource type="AudioStream" uid="uid://d0oxvsisbmhil" path="res://Assets/UI Sfx/WavesAmbience.mp3" id="5_mmn2n"]
 
 [node name="MusicMaster" type="Control" unique_id=745313441]
 layout_mode = 3
@@ -21,11 +22,23 @@ offset_bottom = 40.0
 
 [node name="DnB" type="AudioStreamPlayer" parent="AllSongs" unique_id=1639033822]
 stream = ExtResource("4_eix7m")
+volume_db = -1.225
 
 [node name="SteelDrumsJamRadio" type="AudioStreamPlayer" parent="AllSongs" unique_id=182050616]
 stream = ExtResource("5_0dxmn")
+volume_db = -1.825
 
 [node name="EPianoInterludeRadio" type="AudioStreamPlayer" parent="AllSongs" unique_id=1467406077]
 stream = ExtResource("4_0dxmn")
+volume_db = -1.825
 
 [node name="Empty" type="AudioStreamPlayer" parent="AllSongs" unique_id=417126550]
+
+[node name="Ambience" type="Control" parent="." unique_id=1223164041]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WavesAmbience" type="AudioStreamPlayer" parent="Ambience" unique_id=490145273]
+stream = ExtResource("5_mmn2n")
+volume_db = -14.999

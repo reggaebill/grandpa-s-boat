@@ -1,11 +1,13 @@
 extends Control
 
 @onready var totalSongs: Array = $AllSongs.get_children()
+@onready var waves_ambience: AudioStreamPlayer = $Ambience/WavesAmbience
+
 var currentSong: int = -1
 
 
 func _ready() -> void:
-	pass
+	waves_ambience.play()
 		# This doesn't work yet.
 	#for song in totalSongs:
 		#song.finished.connect(_on_song_finished)
