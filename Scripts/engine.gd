@@ -7,6 +7,10 @@ extends Node2D
 @onready var cardPack: TextureButton = $Collectible/CardPack
 @onready var replacementParts: Node2D = $ReplacementParts
 @onready var newParts: Node2D = $NewParts
+@onready var zap: AudioStreamPlayer = $EngineSounds/Zap
+@onready var engine_startup: AudioStreamPlayer = $EngineSounds/EngineStartup
+
+
 
 func _ready() -> void:
 		# Check the collectible status.
@@ -38,11 +42,11 @@ func _ready() -> void:
 		replacementParts.hide()
 		newParts.hide()
 	
-func _process(_delta: float) -> void:
+#func _process(_delta: float) -> void:
 	# Check for completion signals.
 	#print (State.yellowGoal, State.greenGoal, State.redGoal)
-	if State.yellowGoal == true and State.greenGoal == true and State.redGoal == true:
-		State.engineFixed = true
+	#if State.yellowGoal == true and State.greenGoal == true and State.redGoal == true:
+		#State.engineFixed = true
 	
 func _on_back_button_pressed() -> void:
 	print("back")
@@ -55,9 +59,21 @@ func _on_card_pack_pressed() -> void:
 
 func _yellowWireComplete() -> void:
 	State.yellowGoal = true
-
+	zap.play()
+	if State.yellowGoal == true and State.greenGoal == true and State.redGoal == true:
+		State.engineFixed = true
+		engine_startup.play()
+		
 func _greenWireComplete() -> void:
 	State.greenGoal = true
-
+	zap.play()
+	if State.yellowGoal == true and State.greenGoal == true and State.redGoal == true:
+		State.engineFixed = true
+		engine_startup.play()
+		
 func _redWireComplete() -> void:
 	State.redGoal = true
+	zap.play()
+	if State.yellowGoal == true and State.greenGoal == true and State.redGoal == true:
+		State.engineFixed = true
+		engine_startup.play()

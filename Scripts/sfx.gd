@@ -4,6 +4,7 @@ extends Control
 @onready var button_click: AudioStreamPlayer = $button_click
 @onready var cbradio_tubes: AudioStreamPlayer = $cbradio_tubes
 @onready var cbradio_tubeplug: AudioStreamPlayer = $cbradio_tubeplug
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass

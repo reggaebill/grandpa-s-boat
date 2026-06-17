@@ -5,9 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://dck8deuvtgklj" path="res://Assets/UI Sfx/button sounds 2.wav" id="3_ar3tc"]
 [ext_resource type="AudioStream" uid="uid://j3cta6pghfjf" path="res://Assets/UI Sfx/tubes sounds.wav" id="4_14lcj"]
 [ext_resource type="AudioStream" uid="uid://dh0e5ihq5mp84" path="res://Assets/UI Sfx/tube_plug.wav" id="5_ar3tc"]
-[ext_resource type="AudioStream" uid="uid://cd37l6ek5p2tc" path="res://Assets/Engine/EngineSFX/Zap.mp3" id="6_14lcj"]
 [ext_resource type="AudioStream" uid="uid://dhbc2rgpq8w8j" path="res://Assets/UI Sfx/CollectibleGet.mp3" id="6_c4usm"]
-[ext_resource type="AudioStream" uid="uid://bml8qoasq4qtj" path="res://Assets/Engine/EngineSFX/EngineStartup.mp3" id="7_em1ey"]
 
 [node name="sfx" type="Control" unique_id=542720609]
 layout_mode = 3
@@ -42,14 +40,3 @@ stream = ExtResource("5_ar3tc")
 
 [node name="CollectibleGet" type="AudioStreamPlayer" parent="." unique_id=2085225254]
 stream = ExtResource("6_c4usm")
-
-[node name="EngineSounds" type="Control" parent="." unique_id=1599950835]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Zap" type="AudioStreamPlayer" parent="EngineSounds" unique_id=256558432]
-stream = ExtResource("6_14lcj")
-
-[node name="EngineStartup" type="AudioStreamPlayer" parent="EngineSounds" unique_id=1693533771]
-stream = ExtResource("7_em1ey")
