@@ -205,6 +205,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_k6jq0")
 texture_pressed = ExtResource("4_3ps1r")
 
+[connection signal="junkSold" from="." to="." method="_on_junk_sold"]
 [connection signal="pressed" from="Items/HBoxContainer/VBoxContainer/WiresButton" to="." method="_on_wires_button_pressed"]
 [connection signal="pressed" from="Items/HBoxContainer/VBoxContainer2/WheelButton" to="." method="_on_wheel_button_pressed"]
 [connection signal="pressed" from="SellButton" to="." method="_on_sell_button_pressed"]

@@ -5,9 +5,14 @@ extends Control
 @onready var cbradio_tubes: AudioStreamPlayer = $cbradio_tubes
 @onready var cbradio_tubeplug: AudioStreamPlayer = $cbradio_tubeplug
 
+# Collectible.
 @onready var collectible_get: AudioStreamPlayer = $CollectibleGet
+# Engine Sounds.
 @onready var engine_startup: AudioStreamPlayer = $EngineSounds/EngineStartup
 @onready var zap: AudioStreamPlayer = $EngineSounds/Zap
+# Shop Sounds.
+@onready var shop_bell: AudioStreamPlayer = $ShopSounds/ShopBell
+@onready var register_ding: AudioStreamPlayer = $ShopSounds/RegisterDing
 
 
 # Called when the node enters the scene tree for the first time.

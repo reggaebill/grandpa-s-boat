@@ -7,10 +7,12 @@ extends Node2D
 @onready var wires_price: Label = $Items/HBoxContainer/VBoxContainer/WiresPrice
 @onready var wheel_price: Label = $Items/HBoxContainer/VBoxContainer2/WheelPrice
 
+signal junkSold
 
 func _ready() -> void:
 	# When scene loads, set the money display to show whatever is stored in state.gd.
 	updateMoney()
+	sfx.play_sfx(sfx.shop_bell)
 	# Temp flag changing. Remove after shop debugging done.
 	State.ukuleleCollected = true
 	State.bassCollected = true
@@ -30,18 +32,22 @@ func _on_sell_button_pressed() -> void:
 		State.money = State.money + 10
 		updateMoney()
 		State.cardSold = true
+		junkSold.emit()
 	if State.bassCollected and not State.bassSold:
 		State.money = State.money + 20
 		updateMoney()
 		State.bassSold = true
+		junkSold.emit()
 	if State.coinCollected and not State.coinSold:
 		State.money = State.money + 15
 		updateMoney()
 		State.coinSold = true
+		junkSold.emit()
 	if State.ukuleleCollected and not State.ukuleleSold:
 		State.money = State.money + 5
 		updateMoney()
 		State.ukuleleSold = true
+		junkSold.emit()
 
 # Purchase the wires button.
 func _on_wires_button_pressed() -> void:
@@ -60,3 +66,7 @@ func _on_wheel_button_pressed() -> void:
 		updateMoney()
 		wheel_button.hide()
 		wheel_price.hide()
+
+
+func _on_junk_sold() -> void:
+	sfx.play_sfx(sfx.register_ding)
