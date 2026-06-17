@@ -22,6 +22,7 @@ offset_bottom = 40.0
 [node name="DnB" type="AudioStreamPlayer" parent="AllSongs" unique_id=1639033822]
 stream = ExtResource("4_eix7m")
 
+<<<<<<< Updated upstream
 [node name="SteelDrumsJamRadio" type="AudioStreamPlayer" parent="AllSongs" unique_id=182050616]
 stream = ExtResource("5_0dxmn")
 
@@ -29,3 +30,11 @@ stream = ExtResource("5_0dxmn")
 stream = ExtResource("4_0dxmn")
 
 [node name="Empty" type="AudioStreamPlayer" parent="AllSongs" unique_id=417126550]
+=======
+[node name="BG Noise" type="Control" parent="." unique_id=589180592]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ocean Sounds" type="AudioStreamPlayer" parent="BG Noise" unique_id=1069416268]
+>>>>>>> Stashed changes
