@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://0yhwix7lc6nw"]
+
+[ext_resource type="Script" uid="uid://ddxtbtuybeuur" path="res://Scripts/sfx.gd" id="1_tcyhk"]
+[ext_resource type="AudioStream" uid="uid://b67tgknl0wst" path="res://Assets/UI Sfx/button sounds 1.wav" id="2_ivd03"]
+[ext_resource type="AudioStream" uid="uid://dck8deuvtgklj" path="res://Assets/UI Sfx/button sounds 2.wav" id="3_ar3tc"]
+[ext_resource type="AudioStream" uid="uid://j3cta6pghfjf" path="res://Assets/UI Sfx/tubes sounds.wav" id="4_14lcj"]
+[ext_resource type="AudioStream" uid="uid://dh0e5ihq5mp84" path="res://Assets/UI Sfx/tube_plug.wav" id="5_ar3tc"]
+
+[node name="sfx" type="Control" unique_id=542720609]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tcyhk")
+
+[node name="button_hover" type="AudioStreamPlayer" parent="." unique_id=1439858338]
+stream = ExtResource("2_ivd03")
+
+[node name="button_click" type="AudioStreamPlayer" parent="." unique_id=1127517772]
+stream = ExtResource("3_ar3tc")
+
+[node name="cbradio_knobs" type="AudioStreamPlayer" parent="." unique_id=1862484069]
+
+[node name="cbradio_tubes" type="AudioStreamPlayer" parent="." unique_id=1610442656]
+stream = ExtResource("4_14lcj")
+volume_db = -8.994
+pitch_scale = 0.37
+
+[node name="cbradio_tubeplug" type="AudioStreamPlayer" parent="." unique_id=1014896555]
+stream = ExtResource("5_ar3tc")
+
+[node name="cbradio_dial" type="AudioStreamPlayer" parent="." unique_id=1713951495]
+
+[node name="cbradio_static" type="AudioStreamPlayer" parent="." unique_id=125713547]
+
+[node name="cbradio_comms" type="AudioStreamPlayer" parent="." unique_id=933672462]

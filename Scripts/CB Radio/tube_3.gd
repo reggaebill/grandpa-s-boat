@@ -12,6 +12,7 @@ func _process(delta):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_button_button_down():
+	sfx.play_sfx(sfx.cbradio_tubes)
 	dragging = true
 	of = get_global_mouse_position() - global_position
 

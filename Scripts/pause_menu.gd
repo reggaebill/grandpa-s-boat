@@ -19,6 +19,7 @@ func pause():
 
 func _on_resume_button_pressed() -> void:
 	resume()
+	sfx.click()
 
 
 func testEsc():
@@ -31,40 +32,42 @@ func testEsc():
 
 func _on_main_menu_button_pressed() -> void:
 	resume()
+	sfx.click()
 	SceneTransition.change_scene("res://Scenes/main_menu.tscn")
 
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+	sfx.click()
 
 #sounds functions
-# func _on_resume_button_mouse_entered() -> void:
-# 	MenuSounds.hover()
+func _on_resume_button_mouse_entered() -> void:
+	sfx.hover()
 
 
-# func _on_restart_button_mouse_entered() -> void:
-# 	MenuSounds.hover()
+func _on_restart_button_mouse_entered() -> void:
+	sfx.hover()
 
 
-# func _on_main_menu_button_mouse_entered() -> void:
-# 	MenuSounds.hover()
+func _on_main_menu_button_mouse_entered() -> void:
+	sfx.hover()
 
 
-# func _on_quit_button_mouse_entered() -> void:
-# 	MenuSounds.hover()
+func _on_quit_button_mouse_entered() -> void:
+	sfx.hover()
 
 
-# func _on_quit_button_mouse_exited() -> void:
-# 	MenuSounds.release_hover()
+func _on_quit_button_mouse_exited() -> void:
+	sfx.release_hover()
 
 
-# func _on_main_menu_button_mouse_exited() -> void:
-# 	MenuSounds.release_hover()
+func _on_main_menu_button_mouse_exited() -> void:
+	sfx.release_hover()
 
 
-# func _on_restart_button_mouse_exited() -> void:
-# 	MenuSounds.release_hover()
+func _on_restart_button_mouse_exited() -> void:
+	sfx.release_hover()
 
 
-# func _on_resume_button_mouse_exited() -> void:
-# 	MenuSounds.release_hover()
+func _on_resume_button_mouse_exited() -> void:
+	sfx.release_hover()
