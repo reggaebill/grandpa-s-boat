@@ -18,14 +18,6 @@ signal greenWireComplete
 func _ready() -> void:
 	pass
 
-func _process(_delta: float) -> void:
-	#verify which wire entered and handle accordingly
-	if wire_entered == true and active_wire == greenWire:
-		if greenWire.dragging == false:
-			greenWire.visible = false
-			wireNewG.visible = true
-			greenWireComplete.emit()
-
 func _on_area_entered(area: Area2D) -> void:
 	wire_entered = true
 	# Checks which wire is entering by name, then sets that as the active wire.
@@ -38,3 +30,9 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_area_exited(_area: Area2D) -> void:
 	wire_entered = false
+
+func _on_green_wire_green_wire_dropped() -> void:
+	if wire_entered == true and active_wire == greenWire and greenWire.dragging == false:
+		greenWire.visible = false
+		wireNewG.visible = true
+		greenWireComplete.emit()

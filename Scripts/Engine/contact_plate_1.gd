@@ -18,30 +18,6 @@ signal yellowWireComplete
 func _ready() -> void:
 	pass
 
-func _process(_delta: float) -> void:
-	#verify which wire entered and handle accordingly
-	if wire_entered == true and active_wire == yellowWire:
-		if yellowWire.dragging == false:
-			yellowWire.visible = false
-			wireNewY.visible = true
-			yellowWireComplete.emit()
-			
-	#elif wire_entered == true and active_wire == greenWire:
-		#if wireNewG.visible == true:
-			#pass
-		#elif greenWire.dragging == true:
-			#pass
-		#elif greenWire.dragging == false:
-			#greenWire.position = position
-	#elif wire_entered == true and active_wire == redWire:
-		#if wireNewR.visible == true:
-			#pass
-		#elif redWire.dragging == true:
-			#pass
-		#elif redWire.dragging == false:
-			#redWire.position = position
-
-
 
 func _on_area_entered(area: Area2D) -> void:
 	wire_entered = true
@@ -56,3 +32,10 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_area_exited(_area: Area2D) -> void:
 	wire_entered = false
+
+
+func _on_yellow_wire_yellow_wire_dropped() -> void:
+	if wire_entered == true and active_wire == yellowWire:
+		yellowWire.visible = false
+		wireNewY.visible = true
+		yellowWireComplete.emit()

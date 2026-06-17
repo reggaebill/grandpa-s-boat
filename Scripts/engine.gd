@@ -14,6 +14,8 @@ extends Node2D
 
 func _ready() -> void:
 		# Check the collectible status.
+	#zap.play()
+	#engine_startup.play()
 	if State.cardCollected == true:
 		cardPack.hide()
 	else:

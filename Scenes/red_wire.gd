@@ -3,6 +3,8 @@ extends Sprite2D
 var dragging = false
 var of = Vector2(0, 0)
 
+signal redWireDropped
+
 func _process(_delta):
 	if dragging:
 		position = position.lerp(get_global_mouse_position() - of, 0.2)
@@ -19,3 +21,4 @@ func _on_button_button_down() -> void:
 
 func _on_button_button_up() -> void:
 	dragging = false
+	redWireDropped.emit()
