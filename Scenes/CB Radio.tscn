@@ -7,18 +7,27 @@
 [ext_resource type="Script" uid="uid://tbm5pl0chux7" path="res://Scripts/CB Radio/knobs.gd" id="3_t1sk8"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
 [ext_resource type="Script" uid="uid://csfu11ahoiyrm" path="res://Scripts/CB Radio/area_tube_1.gd" id="4_14p1o"]
-[ext_resource type="Texture2D" uid="uid://b6y6ds4n0j7m2" path="res://Assets/Radio/knob.png" id="4_kaavu"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_uvcak"]
 [ext_resource type="Script" uid="uid://bvx0timt70cn7" path="res://Scripts/CB Radio/knob_r.gd" id="5_3sx2v"]
 [ext_resource type="Script" uid="uid://byv04htb562tw" path="res://Scripts/CB Radio/tube_1.gd" id="5_gmwue"]
 [ext_resource type="Script" uid="uid://b3ug302twvn85" path="res://Scripts/CB Radio/area_tube_2.gd" id="6_4ch4a"]
+[ext_resource type="Texture2D" uid="uid://cwaklnx836gvk" path="res://Assets/Radio/knob0.png" id="6_j00dc"]
 [ext_resource type="Script" uid="uid://c5bvjlfskunic" path="res://Scripts/CB Radio/area_tube_3.gd" id="7_3sx2v"]
+[ext_resource type="Texture2D" uid="uid://dfyqutqljo231" path="res://Assets/Radio/knob1.png" id="7_7cee3"]
 [ext_resource type="Shader" uid="uid://b6bikedpbovig" path="res://Shaders/new_shader.gdshader" id="7_uvcak"]
+[ext_resource type="Texture2D" uid="uid://djk54e7u0o754" path="res://Assets/Radio/knob2.png" id="8_lkspv"]
 [ext_resource type="Texture2D" uid="uid://bsiagdu4ro053" path="res://Assets/Radio/tube on.png" id="9_3p8nn"]
+[ext_resource type="Texture2D" uid="uid://dyxrrg3d8rwb1" path="res://Assets/Radio/knob3.png" id="9_x1jlf"]
 [ext_resource type="Script" uid="uid://bjr65n5hdq43m" path="res://Scripts/CB Radio/tube_2.gd" id="10_t1sk8"]
+[ext_resource type="Texture2D" uid="uid://dfheq4sdbjkjs" path="res://Assets/Radio/knob4.png" id="10_wroxb"]
 [ext_resource type="Script" uid="uid://7i58llh1mwmh" path="res://Scripts/CB Radio/tube_3.gd" id="11_2a6jh"]
+[ext_resource type="Texture2D" uid="uid://dvj044dm2j0na" path="res://Assets/Radio/knob5.png" id="11_3hwed"]
 [ext_resource type="Texture2D" uid="uid://c17674ns6tggc" path="res://Assets/Radio/tube off.png" id="12_3xt2p"]
+[ext_resource type="Texture2D" uid="uid://dn1ymauyhb8jj" path="res://Assets/Radio/knob6.png" id="12_h85md"]
+[ext_resource type="Texture2D" uid="uid://dtdysioqjlbjv" path="res://Assets/Radio/knob7.png" id="13_1pc10"]
 [ext_resource type="Texture2D" uid="uid://c60k5xw16u3us" path="res://Assets/FPO/Eo_circle_green_checkmark.svg.png" id="14_3sx2v"]
+[ext_resource type="Texture2D" uid="uid://o7obtt6e3toc" path="res://Assets/Radio/knob8.png" id="14_u8moy"]
+[ext_resource type="Texture2D" uid="uid://dxkfmttkre6xs" path="res://Assets/Radio/knob9.png" id="15_qhsmb"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="19_2a6jh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3p8nn"]
@@ -83,21 +92,78 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 498.0
-offset_top = 757.0
-offset_right = 538.0
-offset_bottom = 797.0
+offset_left = 574.0
+offset_top = 644.0
+offset_right = 614.0
+offset_bottom = 684.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 script = ExtResource("3_4ch4a")
 
-[node name="knobL_Sprite" type="Sprite2D" parent="Knobs/KnobL" unique_id=1424425316]
+[node name="Knobs" type="Node2D" parent="Knobs/KnobL" unique_id=1428630977]
+
+[node name="0" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=1424425316]
 position = Vector2(19.5, 18.5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_kaavu")
+texture = ExtResource("6_j00dc")
+
+[node name="1" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=1517029813]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_7cee3")
+
+[node name="2" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=802314502]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_lkspv")
+
+[node name="3" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=368144990]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_x1jlf")
+
+[node name="4" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=760589327]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_wroxb")
+
+[node name="5" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=1470176027]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_3hwed")
+
+[node name="6" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=502082489]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_h85md")
+
+[node name="7" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=1859133735]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_1pc10")
+
+[node name="8" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=1402502149]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_u8moy")
+
+[node name="9" type="Sprite2D" parent="Knobs/KnobL/Knobs" unique_id=1827309175]
+visible = false
+position = Vector2(19.5, 18.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_qhsmb")
 
 [node name="knobL_Counter" type="RichTextLabel" parent="Knobs/KnobL" unique_id=992524912]
+z_index = -4
 layout_mode = 0
 offset_left = 49.0
 offset_top = 2.5
@@ -121,21 +187,78 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1228.0
-offset_top = 766.0
-offset_right = 1268.0
-offset_bottom = 806.0
+offset_left = 908.0
+offset_top = 645.0
+offset_right = 948.0
+offset_bottom = 685.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 script = ExtResource("5_3sx2v")
 
-[node name="knobR_Sprite" type="Sprite2D" parent="Knobs/KnobR" unique_id=1296542531]
+[node name="Knobs" type="Node2D" parent="Knobs/KnobR" unique_id=1142927590]
+
+[node name="0" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=1296542531]
 position = Vector2(20, 19.5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_kaavu")
+texture = ExtResource("6_j00dc")
+
+[node name="1" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=1300215802]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_7cee3")
+
+[node name="2" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=1980030490]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_lkspv")
+
+[node name="3" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=334399701]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_x1jlf")
+
+[node name="4" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=592643174]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_wroxb")
+
+[node name="5" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=1102816170]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_3hwed")
+
+[node name="6" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=1956805248]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_h85md")
+
+[node name="7" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=7751465]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_1pc10")
+
+[node name="8" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=1922422406]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_u8moy")
+
+[node name="9" type="Sprite2D" parent="Knobs/KnobR/Knobs" unique_id=1158440002]
+visible = false
+position = Vector2(20, 19.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_qhsmb")
 
 [node name="knobR_Counter" type="RichTextLabel" parent="Knobs/KnobR" unique_id=1991756467]
+z_index = -5
 layout_mode = 0
 offset_left = -49.0
 offset_top = -1.5

@@ -3,6 +3,7 @@ extends Control
 var knob_counter : RichTextLabel
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 var current_number = numbers[0]
+@onready var knobs: Array = $Knobs.get_children()
 
 func _ready() -> void:
 	knob_counter = $knobL_Counter
@@ -11,8 +12,12 @@ func _ready() -> void:
 func _on_button_button_down() -> void:
 	current_number = (current_number + 1) % numbers.size()
 	knob_counter.text = str(current_number)
+	show_only_sprite(current_number) # Show the sprite corresponding to the current number, hide the others
 
-
+func show_only_sprite(index: int) -> void:
+	for i in range(knobs.size()):
+		# Set true for the target index, false for everything else
+		knobs[i].visible = (i == index)
 
 
 
