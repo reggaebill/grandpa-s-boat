@@ -6,6 +6,11 @@ var current_number = numbers[0]
 @onready var knobs: Array = $Knobs.get_children()
 
 func _ready() -> void:
+	if State.CB_Radio_complete == true:
+		current_number = 6
+		knob_counter = $knobL_Counter
+		knob_counter.text = str(current_number)
+		show_only_sprite(current_number) # Show the sprite corresponding to the current number, hide the others
 	knob_counter = $knobL_Counter
 	knob_counter.text = str(current_number)
 
