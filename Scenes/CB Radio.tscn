@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/CB Radio/cb_radio.gd" id="1_pnfa1"]
 [ext_resource type="Texture2D" uid="uid://bjxidnyda6xcl" path="res://Assets/Radio/radio scene.jpeg" id="2_3p8nn"]
+[ext_resource type="AudioStream" uid="uid://3w8mg44iw6vn" path="res://Assets/Radio/Sounds/static.mp3" id="2_lkspv"]
 [ext_resource type="Texture2D" uid="uid://cfixmjsni2m6d" path="res://Assets/Radio/coin.png" id="3_3p8nn"]
 [ext_resource type="Script" uid="uid://d1ndvblgq5c0e" path="res://Scripts/CB Radio/knob_l.gd" id="3_4ch4a"]
 [ext_resource type="Script" uid="uid://tbm5pl0chux7" path="res://Scripts/CB Radio/knobs.gd" id="3_t1sk8"]
+[ext_resource type="AudioStream" uid="uid://bmorslg3tiq1e" path="res://Assets/Radio/Sounds/737675__klankbeeld__maritime-radio-nl-traffic-center-vlissingen-240528.mp3" id="3_x1jlf"]
 [ext_resource type="Script" uid="uid://csfu11ahoiyrm" path="res://Scripts/CB Radio/area_tube_1.gd" id="4_14p1o"]
 [ext_resource type="Script" uid="uid://bvx0timt70cn7" path="res://Scripts/CB Radio/knob_r.gd" id="5_3sx2v"]
 [ext_resource type="Script" uid="uid://byv04htb562tw" path="res://Scripts/CB Radio/tube_1.gd" id="5_gmwue"]
@@ -23,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://c17674ns6tggc" path="res://Assets/Radio/tube off.png" id="12_3xt2p"]
 [ext_resource type="Texture2D" uid="uid://dn1ymauyhb8jj" path="res://Assets/Radio/knob6.png" id="12_h85md"]
 [ext_resource type="Texture2D" uid="uid://dtdysioqjlbjv" path="res://Assets/Radio/knob7.png" id="13_1pc10"]
-[ext_resource type="Texture2D" uid="uid://c60k5xw16u3us" path="res://Assets/FPO/Eo_circle_green_checkmark.svg.png" id="14_3sx2v"]
 [ext_resource type="Texture2D" uid="uid://o7obtt6e3toc" path="res://Assets/Radio/knob8.png" id="14_u8moy"]
 [ext_resource type="Texture2D" uid="uid://dxkfmttkre6xs" path="res://Assets/Radio/knob9.png" id="15_qhsmb"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="19_2a6jh"]
@@ -40,14 +41,26 @@ shader = ExtResource("7_uvcak")
 shader_parameter/screen_size = Vector2(1920, 1080)
 shader_parameter/pixel_block = Vector2(2, 2)
 
-[node name="Main" type="Node2D" unique_id=747834159 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3", "knob_1", "knob_2", "completeCheck")]
+[node name="Main" type="Node2D" unique_id=747834159 node_paths=PackedStringArray("noise", "chatter", "tube_1", "tube_2", "tube_3", "knob_1", "knob_2", "completeCheck")]
 script = ExtResource("1_pnfa1")
+noise = NodePath("Radio/Static")
+chatter = NodePath("Radio/Chatter")
 tube_1 = NodePath("Tubes/AreaTube1")
 tube_2 = NodePath("Tubes/AreaTube2")
 tube_3 = NodePath("Tubes/AreaTube3")
 knob_1 = NodePath("Knobs/KnobL")
 knob_2 = NodePath("Knobs/KnobR")
-completeCheck = NodePath("Complete/CompleteSprite")
+completeCheck = NodePath("")
+
+[node name="Radio" type="Node2D" parent="." unique_id=2115899382]
+
+[node name="Static" type="AudioStreamPlayer" parent="Radio" unique_id=1276011544]
+stream = ExtResource("2_lkspv")
+parameters/looping = true
+
+[node name="Chatter" type="AudioStreamPlayer" parent="Radio" unique_id=1099386724]
+stream = ExtResource("3_x1jlf")
+parameters/looping = true
 
 [node name="BG" type="Node2D" parent="." unique_id=771772868]
 metadata/_edit_lock_ = true
@@ -389,12 +402,6 @@ scale = Vector2(6.426035, 6.8011365)
 position = Vector2(1.6000977, 308.80005)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
-
-[node name="Complete" type="Node2D" parent="." unique_id=1014014516]
-
-[node name="CompleteSprite" type="Sprite2D" parent="Complete" unique_id=1001944805]
-position = Vector2(922, 555)
-texture = ExtResource("14_3sx2v")
 
 [node name="Control" type="Control" parent="." unique_id=2041451175]
 layout_mode = 3

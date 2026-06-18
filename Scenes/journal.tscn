@@ -172,7 +172,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "The onboard radio has been acting up. I bought new tubes for it, but wasn't able to get the rest put together. You might need to do some fine tuning."
+text = "The onboard radio has been acting up. I bought new tubes for it, but wasn't able to get the rest put together. You might need to do some fine tuning. All I remember is that the knob combination was something \"nice.\""
 autowrap_mode = 3
 
 [node name="GNote4" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=427651469]
@@ -307,7 +307,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Looks like I just need to install the tubes right. That should be easy enough."
+text = "Looks like I just need to install the tubes right, and then put the correct dial combination in... That should be easy enough."
 autowrap_mode = 3
 
 [node name="SNote4" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=1672516099]

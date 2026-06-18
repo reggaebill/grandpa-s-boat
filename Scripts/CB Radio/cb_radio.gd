@@ -1,5 +1,8 @@
 extends Node2D
 
+@export var noise : AudioStreamPlayer
+@export var chatter : AudioStreamPlayer
+
 var tube_checker = 0
 var CB_Radio_complete = false
 var tubes_complete = false
@@ -15,7 +18,7 @@ signal noteGot
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	completeCheck.visible = false
+	
 	# Collectible check.
 	if not State.coinCollected:
 		$Collectible/coinButton.show()
@@ -31,6 +34,7 @@ func _process(_delta: float) -> void:
 		tubes_complete = true
 		if tube_checker < 1:
 			tube_checker = 1
+			noise.play()
 			print("tubes complete")
 	# if knob_1.knobTurned == true and knob_2.knobTurned == true and knob_3.knobTurned == true:
 	# 	knobs_complete = true
@@ -41,19 +45,20 @@ func _process(_delta: float) -> void:
 		knobs_complete = true
 		if tube_checker < 2:
 			tube_checker = 2
+			noise.stop()
+			chatter.play()
 			print("knobs complete")
 
 	if tubes_complete == true and knobs_complete == true:
 		CB_Radio_complete = true
-		completeCheck.visible = true
-
-
-
+		
 
 
 
 func _on_back_button_pressed() -> void:
 	SceneTransition.change_scene("res://Scenes/Boat Overview.tscn")
+	noise.stop()
+	chatter.stop()
 
 # Collectible button.
 func _on_coin_button_pressed() -> void:
