@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dn2x31yal8j5q" path="res://Assets/Cabin/Ukulele.png" id="5_16vce"]
 [ext_resource type="Texture2D" uid="uid://cjigsogogtxrn" path="res://Assets/Shop/ShopWires.png" id="6_q37xc"]
 [ext_resource type="Texture2D" uid="uid://ck5a6tdaf8fdb" path="res://Assets/Cabin/WheelSprite.png" id="7_3thhg"]
+[ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="9_16vce"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4r5f"]
 bg_color = Color(0.8235294, 0.9254902, 0.6, 1)
@@ -476,3 +477,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_3thhg")
 expand_mode = 1
+
+[node name="PauseMenu" parent="." unique_id=1079304872 instance=ExtResource("9_16vce")]
+layout_mode = 1
