@@ -14,6 +14,7 @@ var bassCollected:= false
 
 	# Radio states.
 var coinCollected:= false
+var CB_Radio_complete = false
 
 	# Cabin states.
 var ukuleleCollected:= false
