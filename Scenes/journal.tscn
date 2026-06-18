@@ -90,7 +90,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 50
-text = "Grandpa's Notes"
+text = "Grandpa Notes"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -118,7 +118,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Enjoy my old boat, grandchild. There are a couple of issues, but I've written some instructions for you to get her out to sea. "
+text = "Enjoy my old boat, grandchild. There are a couple of issues, but I have written some instructions for you to get her out to sea. "
 autowrap_mode = 3
 
 [node name="GNote2" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=1633533428]
@@ -145,7 +145,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "The motor doesn't like starting up all the time, so just give it a couple of kicks. It should start up after that."
+text = "The motor is having some trouble starting up at times, so just give it a couple of kicks. It should start up after that."
 autowrap_mode = 3
 
 [node name="GNote3" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=427192375]
@@ -172,7 +172,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "The onboard radio has been acting up. I bought new tubes for it, but wasn't able to get the rest put together. You might need to do some fine tuning. All I remember is that the knob combination was something \"nice.\""
+text = "The onboard radio has been acting up. I bought new tubes for it, but have not been able to get the rest put together. You might need to do some fine tuning. All I remember is that the knob combination was something \"nice.\""
 autowrap_mode = 3
 
 [node name="GNote4" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=427651469]
@@ -252,7 +252,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "I guess I should take a look at each of the problems, and make my own notes on what to do. Let's see what kind of shape the Valiant Attempt is in."
+text = "I guess I should take a look at each of the problems, and make my own notes on what to do. Let me see what kind of shape the Valiant Attempt is in."
 autowrap_mode = 3
 
 [node name="SNote2" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=618509737]
@@ -280,7 +280,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
 text = "Looks like the wires are frayed and barely connected. No wonder you need to kick it to start.
-I'll need some new wires, so I can connect them up more cleanly."
+I will need some new wires, so I can connect them up more cleanly."
 autowrap_mode = 3
 
 [node name="SNote3" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=637645504]
@@ -334,7 +334,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Yeah, no. I'm just going to buy a new wheel for this thing, the poor boat deserves that much."
+text = "Yeah, no. I am just going to buy a new wheel for this thing, the poor boat deserves that much."
 autowrap_mode = 3
 
 [node name="Collectibles" type="Panel" parent="." unique_id=642954205]
