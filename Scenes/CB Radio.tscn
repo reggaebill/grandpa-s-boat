@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://c6mlv80o4yky1"]
 
 [ext_resource type="Script" uid="uid://cu1ows484e0ep" path="res://Scripts/CB Radio/cb_radio.gd" id="1_pnfa1"]
-[ext_resource type="Texture2D" uid="uid://dol6g78tacndh" path="res://Assets/Radio/radio bg.jpg" id="2_pnfa1"]
+[ext_resource type="Texture2D" uid="uid://bjxidnyda6xcl" path="res://Assets/Radio/radio scene.jpeg" id="2_3p8nn"]
 [ext_resource type="Texture2D" uid="uid://cfixmjsni2m6d" path="res://Assets/Radio/coin.png" id="3_3p8nn"]
 [ext_resource type="Script" uid="uid://d1ndvblgq5c0e" path="res://Scripts/CB Radio/knob_l.gd" id="3_4ch4a"]
 [ext_resource type="Script" uid="uid://tbm5pl0chux7" path="res://Scripts/CB Radio/knobs.gd" id="3_t1sk8"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_xbm3r"]
 [ext_resource type="Script" uid="uid://csfu11ahoiyrm" path="res://Scripts/CB Radio/area_tube_1.gd" id="4_14p1o"]
-[ext_resource type="Texture2D" uid="uid://dvb4t8el0dqf1" path="res://Assets/FPO/nixie tube.png" id="4_gmwue"]
 [ext_resource type="Texture2D" uid="uid://b6y6ds4n0j7m2" path="res://Assets/Radio/knob.png" id="4_kaavu"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_uvcak"]
 [ext_resource type="Script" uid="uid://bvx0timt70cn7" path="res://Scripts/CB Radio/knob_r.gd" id="5_3sx2v"]
 [ext_resource type="Script" uid="uid://byv04htb562tw" path="res://Scripts/CB Radio/tube_1.gd" id="5_gmwue"]
-[ext_resource type="Texture2D" uid="uid://1oyrs5b6wqij" path="res://Assets/FPO/nixie tube copy.png" id="5_mxeft"]
 [ext_resource type="Script" uid="uid://b3ug302twvn85" path="res://Scripts/CB Radio/area_tube_2.gd" id="6_4ch4a"]
 [ext_resource type="Script" uid="uid://c5bvjlfskunic" path="res://Scripts/CB Radio/area_tube_3.gd" id="7_3sx2v"]
 [ext_resource type="Shader" uid="uid://b6bikedpbovig" path="res://Shaders/new_shader.gdshader" id="7_uvcak"]
+[ext_resource type="Texture2D" uid="uid://bsiagdu4ro053" path="res://Assets/Radio/tube on.png" id="9_3p8nn"]
 [ext_resource type="Script" uid="uid://bjr65n5hdq43m" path="res://Scripts/CB Radio/tube_2.gd" id="10_t1sk8"]
 [ext_resource type="Script" uid="uid://7i58llh1mwmh" path="res://Scripts/CB Radio/tube_3.gd" id="11_2a6jh"]
+[ext_resource type="Texture2D" uid="uid://c17674ns6tggc" path="res://Assets/Radio/tube off.png" id="12_3xt2p"]
 [ext_resource type="Texture2D" uid="uid://c60k5xw16u3us" path="res://Assets/FPO/Eo_circle_green_checkmark.svg.png" id="14_3sx2v"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="19_2a6jh"]
 
@@ -54,10 +54,11 @@ size_flags_horizontal = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=391656527]
 position = Vector2(960.5001, 540)
-texture = ExtResource("2_pnfa1")
+texture = ExtResource("2_3p8nn")
 metadata/_edit_lock_ = true
 
 [node name="Collectible" type="Node2D" parent="." unique_id=367898156]
+position = Vector2(-134, -119)
 
 [node name="coinButton" type="TextureButton" parent="Collectible" unique_id=860077393]
 offset_left = 1484.0
@@ -155,13 +156,12 @@ scale = Vector2(5.2161145, 5.22)
 metadata/_edit_lock_ = true
 
 [node name="AreaTube1" type="Area2D" parent="Tubes" unique_id=825780852 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
-position = Vector2(851, 578)
+position = Vector2(616, 463)
 scale = Vector2(0.25, 0.25)
 script = ExtResource("4_14p1o")
 tube_1 = NodePath("../Tube1")
 tube_2 = NodePath("../Tube2")
 tube_3 = NodePath("../Tube3")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube1" unique_id=64289329]
 position = Vector2(1.6000977, 308.80005)
@@ -169,16 +169,15 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Tubes/AreaTube1" unique_id=463555392]
-texture = ExtResource("5_mxeft")
+texture = ExtResource("9_3p8nn")
 
 [node name="AreaTube2" type="Area2D" parent="Tubes" unique_id=2122222060 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
-position = Vector2(1022, 581)
+position = Vector2(849, 468)
 scale = Vector2(0.25, 0.25)
 script = ExtResource("6_4ch4a")
 tube_1 = NodePath("../Tube1")
 tube_2 = NodePath("../Tube2")
 tube_3 = NodePath("../Tube3")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube2" unique_id=54047103]
 position = Vector2(1.6000977, 308.80005)
@@ -186,16 +185,15 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Tubes/AreaTube2" unique_id=1339923045]
-texture = ExtResource("5_mxeft")
+texture = ExtResource("9_3p8nn")
 
 [node name="AreaTube3" type="Area2D" parent="Tubes" unique_id=510286741 node_paths=PackedStringArray("tube_1", "tube_2", "tube_3")]
-position = Vector2(1185, 579)
+position = Vector2(938, 467)
 scale = Vector2(0.25, 0.25)
 script = ExtResource("7_3sx2v")
 tube_1 = NodePath("../Tube1")
 tube_2 = NodePath("../Tube2")
 tube_3 = NodePath("../Tube3")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tubes/AreaTube3" unique_id=1992485013]
 position = Vector2(1.6000977, 308.80005)
@@ -203,12 +201,12 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Tubes/AreaTube3" unique_id=1803103010]
-texture = ExtResource("5_mxeft")
+texture = ExtResource("9_3p8nn")
 
 [node name="Tube1" type="Sprite2D" parent="Tubes" unique_id=1059021618]
 position = Vector2(1797, 740)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_gmwue")
+texture = ExtResource("12_3xt2p")
 script = ExtResource("5_gmwue")
 
 [node name="Button" type="Button" parent="Tubes/Tube1" unique_id=1931478244]
@@ -229,7 +227,7 @@ shape = SubResource("CapsuleShape2D_3p8nn")
 [node name="Tube2" type="Sprite2D" parent="Tubes" unique_id=1818795840]
 position = Vector2(1502, 932)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_gmwue")
+texture = ExtResource("12_3xt2p")
 script = ExtResource("10_t1sk8")
 
 [node name="Button" type="Button" parent="Tubes/Tube2" unique_id=284021489]
@@ -250,7 +248,7 @@ shape = SubResource("CapsuleShape2D_3p8nn")
 [node name="Tube3" type="Sprite2D" parent="Tubes" unique_id=772386146]
 position = Vector2(1676, 921)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_gmwue")
+texture = ExtResource("12_3xt2p")
 script = ExtResource("11_2a6jh")
 
 [node name="Button" type="Button" parent="Tubes/Tube3" unique_id=133344127]
@@ -269,6 +267,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
 
 [node name="Complete" type="Node2D" parent="." unique_id=1014014516]
+visible = false
 
 [node name="CompleteSprite" type="Sprite2D" parent="Complete" unique_id=1001944805]
 position = Vector2(922, 555)
