@@ -1,0 +1,376 @@
+[gd_scene format=3 uid="uid://ctno3ic58ue52"]
+
+[ext_resource type="Script" uid="uid://c1jkgvwwfgydr" path="res://Scripts/journal.gd" id="1_civ5d"]
+[ext_resource type="FontFile" uid="uid://ll8u73k67l5r" path="res://Assets/Fonts/myoldrem.ttf" id="2_d4r5f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4r5f"]
+bg_color = Color(0.8235294, 0.9254902, 0.6, 1)
+border_width_left = 8
+border_width_top = 6
+border_width_right = 8
+border_width_bottom = 6
+border_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d4r5f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okafp"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Journal" type="Control" unique_id=1598133641]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_civ5d")
+
+[node name="BG" type="ColorRect" parent="." unique_id=211663990]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.92941177, 0.84313726, 1)
+
+[node name="TitleContainer" type="MarginContainer" parent="." unique_id=1052237940]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="TitleContainer" unique_id=787363625]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 120
+text = "Journal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GrandpaNotes" type="MarginContainer" parent="." unique_id=1622499954]
+layout_mode = 1
+offset_right = 627.0
+offset_bottom = 1077.0
+theme_override_constants/margin_left = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GrandpaNotes" unique_id=543603906]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Label" type="Label" parent="GrandpaNotes/VBoxContainer" unique_id=1494422518]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 50
+text = "Grandpa's Notes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GNote1" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=990039212]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4r5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="GrandpaNotes/VBoxContainer/GNote1" unique_id=161564318]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="GrandpaNotes/VBoxContainer/GNote1/MarginContainer" unique_id=2126191805]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 24
+text = "Note from grandpa, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+autowrap_mode = 3
+
+[node name="GNote2" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=1633533428]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4r5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="GrandpaNotes/VBoxContainer/GNote2" unique_id=434478970]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="GrandpaNotes/VBoxContainer/GNote2/MarginContainer" unique_id=716767766]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 24
+text = "Note from grandpa, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+autowrap_mode = 3
+
+[node name="GNote3" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=427192375]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4r5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="GrandpaNotes/VBoxContainer/GNote3" unique_id=1508461242]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="GrandpaNotes/VBoxContainer/GNote3/MarginContainer" unique_id=529574605]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 24
+text = "Note from grandpa, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+autowrap_mode = 3
+
+[node name="GNote4" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=427651469]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4r5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="GrandpaNotes/VBoxContainer/GNote4" unique_id=671666219]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="GrandpaNotes/VBoxContainer/GNote4/MarginContainer" unique_id=1518883337]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 24
+text = "Note from grandpa, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+autowrap_mode = 3
+
+[node name="SelfNotes" type="MarginContainer" parent="." unique_id=1015131881]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -627.0
+offset_bottom = 1077.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SelfNotes" unique_id=286544059]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Label" type="Label" parent="SelfNotes/VBoxContainer" unique_id=1366326157]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 50
+text = "Grandpa's Notes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SNote1" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=1651630015]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4r5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="SelfNotes/VBoxContainer/SNote1" unique_id=1577015894]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="SelfNotes/VBoxContainer/SNote1/MarginContainer" unique_id=1900298834]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 24
+text = "Note from myself, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+autowrap_mode = 3
+
+[node name="SNote2" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=618509737]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4r5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="SelfNotes/VBoxContainer/SNote2" unique_id=1247728337]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="SelfNotes/VBoxContainer/SNote2/MarginContainer" unique_id=74400767]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 24
+text = "Note from myself, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+autowrap_mode = 3
+
+[node name="SNote3" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=637645504]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4r5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="SelfNotes/VBoxContainer/SNote3" unique_id=1880086445]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="SelfNotes/VBoxContainer/SNote3/MarginContainer" unique_id=677286704]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 24
+text = "Note from myself, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+autowrap_mode = 3
+
+[node name="SNote4" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=1672516099]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4r5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="SelfNotes/VBoxContainer/SNote4" unique_id=329980988]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="SelfNotes/VBoxContainer/SNote4/MarginContainer" unique_id=1805322968]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_d4r5f")
+theme_override_font_sizes/font_size = 24
+text = "Note from myself, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+autowrap_mode = 3
+
+[node name="Collectibles" type="Panel" parent="." unique_id=642954205]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -305.5
+offset_top = -776.0
+offset_right = 305.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_d4r5f")
+
+[node name="GridContainer" type="GridContainer" parent="Collectibles" unique_id=901308232]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -177.0
+offset_right = 177.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
+columns = 2
+
+[node name="Panel" type="Panel" parent="Collectibles/GridContainer" unique_id=1068805914]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_okafp")
+
+[node name="Panel2" type="Panel" parent="Collectibles/GridContainer" unique_id=2035838729]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_okafp")
+
+[node name="Panel3" type="Panel" parent="Collectibles/GridContainer" unique_id=784024755]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_okafp")
+
+[node name="Panel4" type="Panel" parent="Collectibles/GridContainer" unique_id=852002219]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_okafp")

@@ -57,6 +57,7 @@ func _on_wires_button_pressed() -> void:
 		updateMoney()
 		wires_button.hide()
 		wires_price.hide()
+		sfx.play_sfx(sfx.register_ding)
 
 # Purchase the wheel button.
 func _on_wheel_button_pressed() -> void:
@@ -66,6 +67,7 @@ func _on_wheel_button_pressed() -> void:
 		updateMoney()
 		wheel_button.hide()
 		wheel_price.hide()
+		sfx.play_sfx(sfx.register_ding)
 
 
 func _on_junk_sold() -> void:

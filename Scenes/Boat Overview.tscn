@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://cmjjl25fltlcv" path="res://Scripts/boombox.gd" id="9_x1ki7"]
 [ext_resource type="Texture2D" uid="uid://c5csl7731bllr" path="res://Assets/Sign.png" id="10_nj1sv"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="11_x1ki7"]
+[ext_resource type="PackedScene" uid="uid://ctno3ic58ue52" path="res://Scenes/journal.tscn" id="13_icp3h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3uoi3"]
 shader = ExtResource("7_3uoi3")
@@ -136,6 +137,11 @@ metadata/_edit_lock_ = true
 
 [node name="PauseMenu" parent="Pause" unique_id=1079304872 instance=ExtResource("11_x1ki7")]
 metadata/_edit_lock_ = true
+
+[node name="Journal" type="CanvasLayer" parent="." unique_id=1720359653]
+
+[node name="Journal" parent="Journal" unique_id=1598133641 instance=ExtResource("13_icp3h")]
+visible = false
 
 [connection signal="pressed" from="Interactives/Hull" to="." method="_on_hull_pressed"]
 [connection signal="pressed" from="Interactives/Engine" to="." method="_on_engine_pressed"]
