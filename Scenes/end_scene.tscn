@@ -1,9 +1,34 @@
-[gd_scene format=3 uid="uid://blpa2yawg7igt"]
+[gd_scene format=3 uid="uid://c5ytu3g0g5od4"]
 
 [ext_resource type="Texture2D" uid="uid://dwllfmahuoxtr" path="res://Assets/Scene Art/end scene.jpeg" id="1_5pkqa"]
+[ext_resource type="Script" uid="uid://bkoe316abvfr" path="res://Scripts/end_scene.gd" id="1_20ln8"]
+[ext_resource type="Theme" uid="uid://d4mslk06tm77e" path="res://Themes/MainMenuButtonTheme.tres" id="3_foadp"]
+[ext_resource type="StyleBox" uid="uid://dswlao14uquso" path="res://Themes/MainMenuButtonStyleNormal.tres" id="4_xom27"]
+[ext_resource type="StyleBox" uid="uid://balf24c77qpm0" path="res://Themes/MainMenuButtonStylePressed.tres" id="5_kwb7v"]
+[ext_resource type="StyleBox" uid="uid://cme33scadn1v2" path="res://Themes/MainMenuButtonStyleHover.tres" id="6_f7vrb"]
 
 [node name="Main" type="Node2D" unique_id=1965805755]
+script = ExtResource("1_20ln8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1740650378]
 position = Vector2(960, 540)
 texture = ExtResource("1_5pkqa")
+
+[node name="Button" type="Button" parent="." unique_id=15645881]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 653.0
+offset_top = 914.0
+offset_right = 1287.0
+offset_bottom = 1062.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_foadp")
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_styles/normal = ExtResource("4_xom27")
+theme_override_styles/pressed = ExtResource("5_kwb7v")
+theme_override_styles/hover = ExtResource("6_f7vrb")
+text = "End Game"

@@ -5,6 +5,7 @@ extends Node2D
 @onready var engine_sparks: CPUParticles2D = $Sparks/EngineSparks
 @onready var wheel_sparks: CPUParticles2D = $Sparks/WheelSparks
 @onready var wheel_sprite: Sprite2D = $WheelSprite
+@onready var end_game_button: Button = $EndGameButton
 
 func _ready() -> void:
 	wheel_sprite.hide()
@@ -19,6 +20,8 @@ func _ready() -> void:
 	if State.wheelComplete:
 		wheel_sparks.hide()
 		wheel_sprite.show()
+	if State.wheelComplete and State.CB_Radio_complete and State.engineFixed:
+		end_game_button.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -55,3 +58,8 @@ func _on_big_mouth_billy_pressed() -> void:
 	big_mouth_billy.hide()
 	sfx.play_sfx(sfx.collectible_get)
 	
+
+
+func _on_end_game_button_pressed() -> void:
+	SceneTransition.change_scene("res://Scenes/end_scene.tscn")
+	sfx.play_sfx(sfx.engine_startup)

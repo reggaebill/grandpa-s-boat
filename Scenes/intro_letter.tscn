@@ -163,6 +163,7 @@ offset_top = 960.0
 offset_right = 1903.0
 offset_bottom = 1060.0
 theme = ExtResource("3_mfqup")
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_styles/normal = ExtResource("4_a1meb")
 theme_override_styles/pressed = ExtResource("5_c7t3g")
 theme_override_styles/hover = ExtResource("6_pfobd")
