@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bs56ofahwimj1"]
 
 [ext_resource type="Script" uid="uid://dgq4qa8kijql4" path="res://Scripts/Cabin/cabin.gd" id="1_f8aqm"]
-[ext_resource type="Texture2D" uid="uid://7slminc5osp7" path="res://Assets/Cabin/CabinWithWheel.png" id="2_c28uo"]
 [ext_resource type="Texture2D" uid="uid://s10cygpbr1oj" path="res://Assets/Scene Art/cabin interior.jpeg" id="2_iulul"]
+[ext_resource type="Texture2D" uid="uid://di5cc7s6pdiyj" path="res://Assets/Cabin/ViseGripsSprite.png" id="3_ph2gg"]
 [ext_resource type="Texture2D" uid="uid://s36x40ubh536" path="res://Assets/Scene Art/uke.png" id="4_xywt6"]
 [ext_resource type="Texture2D" uid="uid://cuhkj7belcwrw" path="res://Assets/Scene Art/wheel.png" id="5_ph2gg"]
 [ext_resource type="Script" uid="uid://c3juvo42p4b10" path="res://Scripts/Cabin/new_wheel.gd" id="6_bs8s3"]
@@ -24,15 +24,23 @@ script = ExtResource("1_f8aqm")
 metadata/_edit_lock_ = true
 
 [node name="CabinBGVise" type="Sprite2D" parent="BG" unique_id=404555482]
+visible = false
 position = Vector2(960, 540)
 texture = ExtResource("2_iulul")
 metadata/_edit_lock_ = true
 
+[node name="Sprite2D" type="Sprite2D" parent="BG/CabinBGVise" unique_id=1769060218]
+position = Vector2(169, 235)
+texture = ExtResource("3_ph2gg")
+
 [node name="CabinBGWheel" type="Sprite2D" parent="BG" unique_id=1104283931]
-visible = false
 position = Vector2(960, 540)
-texture = ExtResource("2_c28uo")
+texture = ExtResource("2_iulul")
 metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/CabinBGWheel" unique_id=70395945]
+position = Vector2(107, 253)
+texture = ExtResource("5_ph2gg")
 
 [node name="Collectible" type="Node2D" parent="." unique_id=2099541889]
 
