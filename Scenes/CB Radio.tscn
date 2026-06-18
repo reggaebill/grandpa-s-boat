@@ -390,7 +390,6 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3p8nn")
 
 [node name="Complete" type="Node2D" parent="." unique_id=1014014516]
-visible = false
 
 [node name="CompleteSprite" type="Sprite2D" parent="Complete" unique_id=1001944805]
 position = Vector2(922, 555)
