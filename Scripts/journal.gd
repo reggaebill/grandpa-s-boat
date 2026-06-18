@@ -52,12 +52,21 @@ func _unhandled_input(event: InputEvent) -> void:
 			close()
 		else:
 			open()
+	# Duplicated checks from _ready, so they always work on opening the screen.
 	if State.noteCheck1:
 		sNote2.show()
 	if State.noteCheck2:
 		sNote3.show()
 	if State.noteCheck3:
 		sNote4.show()
+	if State.cardCollected and not State.cardSold:
+		cards.show()
+	if State.coinCollected and not State.coinSold:
+		coin.show()
+	if State.ukuleleCollected and not State.ukuleleSold:
+		ukulele.show()
+	if State.bassCollected and not State.bassSold:
+		bass.show()
 
 func open():
 	self.move_to_front()

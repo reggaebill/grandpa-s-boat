@@ -59,3 +59,4 @@ func _on_back_button_pressed() -> void:
 func _on_coin_button_pressed() -> void:
 	State.coinCollected = true
 	$Collectible/coinButton.hide()
+	sfx.play_sfx(sfx.collectible_get)

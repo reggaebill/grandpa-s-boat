@@ -42,6 +42,7 @@ func _on_back_button_pressed() -> void:
 func _on_ukulele_button_pressed() -> void:
 	State.ukuleleCollected = true
 	ukulele_button.hide()
+	sfx.play_sfx(sfx.collectible_get)
 
 
 func _on_mount_wheel_complete() -> void:
