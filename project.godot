@@ -15,9 +15,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Grandpa's Boat"
-run/main_scene="res://Scenes/Boat Overview.tscn"
+run/main_scene="uid://dgo1rnt4cpduo"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="uid://ck5a6tdaf8fdb"
+config/icon="uid://ck5a6tdaf8fdb"
 
 [autoload]
 

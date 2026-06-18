@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c60k5xw16u3us" path="res://Assets/FPO/Eo_circle_green_checkmark.svg.png" id="3_skust"]
 [ext_resource type="Texture2D" uid="uid://daxd7hjb43s3l" path="res://Assets/Scene Art/BigMouthBilly.png" id="3_sve4w"]
 [ext_resource type="Shader" uid="uid://b6bikedpbovig" path="res://Shaders/new_shader.gdshader" id="7_3uoi3"]
-[ext_resource type="Texture2D" uid="uid://ck5a6tdaf8fdb" path="res://Assets/Cabin/WheelSprite.png" id="7_omv04"]
+[ext_resource type="Texture2D" uid="uid://cuhkj7belcwrw" path="res://Assets/Scene Art/wheel.png" id="7_omv04"]
 [ext_resource type="Script" uid="uid://cmjjl25fltlcv" path="res://Scripts/boombox.gd" id="9_x1ki7"]
 [ext_resource type="Theme" uid="uid://d4mslk06tm77e" path="res://Themes/MainMenuButtonTheme.tres" id="11_incph"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="11_x1ki7"]

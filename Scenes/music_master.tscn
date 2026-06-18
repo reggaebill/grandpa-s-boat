@@ -42,3 +42,4 @@ offset_bottom = 40.0
 [node name="WavesAmbience" type="AudioStreamPlayer" parent="Ambience" unique_id=490145273]
 stream = ExtResource("5_mmn2n")
 volume_db = -14.999
+parameters/looping = true
