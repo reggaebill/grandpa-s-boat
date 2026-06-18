@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="11_x1ki7"]
 [ext_resource type="PackedScene" uid="uid://ctno3ic58ue52" path="res://Scenes/journal.tscn" id="13_icp3h"]
 
+[sub_resource type="Gradient" id="Gradient_utpnu"]
+offsets = PackedFloat32Array(0.7302632, 1)
+colors = PackedColorArray(1, 0.65, 0, 1, 1, 0, 0, 1)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3uoi3"]
 shader = ExtResource("7_3uoi3")
 shader_parameter/screen_size = Vector2(1920, 1080)
@@ -109,6 +113,98 @@ offset_top = -420.0
 offset_right = -712.0
 offset_bottom = -412.0
 scale = Vector2(183.58, 99.94)
+
+[node name="Sparks" type="Node2D" parent="." unique_id=1592680228]
+
+[node name="WheelSparks" type="CPUParticles2D" parent="Sparks" unique_id=224189603]
+position = Vector2(697, 525)
+amount = 5
+lifetime = 0.2
+preprocess = 1.27
+speed_scale = 0.6
+explosiveness = 0.56
+randomness = 1.0
+lifetime_randomness = 0.52
+spread = 173.15
+gravity = Vector2(0, 0)
+initial_velocity_min = 229.17
+initial_velocity_max = 270.83
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+damping_min = 100.0
+damping_max = 100.0
+angle_min = -390.0
+angle_max = 420.0
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(1, 0.6666667, 0, 1)
+color_ramp = SubResource("Gradient_utpnu")
+hue_variation_min = 0.58
+hue_variation_max = 0.73
+anim_speed_min = 77.33
+anim_speed_max = 77.33
+anim_offset_min = 0.3958
+anim_offset_max = 1.0
+
+[node name="EngineSparks" type="CPUParticles2D" parent="Sparks" unique_id=1391601359]
+position = Vector2(1805, 559)
+amount = 5
+lifetime = 0.2
+preprocess = 1.27
+speed_scale = 0.6
+explosiveness = 0.56
+randomness = 1.0
+lifetime_randomness = 0.52
+spread = 173.15
+gravity = Vector2(0, 0)
+initial_velocity_min = 229.17
+initial_velocity_max = 270.83
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+damping_min = 100.0
+damping_max = 100.0
+angle_min = -390.0
+angle_max = 420.0
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(1, 0.6666667, 0, 1)
+color_ramp = SubResource("Gradient_utpnu")
+hue_variation_min = 0.58
+hue_variation_max = 0.73
+anim_speed_min = 77.33
+anim_speed_max = 77.33
+anim_offset_min = 0.3958
+anim_offset_max = 1.0
+
+[node name="RadioSparks" type="CPUParticles2D" parent="Sparks" unique_id=2073250103]
+position = Vector2(1248, 411)
+amount = 5
+lifetime = 0.2
+preprocess = 1.27
+speed_scale = 0.6
+explosiveness = 0.56
+randomness = 1.0
+lifetime_randomness = 0.52
+spread = 173.15
+gravity = Vector2(0, 0)
+initial_velocity_min = 229.17
+initial_velocity_max = 270.83
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+damping_min = 100.0
+damping_max = 100.0
+angle_min = -390.0
+angle_max = 420.0
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(1, 0.6666667, 0, 1)
+color_ramp = SubResource("Gradient_utpnu")
+hue_variation_min = 0.58
+hue_variation_max = 0.73
+anim_speed_min = 77.33
+anim_speed_max = 77.33
+anim_offset_min = 0.3958
+anim_offset_max = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=964618026]
 visible = false
