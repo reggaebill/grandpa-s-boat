@@ -23,7 +23,7 @@ func _ready() -> void:
 	await body_text("If you are reading this, I regret to inform you of my passing.", _1)
 	await body_text("There is some good news, however. I have decided to leave you my prized possession.", _2)
 	await body_text("Please take care of the Valiant Attempt, my old fishing boat.", _3)
-	await body_text("She'll need some fixing up, but I left you a journal with some notes on how to go about that.", _4)
+	await body_text("She might need some fixing up, but I left you a journal with some notes on how to go about that.", _4)
 	await body_text("Just press the J key to look at the journal.", _5)
 	await body_text("Good luck out there.", _6)
 	await body_text("-Sincerely yours,", _11)
