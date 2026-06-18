@@ -1,16 +1,11 @@
 [gd_scene format=3 uid="uid://cav8kvfmghv5u"]
 
-[ext_resource type="Texture2D" uid="uid://dokt0m6suwsdu" path="res://Assets/Boat.jpg" id="1_oqir0"]
 [ext_resource type="Script" uid="uid://c68q5ptf572nr" path="res://Scripts/boat_overview.gd" id="1_skust"]
+[ext_resource type="Texture2D" uid="uid://dk3f3sjc8ugdd" path="res://Assets/Scene Art/IMG_0961.jpeg" id="2_3uoi3"]
 [ext_resource type="Texture2D" uid="uid://3qy5qonnxr62" path="res://Assets/FPO/pngtree-old-plank-of-wood-png-file-png-image_10159881.png" id="2_mjnil"]
 [ext_resource type="Texture2D" uid="uid://c60k5xw16u3us" path="res://Assets/FPO/Eo_circle_green_checkmark.svg.png" id="3_skust"]
-[ext_resource type="Texture2D" uid="uid://dvmehtq11i254" path="res://Assets/FPO/pngtree-outboard-boat-motor-with-propeller-png-image_19351156.webp" id="4_cde15"]
-[ext_resource type="Texture2D" uid="uid://dhbcbnqgnroka" path="res://Assets/FPO/radio.png" id="6_cde15"]
 [ext_resource type="Shader" uid="uid://b6bikedpbovig" path="res://Shaders/new_shader.gdshader" id="7_3uoi3"]
-[ext_resource type="Texture2D" uid="uid://ck5a6tdaf8fdb" path="res://Assets/Cabin/WheelSprite.png" id="7_utpnu"]
-[ext_resource type="Texture2D" uid="uid://dkfuaee7gphj1" path="res://Assets/FPO/boombox.webp" id="8_omv04"]
 [ext_resource type="Script" uid="uid://cmjjl25fltlcv" path="res://Scripts/boombox.gd" id="9_x1ki7"]
-[ext_resource type="Texture2D" uid="uid://c5csl7731bllr" path="res://Assets/Sign.png" id="10_nj1sv"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="11_x1ki7"]
 [ext_resource type="PackedScene" uid="uid://ctno3ic58ue52" path="res://Scenes/journal.tscn" id="13_icp3h"]
 
@@ -41,10 +36,8 @@ size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=1083941025]
-position = Vector2(1194, 632)
-scale = Vector2(8.542857, 6.977778)
-texture = ExtResource("1_oqir0")
-metadata/_edit_lock_ = true
+position = Vector2(962, 542)
+texture = ExtResource("2_3uoi3")
 
 [node name="Interactives" type="Control" parent="." unique_id=211147465]
 layout_mode = 3
@@ -53,6 +46,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Hull" type="TextureButton" parent="Interactives" unique_id=1945996941]
+visible = false
 layout_mode = 0
 offset_left = 1200.0
 offset_top = 484.0
@@ -68,58 +62,56 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 170.0
-offset_top = 448.0
-offset_right = 433.0
-offset_bottom = 804.0
+offset_left = 1598.0
+offset_top = 440.0
+offset_right = 2098.0
+offset_bottom = 940.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("4_cde15")
+scale = Vector2(0.435, 0.27)
 texture_pressed = ExtResource("3_skust")
 
 [node name="CB Radio" type="TextureButton" parent="Interactives" unique_id=1690891173]
 layout_mode = 0
-offset_left = 943.0001
-offset_top = 306.00006
-offset_right = 2310.0
-offset_bottom = 1386.0
-scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("6_cde15")
+offset_left = 1082.9999
+offset_top = 397.0
+offset_right = 2450.0
+offset_bottom = 1477.0
+rotation = -0.18993104
+scale = Vector2(0.18, 0.08)
 texture_pressed = ExtResource("3_skust")
 
 [node name="Cabin" type="TextureButton" parent="Interactives" unique_id=388062359]
 layout_mode = 0
-offset_left = 1440.0
-offset_top = 231.0
-offset_right = 1678.0
-offset_bottom = 418.0
-texture_normal = ExtResource("7_utpnu")
+offset_left = 656.0
+offset_top = 443.0
+offset_right = 894.0
+offset_bottom = 630.0
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="StoreSign" type="TextureButton" parent="Interactives" unique_id=279376162]
 layout_mode = 0
-offset_left = 1595.0
-offset_top = 773.0
-offset_right = 1851.0
-offset_bottom = 1029.0
-texture_normal = ExtResource("10_nj1sv")
+offset_left = 54.0
+offset_top = 740.0
+offset_right = 310.0
+offset_bottom = 996.0
 
 [node name="Boombox" type="Sprite2D" parent="Interactives" unique_id=827470549]
-position = Vector2(704, 942)
+position = Vector2(1708, 930)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("8_omv04")
 script = ExtResource("9_x1ki7")
 
 [node name="Button" type="Button" parent="Interactives/Boombox" unique_id=130316662]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -860.0
-offset_top = -248.0
-offset_right = -852.0
-offset_bottom = -240.0
-scale = Vector2(224.04002, 80.2)
+offset_left = -720.0
+offset_top = -420.0
+offset_right = -712.0
+offset_bottom = -412.0
+scale = Vector2(183.58, 99.94)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=964618026]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1843290395]
 top_level = true

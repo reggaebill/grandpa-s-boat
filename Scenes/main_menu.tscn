@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://d4mslk06tm77e" path="res://Themes/MainMenuButtonTheme.tres" id="1_ce3w2"]
 [ext_resource type="Script" uid="uid://b21knwhxnhyjk" path="res://Scripts/main_menu.gd" id="1_n45e2"]
 [ext_resource type="StyleBox" uid="uid://dswlao14uquso" path="res://Themes/MainMenuButtonStyleNormal.tres" id="2_n45e2"]
+[ext_resource type="Texture2D" uid="uid://ct1y8n7fgbsiw" path="res://Assets/Scene Art/IMG_0959.jpeg" id="2_opfnp"]
 [ext_resource type="StyleBox" uid="uid://balf24c77qpm0" path="res://Themes/MainMenuButtonStylePressed.tres" id="3_opfnp"]
 [ext_resource type="StyleBox" uid="uid://cme33scadn1v2" path="res://Themes/MainMenuButtonStyleHover.tres" id="4_cp0ys"]
 
@@ -24,6 +25,10 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2048306312]
+position = Vector2(960, 539)
+texture = ExtResource("2_opfnp")
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=785034320]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 1
@@ -31,11 +36,16 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = 135.0
+offset_top = 281.0
+offset_right = 735.0
+offset_bottom = 281.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=57190694]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/separation = 20
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=752522511]
@@ -52,6 +62,7 @@ theme_override_styles/hover = ExtResource("4_cp0ys")
 text = "START"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=363124011]
+visible = false
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 4
