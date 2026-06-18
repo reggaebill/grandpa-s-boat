@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cjigsogogtxrn" path="res://Assets/Shop/ShopWires.png" id="4_s8dlv"]
 [ext_resource type="Texture2D" uid="uid://i33nw4sc3rr2" path="res://Assets/Shop/ShopWheel.png" id="5_tyrku"]
 [ext_resource type="FontFile" uid="uid://ll8u73k67l5r" path="res://Assets/Fonts/myoldrem.ttf" id="6_3ps1r"]
+[ext_resource type="PackedScene" uid="uid://ctno3ic58ue52" path="res://Scenes/journal.tscn" id="9_tyrku"]
 
 [sub_resource type="Theme" id="Theme_ymrm4"]
 default_font = ExtResource("6_3ps1r")
@@ -204,6 +205,11 @@ grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_k6jq0")
 texture_pressed = ExtResource("4_3ps1r")
+
+[node name="Journal" type="CanvasLayer" parent="." unique_id=1665770950]
+
+[node name="Journal" parent="Journal" unique_id=1598133641 instance=ExtResource("9_tyrku")]
+visible = false
 
 [connection signal="junkSold" from="." to="." method="_on_junk_sold"]
 [connection signal="pressed" from="Items/HBoxContainer/VBoxContainer/WiresButton" to="." method="_on_wires_button_pressed"]

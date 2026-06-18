@@ -52,6 +52,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			close()
 		else:
 			open()
+	if State.noteCheck1:
+		sNote2.show()
+	if State.noteCheck2:
+		sNote3.show()
+	if State.noteCheck3:
+		sNote4.show()
 
 func open():
 	self.move_to_front()

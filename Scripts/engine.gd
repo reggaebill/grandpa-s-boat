@@ -43,6 +43,7 @@ func _ready() -> void:
 	if not State.noteCheck1:
 		noteGot.connect(State._noteCollect1)
 		noteGot.emit()
+		
 	
 func _on_back_button_pressed() -> void:
 	print("back")

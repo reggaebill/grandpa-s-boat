@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://dynbb0wc0su5b" path="res://Assets/Engine/Art/blue wire.png" id="20_bgrq0"]
 [ext_resource type="Texture2D" uid="uid://c5wnjkqd7mfhl" path="res://Assets/Engine/Art/red wire.png" id="21_jwlqx"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="24_xmv2s"]
+[ext_resource type="PackedScene" uid="uid://ctno3ic58ue52" path="res://Scenes/journal.tscn" id="25_4n4wf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmagb"]
 radius = 13.038404
@@ -271,6 +272,11 @@ metadata/_edit_lock_ = true
 
 [node name="PauseMenu" parent="Pause" unique_id=1079304872 instance=ExtResource("24_xmv2s")]
 metadata/_edit_lock_ = true
+
+[node name="Journal" type="CanvasLayer" parent="." unique_id=2063484712]
+
+[node name="Journal" parent="Journal" unique_id=1598133641 instance=ExtResource("25_4n4wf")]
+visible = false
 
 [connection signal="pressed" from="Collectible/CardPack" to="." method="_on_card_pack_pressed"]
 [connection signal="area_entered" from="ControlPanel/ContactPlate1" to="ControlPanel/ContactPlate1" method="_on_area_entered"]
