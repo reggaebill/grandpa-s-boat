@@ -1,9 +1,12 @@
 extends Node2D
 
+@onready var big_mouth_billy: TextureButton = $Collectible/BigMouthBilly
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if not State.bassCollected:
+		big_mouth_billy.show()
+	else:
+		big_mouth_billy.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,3 +37,10 @@ func _on_cabin_pressed() -> void:
 func _on_store_sign_pressed() -> void:
 	print("shop")
 	SceneTransition.change_scene("res://Scenes/shop.tscn")
+
+
+func _on_big_mouth_billy_pressed() -> void:
+	State.bassCollected = true
+	big_mouth_billy.hide()
+	sfx.play_sfx(sfx.collectible_get)
+	
