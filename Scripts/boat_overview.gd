@@ -1,12 +1,21 @@
 extends Node2D
 
 @onready var big_mouth_billy: TextureButton = $Collectible/BigMouthBilly
+@onready var radio_sparks: CPUParticles2D = $Sparks/RadioSparks
+@onready var engine_sparks: CPUParticles2D = $Sparks/EngineSparks
+@onready var wheel_sparks: CPUParticles2D = $Sparks/WheelSparks
 
 func _ready() -> void:
 	if not State.bassCollected:
 		big_mouth_billy.show()
 	else:
 		big_mouth_billy.hide()
+	if State.CB_Radio_complete:
+		radio_sparks.hide()
+	if State.engineFixed:
+		engine_sparks.hide()
+	if State.wheelComplete:
+		wheel_sparks.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
