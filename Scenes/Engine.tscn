@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wong2bncfsxe"]
 
 [ext_resource type="Script" uid="uid://d05d6upkk85ok" path="res://Scripts/engine.gd" id="1_4dnpw"]
-[ext_resource type="Texture2D" uid="uid://s5ndfvtkqums" path="res://Assets/Engine/EngineBG.png" id="2_2xonk"]
+[ext_resource type="Texture2D" uid="uid://b52xmbj53yk3p" path="res://Assets/Engine/Art/engine scene.jpeg" id="2_xmv2s"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_2xonk"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_lj1rd"]
 [ext_resource type="Texture2D" uid="uid://g35vreguxese" path="res://Assets/Engine/BaseballPackArt.jpg" id="5_2xonk"]
@@ -42,7 +42,7 @@ size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=1529416044]
-texture = ExtResource("2_2xonk")
+texture = ExtResource("2_xmv2s")
 centered = false
 
 [node name="Collectible" type="Node2D" parent="." unique_id=1291949957]
