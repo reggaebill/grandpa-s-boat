@@ -41,7 +41,7 @@ size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=1083941025]
-position = Vector2(966, 543)
+position = Vector2(963, 543)
 texture = ExtResource("2_3uoi3")
 
 [node name="Collectible" type="Node2D" parent="." unique_id=1051003253]
