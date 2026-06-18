@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bs56ofahwimj1"]
 
 [ext_resource type="Script" uid="uid://dgq4qa8kijql4" path="res://Scripts/Cabin/cabin.gd" id="1_f8aqm"]
-[ext_resource type="Texture2D" uid="uid://cd0ljk013n2ow" path="res://Assets/Cabin/CabinWithGrips.png" id="1_ms4um"]
 [ext_resource type="Texture2D" uid="uid://7slminc5osp7" path="res://Assets/Cabin/CabinWithWheel.png" id="2_c28uo"]
+[ext_resource type="Texture2D" uid="uid://s10cygpbr1oj" path="res://Assets/Scene Art/cabin interior.jpeg" id="2_iulul"]
 [ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_h4odu"]
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_f8aqm"]
-[ext_resource type="Texture2D" uid="uid://ck5a6tdaf8fdb" path="res://Assets/Cabin/WheelSprite.png" id="5_cvv4n"]
-[ext_resource type="Texture2D" uid="uid://dn2x31yal8j5q" path="res://Assets/Cabin/Ukulele.png" id="6_74jxe"]
+[ext_resource type="Texture2D" uid="uid://s36x40ubh536" path="res://Assets/Scene Art/uke.png" id="4_xywt6"]
+[ext_resource type="Texture2D" uid="uid://cuhkj7belcwrw" path="res://Assets/Scene Art/wheel.png" id="5_ph2gg"]
 [ext_resource type="Script" uid="uid://c3juvo42p4b10" path="res://Scripts/Cabin/new_wheel.gd" id="6_bs8s3"]
 [ext_resource type="Script" uid="uid://dr3eyq8nsnuat" path="res://Scripts/Cabin/mount.gd" id="7_iulul"]
 
@@ -24,7 +24,7 @@ metadata/_edit_lock_ = true
 
 [node name="CabinBGVise" type="Sprite2D" parent="BG" unique_id=404555482]
 position = Vector2(960, 540)
-texture = ExtResource("1_ms4um")
+texture = ExtResource("2_iulul")
 metadata/_edit_lock_ = true
 
 [node name="CabinBGWheel" type="Sprite2D" parent="BG" unique_id=1104283931]
@@ -40,13 +40,13 @@ offset_left = 1743.0
 offset_top = 851.0
 offset_right = 1999.0
 offset_bottom = 1107.0
-texture_normal = ExtResource("6_74jxe")
+texture_normal = ExtResource("4_xywt6")
 
 [node name="Wheel" type="Node2D" parent="." unique_id=168848664]
 
 [node name="NewWheel" type="Sprite2D" parent="Wheel" unique_id=304369218]
 position = Vector2(712, 264)
-texture = ExtResource("5_cvv4n")
+texture = ExtResource("5_ph2gg")
 script = ExtResource("6_bs8s3")
 
 [node name="Button" type="Button" parent="Wheel/NewWheel" unique_id=1068114255]
