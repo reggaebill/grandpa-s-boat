@@ -14,10 +14,10 @@ func _ready() -> void:
 	updateMoney()
 	sfx.play_sfx(sfx.shop_bell)
 	# Temp flag changing. Remove after shop debugging done.
-	State.ukuleleCollected = true
-	State.bassCollected = true
-	State.cardCollected = true
-	State.coinCollected = true
+	#State.ukuleleCollected = true
+	#State.bassCollected = true
+	#State.cardCollected = true
+	#State.coinCollected = true
 
 func _on_back_button_pressed() -> void:
 	print("back")
