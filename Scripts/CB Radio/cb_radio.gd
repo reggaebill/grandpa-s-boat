@@ -4,7 +4,7 @@ extends Node2D
 @export var chatter : AudioStreamPlayer
 
 var tube_checker = 0
-var CB_Radio_complete = false
+#var CB_Radio_complete = false
 var tubes_complete = false
 var knobs_complete = false
 @export var tube_1 : Area2D 
@@ -60,7 +60,7 @@ func _process(_delta: float) -> void:
 			if tube_checker < 3:
 				tube_checker = 3
 				print("CB Radio complete")
-				CB_Radio_complete = true
+				State.CB_Radio_complete = true
 	else:
 		pass
 			
