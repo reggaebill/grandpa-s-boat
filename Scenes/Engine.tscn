@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://d05d6upkk85ok" path="res://Scripts/engine.gd" id="1_4dnpw"]
 [ext_resource type="Texture2D" uid="uid://b52xmbj53yk3p" path="res://Assets/Engine/Art/engine scene.jpeg" id="2_xmv2s"]
-[ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_2xonk"]
-[ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_lj1rd"]
 [ext_resource type="Texture2D" uid="uid://g35vreguxese" path="res://Assets/Engine/BaseballPackArt.jpg" id="5_2xonk"]
 [ext_resource type="Script" uid="uid://bgma8l2eme7f4" path="res://Scripts/Engine/contact_plate_1.gd" id="5_7luyh"]
 [ext_resource type="Texture2D" uid="uid://uir83o2ye5vj" path="res://Assets/Engine/Hole.png" id="5_xkf5k"]
@@ -23,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://cdbl3ga7dwjxb" path="res://Assets/Engine/Art/yellow wire.png" id="19_1jtw3"]
 [ext_resource type="Texture2D" uid="uid://dynbb0wc0su5b" path="res://Assets/Engine/Art/blue wire.png" id="20_bgrq0"]
 [ext_resource type="Texture2D" uid="uid://c5wnjkqd7mfhl" path="res://Assets/Engine/Art/red wire.png" id="21_jwlqx"]
+[ext_resource type="Texture2D" uid="uid://brkjibgo4sam0" path="res://Assets/UI Art/back.png" id="22_xmv2s"]
+[ext_resource type="Texture2D" uid="uid://d0erq1odbpheh" path="res://Assets/UI Art/back hover.png" id="23_4n4wf"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="24_xmv2s"]
 [ext_resource type="PackedScene" uid="uid://ctno3ic58ue52" path="res://Scenes/journal.tscn" id="25_4n4wf"]
 
@@ -264,8 +264,8 @@ offset_right = 531.0
 offset_bottom = 223.0
 grow_vertical = 0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("3_2xonk")
-texture_pressed = ExtResource("4_lj1rd")
+texture_normal = ExtResource("22_xmv2s")
+texture_pressed = ExtResource("23_4n4wf")
 metadata/_edit_lock_ = true
 
 [node name="Pause" type="CanvasLayer" parent="." unique_id=78236443]
