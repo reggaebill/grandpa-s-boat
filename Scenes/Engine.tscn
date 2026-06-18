@@ -6,23 +6,23 @@
 [ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_lj1rd"]
 [ext_resource type="Texture2D" uid="uid://g35vreguxese" path="res://Assets/Engine/BaseballPackArt.jpg" id="5_2xonk"]
 [ext_resource type="Script" uid="uid://bgma8l2eme7f4" path="res://Scripts/Engine/contact_plate_1.gd" id="5_7luyh"]
-[ext_resource type="Texture2D" uid="uid://bfv46377bgg8n" path="res://Assets/Engine/GreenWireFrayed.png" id="5_uh4uw"]
 [ext_resource type="Texture2D" uid="uid://uir83o2ye5vj" path="res://Assets/Engine/Hole.png" id="5_xkf5k"]
 [ext_resource type="Texture2D" uid="uid://0d6pnx28mf1d" path="res://Assets/Engine/WiringBoard.png" id="6_lj1rd"]
 [ext_resource type="Script" uid="uid://cps0ne6j0w7hl" path="res://Scenes/contact_plate_2.gd" id="6_mmagb"]
-[ext_resource type="Texture2D" uid="uid://c4fucrf3kv6y0" path="res://Assets/Engine/YellowWireFrayed.png" id="6_q1a0s"]
 [ext_resource type="Script" uid="uid://b3rykemulfjsu" path="res://Scenes/contact_plate_3.gd" id="7_3qhim"]
-[ext_resource type="Texture2D" uid="uid://dmkqqwglxmhrc" path="res://Assets/Engine/RedWireFrayed.png" id="7_vlc3s"]
-[ext_resource type="Texture2D" uid="uid://dhiachvjfw05g" path="res://Assets/Engine/Toolbox.png" id="9_xir5k"]
-[ext_resource type="Texture2D" uid="uid://loqpkd86sf1v" path="res://Assets/Engine/YellowWireSpool.png" id="10_3i2ip"]
+[ext_resource type="Texture2D" uid="uid://ccduxsk1twgum" path="res://Assets/Engine/Art/YellowWireFrayed2.png" id="9_xmv2s"]
+[ext_resource type="Texture2D" uid="uid://bdsoy1rfdnvfr" path="res://Assets/Engine/Art/GreenWireFrayed2.png" id="10_4n4wf"]
 [ext_resource type="Script" uid="uid://b3cb4ms8j0okm" path="res://Scripts/Engine/yellow_wire.gd" id="11_35l8k"]
-[ext_resource type="Texture2D" uid="uid://djeo0klwwue5x" path="res://Assets/Engine/GreenWireSpool.png" id="11_r4klq"]
-[ext_resource type="Texture2D" uid="uid://cc4mhs2wxdg5k" path="res://Assets/Engine/RedWireSpool.png" id="12_35l8k"]
-[ext_resource type="Texture2D" uid="uid://g7mafrdpx870" path="res://Assets/Engine/YellowWireNew.png" id="13_r4klq"]
-[ext_resource type="Texture2D" uid="uid://bocn2c53j85fg" path="res://Assets/Engine/GreenWireNew.png" id="14_35l8k"]
-[ext_resource type="Texture2D" uid="uid://fyr47tsayuuf" path="res://Assets/Engine/RedWireNew.png" id="15_7luyh"]
+[ext_resource type="Texture2D" uid="uid://f8mqin4g17q1" path="res://Assets/Engine/Art/RedWireFrayed2.png" id="11_w76hs"]
+[ext_resource type="Texture2D" uid="uid://cklqt4rw23sv6" path="res://Assets/Engine/Art/wire tray.png" id="12_xmv2s"]
+[ext_resource type="Texture2D" uid="uid://dlgl0h3e4vy4k" path="res://Assets/Engine/Art/yellow spool.png" id="13_4n4wf"]
+[ext_resource type="Texture2D" uid="uid://mtwvfcn2r6du" path="res://Assets/Engine/Art/blue spool.png" id="15_w76hs"]
 [ext_resource type="Script" uid="uid://q14v63xj7r2r" path="res://Scenes/green_wire.gd" id="16_odbwi"]
+[ext_resource type="Texture2D" uid="uid://2tbtnb5xm6t1" path="res://Assets/Engine/Art/red spool.png" id="17_big1x"]
 [ext_resource type="Script" uid="uid://by3wlnfrj4gli" path="res://Scenes/red_wire.gd" id="18_c0ads"]
+[ext_resource type="Texture2D" uid="uid://cdbl3ga7dwjxb" path="res://Assets/Engine/Art/yellow wire.png" id="19_1jtw3"]
+[ext_resource type="Texture2D" uid="uid://dynbb0wc0su5b" path="res://Assets/Engine/Art/blue wire.png" id="20_bgrq0"]
+[ext_resource type="Texture2D" uid="uid://c5wnjkqd7mfhl" path="res://Assets/Engine/Art/red wire.png" id="21_jwlqx"]
 [ext_resource type="PackedScene" uid="uid://dxd0fo48xh51e" path="res://Scenes/pause_menu.tscn" id="24_xmv2s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmagb"]
@@ -40,18 +40,20 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 4
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=1529416044]
 texture = ExtResource("2_xmv2s")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Collectible" type="Node2D" parent="." unique_id=1291949957]
 
 [node name="CardPack" type="TextureButton" parent="Collectible" unique_id=610215588]
-offset_left = 963.0
-offset_top = 910.0
-offset_right = 1737.0
-offset_bottom = 1934.0
+offset_left = 67.00012
+offset_top = 565.0001
+offset_right = 841.0001
+offset_bottom = 1589.0001
 rotation = 1.7191494
 scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("5_2xonk")
@@ -61,6 +63,7 @@ stretch_mode = 0
 metadata/_edit_lock_ = true
 
 [node name="ControlBoard" type="Sprite2D" parent="ControlPanel" unique_id=1905216785]
+visible = false
 position = Vector2(838, 859)
 rotation = -0.47123894
 scale = Vector2(0.84, 0.7375)
@@ -77,7 +80,8 @@ wireNewG = NodePath("../../NewParts/GreenWireNew")
 wireNewR = NodePath("../../NewParts/RedWireNew")
 
 [node name="Contact1" type="CollisionPolygon2D" parent="ControlPanel/ContactPlate1" unique_id=1348765460]
-polygon = PackedVector2Array(-37.59137, 7.2459717, -28.59137, 25.245972, 43.40863, -9.754028, 31.40863, -26.754028)
+position = Vector2(-10.59137, 263.24597)
+polygon = PackedVector2Array(-28, 7, 13, -18, 21, -6, -17, 19)
 
 [node name="ContactPlate2" type="Area2D" parent="ControlPanel" unique_id=1171866604 node_paths=PackedStringArray("yellowWire", "greenWire", "redWire", "wireNewY", "wireNewG", "wireNewR")]
 script = ExtResource("6_mmagb")
@@ -89,8 +93,8 @@ wireNewG = NodePath("../../NewParts/GreenWireNew")
 wireNewR = NodePath("../../NewParts/RedWireNew")
 
 [node name="Contact2" type="CollisionPolygon2D" parent="ControlPanel/ContactPlate2" unique_id=567601018]
-position = Vector2(35, 69)
-polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 793, 764)
+position = Vector2(162, -289)
+polygon = PackedVector2Array(840, 712, 858, 711, 859, 756, 841, 757)
 
 [node name="ContactPlate3" type="Area2D" parent="ControlPanel" unique_id=1523692284 node_paths=PackedStringArray("yellowWire", "greenWire", "redWire", "wireNewY", "wireNewG", "wireNewR")]
 script = ExtResource("7_3qhim")
@@ -102,12 +106,13 @@ wireNewG = NodePath("../../NewParts/GreenWireNew")
 wireNewR = NodePath("../../NewParts/RedWireNew")
 
 [node name="Contact3" type="CollisionPolygon2D" parent="ControlPanel/ContactPlate3" unique_id=727127748]
-position = Vector2(69, 136)
-polygon = PackedVector2Array(783, 746, 856, 709, 865, 727, 809.4639, 755.5393, 793, 764)
+position = Vector2(217, -291)
+polygon = PackedVector2Array(838, 758, 816, 758, 817, 713, 838, 713, 838, 713)
 
 [node name="Buttons" type="Node2D" parent="." unique_id=1209985947]
 
 [node name="Holes" type="Node2D" parent="." unique_id=1817471282]
+visible = false
 
 [node name="Hole1" type="Sprite2D" parent="Holes" unique_id=1187675426]
 position = Vector2(943, 349)
@@ -125,115 +130,117 @@ rotation = 0.9302605
 texture = ExtResource("5_xkf5k")
 
 [node name="OldParts" type="Node2D" parent="." unique_id=536447384]
-visible = false
 
 [node name="YellowWireOld" type="Sprite2D" parent="OldParts" unique_id=1392784660]
-position = Vector2(892, 544)
-texture = ExtResource("6_q1a0s")
+position = Vector2(816, 729)
+texture = ExtResource("9_xmv2s")
 
 [node name="GreenWireOld" type="Sprite2D" parent="OldParts" unique_id=1323218034]
-position = Vector2(967.99994, 687.00006)
-rotation = 0.34906584
-texture = ExtResource("5_uh4uw")
+position = Vector2(1122, 619)
+texture = ExtResource("10_4n4wf")
 
 [node name="RedWireOld" type="Sprite2D" parent="OldParts" unique_id=2023497113]
-position = Vector2(1036, 843)
-rotation = 1.1170107
-texture = ExtResource("7_vlc3s")
+position = Vector2(1123, 442)
+texture = ExtResource("11_w76hs")
 
 [node name="ReplacementParts" type="Node2D" parent="." unique_id=1251941109]
 
 [node name="Toolbox" type="Sprite2D" parent="ReplacementParts" unique_id=482272771]
-position = Vector2(415, 675)
-texture = ExtResource("9_xir5k")
+position = Vector2(1030, 406)
+texture = ExtResource("12_xmv2s")
+metadata/_edit_lock_ = true
 
 [node name="YellowWire" type="Sprite2D" parent="ReplacementParts" unique_id=1951123215]
-position = Vector2(295, 701)
-texture = ExtResource("10_3i2ip")
+position = Vector2(970, 450)
+texture = ExtResource("13_4n4wf")
 script = ExtResource("11_35l8k")
 
 [node name="Button" type="Button" parent="ReplacementParts/YellowWire" unique_id=2058369684]
 modulate = Color(1, 1, 1, 0)
-anchors_preset = -1
-anchor_left = -0.42222223
-anchor_top = -0.30833334
-anchor_right = 0.34444445
-anchor_bottom = 0.4
-offset_right = 8.0
-offset_bottom = 8.0
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -799.0
+offset_top = -836.0
+offset_right = -704.0
+offset_bottom = -743.0
+grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Area2DWireY" type="Area2D" parent="ReplacementParts/YellowWire" unique_id=180780154]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ReplacementParts/YellowWire/Area2DWireY" unique_id=476441964]
-position = Vector2(35, -30)
+position = Vector2(-715, 225)
 shape = SubResource("CircleShape2D_mmagb")
 
 [node name="GreenWire" type="Sprite2D" parent="ReplacementParts" unique_id=332665426]
-position = Vector2(421, 702)
-texture = ExtResource("11_r4klq")
+position = Vector2(1010, 404)
+texture = ExtResource("15_w76hs")
 script = ExtResource("16_odbwi")
 
 [node name="Button" type="Button" parent="ReplacementParts/GreenWire" unique_id=824799208]
 modulate = Color(1, 1, 1, 0)
-anchors_preset = -1
-anchor_left = -0.42222223
-anchor_top = -0.30833334
-anchor_right = 0.34444445
-anchor_bottom = 0.4
-offset_right = 8.0
-offset_bottom = 8.0
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -670.0
+offset_top = -833.0
+offset_right = -581.0
+offset_bottom = -741.0
+grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Area2DWireG" type="Area2D" parent="ReplacementParts/GreenWire" unique_id=579054385]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ReplacementParts/GreenWire/Area2DWireG" unique_id=604682521]
-position = Vector2(35, -30)
+position = Vector2(-600, 211)
 shape = SubResource("CircleShape2D_mmagb")
 
 [node name="RedWire" type="Sprite2D" parent="ReplacementParts" unique_id=1957645165]
-position = Vector2(536, 701)
-texture = ExtResource("12_35l8k")
+position = Vector2(1037, 443)
+texture = ExtResource("17_big1x")
 script = ExtResource("18_c0ads")
 
 [node name="Button" type="Button" parent="ReplacementParts/RedWire" unique_id=733626443]
 modulate = Color(1, 1, 1, 0)
-anchors_preset = -1
-anchor_left = -0.42222223
-anchor_top = -0.30833334
-anchor_right = 0.34444445
-anchor_bottom = 0.4
-offset_right = 8.0
-offset_bottom = 8.0
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -539.0
+offset_top = -830.0
+offset_right = -447.0
+offset_bottom = -738.0
+grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Area2DWireR" type="Area2D" parent="ReplacementParts/RedWire" unique_id=2062788661]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ReplacementParts/RedWire/Area2DWireR" unique_id=330039460]
-position = Vector2(35, -30)
+position = Vector2(-475, 207)
 shape = SubResource("CircleShape2D_mmagb")
 
 [node name="NewParts" type="Node2D" parent="." unique_id=1559232889]
+visible = false
 
 [node name="YellowWireNew" type="Sprite2D" parent="NewParts" unique_id=573597392]
-position = Vector2(886, 542)
-texture = ExtResource("13_r4klq")
+position = Vector2(963.38916, 535.99)
+scale = Vector2(1.0745946, 1.0259447)
+texture = ExtResource("19_1jtw3")
 
 [node name="GreenWireNew" type="Sprite2D" parent="NewParts" unique_id=885080779]
-position = Vector2(973, 680)
-rotation = 0.37873644
-texture = ExtResource("14_35l8k")
+position = Vector2(966, 539)
+scale = Vector2(1.0020834, 0.91759264)
+texture = ExtResource("20_bgrq0")
 
 [node name="RedWireNew" type="Sprite2D" parent="NewParts" unique_id=408235959]
-position = Vector2(1038, 845.99994)
-rotation = 1.1641346
-texture = ExtResource("15_7luyh")
+position = Vector2(963, 540)
+texture = ExtResource("21_jwlqx")
 
 [node name="Control" type="Control" parent="." unique_id=1582329204]
 layout_mode = 3
@@ -258,10 +265,12 @@ grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_2xonk")
 texture_pressed = ExtResource("4_lj1rd")
+metadata/_edit_lock_ = true
 
 [node name="Pause" type="CanvasLayer" parent="." unique_id=78236443]
 
 [node name="PauseMenu" parent="Pause" unique_id=1079304872 instance=ExtResource("24_xmv2s")]
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Collectible/CardPack" to="." method="_on_card_pack_pressed"]
 [connection signal="area_entered" from="ControlPanel/ContactPlate1" to="ControlPanel/ContactPlate1" method="_on_area_entered"]
