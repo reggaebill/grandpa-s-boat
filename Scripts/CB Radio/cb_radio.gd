@@ -20,12 +20,14 @@ signal noteGot
 func _ready() -> void:
 	
 	if State.CB_Radio_complete == true:
-		tube_1.litTube1.visible = true
-		tube_2.litTube2.visible = true
-		tube_3.litTube3.visible = true
-		$Tubes.Tube1.visible = false
-		$Tubes.Tube2.visible = false
-		$Tubes.Tube3.visible = false
+		$Tubes/AreaTube1/Sprite2D.show()
+		$Tubes/AreaTube2/Sprite2D.show()
+		$Tubes/AreaTube3/Sprite2D.show()
+		$Tubes/Tube1.hide()
+		$Tubes/Tube2.hide()
+		$Tubes/Tube3.hide()
+		$Knobs/KnobL.current_number = 6
+		$Knobs/KnobR.current_number = 9
 		chatter.play()
 	# Collectible check.
 	if not State.coinCollected:
