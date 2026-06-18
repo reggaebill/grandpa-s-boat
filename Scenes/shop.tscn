@@ -3,15 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://cinwndfoic74v" path="res://Assets/Shop/ShopPlaceHolder.png" id="1_a0mxf"]
 [ext_resource type="Script" uid="uid://cwcws2v4vjkcb" path="res://Scripts/Shop/shop.gd" id="1_fdj0q"]
 [ext_resource type="FontFile" uid="uid://2gv1dikmg3s8" path="res://Assets/Fonts/SpecialElite.ttf" id="3_3ps1r"]
+[ext_resource type="Texture2D" uid="uid://bxa1yccixu14p" path="res://Assets/FPO/back arrow.png" id="3_k6jq0"]
+[ext_resource type="Texture2D" uid="uid://dkfcph6eqtb3l" path="res://Assets/FPO/Back_Arrow.svg.png" id="4_3ps1r"]
 [ext_resource type="Texture2D" uid="uid://cjigsogogtxrn" path="res://Assets/Shop/ShopWires.png" id="4_s8dlv"]
 [ext_resource type="Texture2D" uid="uid://i33nw4sc3rr2" path="res://Assets/Shop/ShopWheel.png" id="5_tyrku"]
 [ext_resource type="FontFile" uid="uid://ll8u73k67l5r" path="res://Assets/Fonts/myoldrem.ttf" id="6_3ps1r"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://ctno3ic58ue52" path="res://Scenes/journal.tscn" id="9_tyrku"]
-=======
-[ext_resource type="Texture2D" uid="uid://cgemrrcvboo8" path="res://Assets/UI Art/back.png" id="7_s8dlv"]
-[ext_resource type="Texture2D" uid="uid://d3sfs4so1xj7h" path="res://Assets/UI Art/back hover.png" id="8_tyrku"]
->>>>>>> Stashed changes
 
 [sub_resource type="Theme" id="Theme_ymrm4"]
 default_font = ExtResource("6_3ps1r")
@@ -206,8 +203,8 @@ offset_right = 531.0
 offset_bottom = 223.0
 grow_vertical = 0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("7_s8dlv")
-texture_pressed = ExtResource("8_tyrku")
+texture_normal = ExtResource("3_k6jq0")
+texture_pressed = ExtResource("4_3ps1r")
 
 [node name="Journal" type="CanvasLayer" parent="." unique_id=1665770950]
 
