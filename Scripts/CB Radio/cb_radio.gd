@@ -10,6 +10,9 @@ var knobs_complete = false
 @export var knob_1 : Control
 @export var knob_2 : Control
 @export var completeCheck : Sprite2D
+
+signal noteGot
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	completeCheck.visible = false
@@ -18,6 +21,9 @@ func _ready() -> void:
 		$Collectible/coinButton.show()
 	else:
 		$Collectible/coinButton.hide()
+	if not State.noteCheck2:
+		noteGot.connect(State._noteCollect2)
+		noteGot.emit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

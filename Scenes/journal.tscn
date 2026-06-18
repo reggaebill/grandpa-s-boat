@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c1jkgvwwfgydr" path="res://Scripts/journal.gd" id="1_civ5d"]
 [ext_resource type="FontFile" uid="uid://ll8u73k67l5r" path="res://Assets/Fonts/myoldrem.ttf" id="2_d4r5f"]
 [ext_resource type="Texture2D" uid="uid://cfixmjsni2m6d" path="res://Assets/Radio/coin.png" id="3_jqjty"]
+[ext_resource type="Texture2D" uid="uid://daxd7hjb43s3l" path="res://Assets/Scene Art/BigMouthBilly.png" id="3_wnnew"]
 [ext_resource type="Texture2D" uid="uid://g35vreguxese" path="res://Assets/Engine/BaseballPackArt.jpg" id="4_wnnew"]
 [ext_resource type="Texture2D" uid="uid://dn2x31yal8j5q" path="res://Assets/Cabin/Ukulele.png" id="5_16vce"]
 [ext_resource type="Texture2D" uid="uid://cjigsogogtxrn" path="res://Assets/Shop/ShopWires.png" id="6_q37xc"]
@@ -116,7 +117,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Note from grandpa, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+text = "Enjoy my old boat, grandchild. There are a couple of issues, but I've written some instructions for you to get her out to sea. "
 autowrap_mode = 3
 
 [node name="GNote2" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=1633533428]
@@ -143,7 +144,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Note from grandpa, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+text = "The motor doesn't like starting up all the time, so just give it a couple of kicks. It should start up after that."
 autowrap_mode = 3
 
 [node name="GNote3" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=427192375]
@@ -170,7 +171,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Note from grandpa, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+text = "The onboard radio has been acting up. I bought new tubes for it, but wasn't able to get the rest put together. You might need to do some fine tuning."
 autowrap_mode = 3
 
 [node name="GNote4" type="Panel" parent="GrandpaNotes/VBoxContainer" unique_id=427651469]
@@ -197,7 +198,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Note from grandpa, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+text = "The steering wheel has been missing for a few years. But I put a pair of vise grips on there, and they get the job done."
 autowrap_mode = 3
 
 [node name="SelfNotes" type="MarginContainer" parent="." unique_id=1015131881]
@@ -250,7 +251,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Note from myself, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+text = "I guess I should take a look at each of the problems, and make my own notes on what to do. Let's see what kind of shape the Valiant Attempt is in."
 autowrap_mode = 3
 
 [node name="SNote2" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=618509737]
@@ -277,7 +278,8 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Note from myself, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+text = "Looks like the wires are frayed and barely connected. No wonder you need to kick it to start.
+I'll need some new wires, so I can connect them up more cleanly."
 autowrap_mode = 3
 
 [node name="SNote3" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=637645504]
@@ -304,7 +306,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Note from myself, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+text = "Looks like I just need to install the tubes right. That should be easy enough."
 autowrap_mode = 3
 
 [node name="SNote4" type="Panel" parent="SelfNotes/VBoxContainer" unique_id=1672516099]
@@ -331,7 +333,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d4r5f")
 theme_override_font_sizes/font_size = 24
-text = "Note from myself, it reads like this and so on and so forth. But surprise motherfucker, there's more text, because I needed to test a more-full text box."
+text = "Yeah, no. I'm just going to buy a new wheel for this thing, the poor boat deserves that much."
 autowrap_mode = 3
 
 [node name="Collectibles" type="Panel" parent="." unique_id=642954205]
@@ -392,6 +394,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("3_wnnew")
 expand_mode = 1
 
 [node name="Panel2" type="Panel" parent="Collectibles/GridContainer" unique_id=2035838729]

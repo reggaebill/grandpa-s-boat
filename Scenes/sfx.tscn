@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cd37l6ek5p2tc" path="res://Assets/Engine/EngineSFX/Zap.mp3" id="6_14lcj"]
 [ext_resource type="AudioStream" uid="uid://dhbc2rgpq8w8j" path="res://Assets/UI Sfx/CollectibleGet.mp3" id="6_c4usm"]
 [ext_resource type="AudioStream" uid="uid://bml8qoasq4qtj" path="res://Assets/Engine/EngineSFX/EngineStartup.mp3" id="7_em1ey"]
+[ext_resource type="AudioStream" uid="uid://csjkh8n448jjx" path="res://Assets/UI Sfx/JournalScribble.mp3" id="7_x4q8o"]
 [ext_resource type="AudioStream" uid="uid://cd4o37xnmksc2" path="res://Assets/Shop/ShopSFX/RegisterDing.mp3" id="9_4l7hu"]
 [ext_resource type="AudioStream" uid="uid://bdb8ho1105gxx" path="res://Assets/Shop/ShopSFX/ShopBell.mp3" id="9_fpi71"]
 
@@ -44,6 +45,10 @@ stream = ExtResource("5_ar3tc")
 
 [node name="CollectibleGet" type="AudioStreamPlayer" parent="." unique_id=2085225254]
 stream = ExtResource("6_c4usm")
+
+[node name="JournalScribble" type="AudioStreamPlayer" parent="." unique_id=869618152]
+stream = ExtResource("7_x4q8o")
+volume_db = -0.765
 
 [node name="EngineSounds" type="Control" parent="." unique_id=1071812500]
 anchors_preset = 0

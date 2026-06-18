@@ -28,3 +28,21 @@ var cardSold:= false
 var bassSold:= false
 var ukuleleSold:= false
 var coinSold:= false
+
+	# Journal states.
+# Notes that are revealed as parts are visited.
+var noteCheck1:= false
+var noteCheck2:= false
+var noteCheck3:= false
+# Functions to make the above work, because we don't have a signals global.
+func _noteCollect1():
+	noteCheck1 = true
+	sfx.play_sfx(sfx.journal_scribble)
+
+func _noteCollect2():
+	noteCheck2 = true
+	sfx.play_sfx(sfx.journal_scribble)
+
+func _noteCollect3():
+	noteCheck3 = true
+	sfx.play_sfx(sfx.journal_scribble)

@@ -8,6 +8,8 @@ extends Node2D
 
 @onready var ukulele_button: TextureButton = $Collectible/UkuleleButton
 
+signal noteGot
+
 func _ready() -> void:
 	# Collectible check.
 	if State.ukuleleCollected:
@@ -27,6 +29,10 @@ func _ready() -> void:
 	else:
 		cabin_bg_vise.show()
 		cabin_bg_wheel.hide()
+	# Journal check.
+	if not State.noteCheck3:
+		noteGot.connect(State._noteCollect3)
+		noteGot.emit()
 
 func _on_back_button_pressed() -> void:
 	print("back")

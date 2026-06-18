@@ -13,6 +13,8 @@ extends Control
 # Shop Sounds.
 @onready var shop_bell: AudioStreamPlayer = $ShopSounds/ShopBell
 @onready var register_ding: AudioStreamPlayer = $ShopSounds/RegisterDing
+# Journal Sound.
+@onready var journal_scribble: AudioStreamPlayer = $JournalScribble
 
 
 # Called when the node enters the scene tree for the first time.

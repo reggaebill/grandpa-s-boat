@@ -8,6 +8,8 @@ extends Node2D
 @onready var replacementParts: Node2D = $ReplacementParts
 @onready var newParts: Node2D = $NewParts
 
+signal noteGot
+
 func _ready() -> void:
 		# Check the collectible status.
 	if State.cardCollected == true:
@@ -37,6 +39,10 @@ func _ready() -> void:
 		oldParts.show()
 		replacementParts.hide()
 		newParts.hide()
+		# Journel check.
+	if not State.noteCheck1:
+		noteGot.connect(State._noteCollect1)
+		noteGot.emit()
 	
 func _on_back_button_pressed() -> void:
 	print("back")
