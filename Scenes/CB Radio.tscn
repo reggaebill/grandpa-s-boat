@@ -41,7 +41,7 @@ shader = ExtResource("7_uvcak")
 shader_parameter/screen_size = Vector2(1920, 1080)
 shader_parameter/pixel_block = Vector2(2, 2)
 
-[node name="Main" type="Node2D" unique_id=747834159 node_paths=PackedStringArray("noise", "chatter", "tube_1", "tube_2", "tube_3", "knob_1", "knob_2", "completeCheck")]
+[node name="Main" type="Node2D" unique_id=747834159 node_paths=PackedStringArray("noise", "chatter", "tube_1", "tube_2", "tube_3", "knob_1", "knob_2")]
 script = ExtResource("1_pnfa1")
 noise = NodePath("Radio/Static")
 chatter = NodePath("Radio/Chatter")
@@ -50,7 +50,6 @@ tube_2 = NodePath("Tubes/AreaTube2")
 tube_3 = NodePath("Tubes/AreaTube3")
 knob_1 = NodePath("Knobs/KnobL")
 knob_2 = NodePath("Knobs/KnobR")
-completeCheck = NodePath("")
 
 [node name="Radio" type="Node2D" parent="." unique_id=2115899382]
 

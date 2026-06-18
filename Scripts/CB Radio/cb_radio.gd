@@ -41,7 +41,7 @@ func _process(_delta: float) -> void:
 	# 	if tube_checker < 2:
 	# 		tube_checker = 2
 	# 		print("knobs complete")
-	if knob_1.current_number == 6 and knob_2.current_number == 9:
+	if knob_1.current_number == 6 and knob_2.current_number == 9 and tubes_complete == true:
 		knobs_complete = true
 		if tube_checker < 2:
 			tube_checker = 2
@@ -50,7 +50,10 @@ func _process(_delta: float) -> void:
 			print("knobs complete")
 
 	if tubes_complete == true and knobs_complete == true:
-		CB_Radio_complete = true
+		if tube_checker < 3:
+			tube_checker = 3
+			print("CB Radio complete")
+			CB_Radio_complete = true
 		
 
 
