@@ -83,10 +83,10 @@ metadata/_edit_lock_ = true
 position = Vector2(-134, -119)
 
 [node name="coinButton" type="TextureButton" parent="Collectible" unique_id=860077393]
-offset_left = 1484.0
-offset_top = 857.0
-offset_right = 1740.0
-offset_bottom = 1113.0
+offset_left = 1787.0
+offset_top = 1078.0
+offset_right = 2043.0
+offset_bottom = 1334.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("3_3p8nn")
 
@@ -409,6 +409,7 @@ offset_left = -9.0
 offset_right = 1939.0
 offset_bottom = 1090.0
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="Back Button" type="TextureButton" parent="Control" unique_id=1098783756]
 layout_mode = 1
@@ -442,6 +443,7 @@ metadata/_edit_lock_ = true
 [node name="Pause" type="CanvasLayer" parent="." unique_id=1779539001]
 
 [node name="PauseMenu" parent="Pause" unique_id=1079304872 instance=ExtResource("19_2a6jh")]
+metadata/_edit_lock_ = true
 
 [node name="Journal" type="CanvasLayer" parent="." unique_id=929525927]
 

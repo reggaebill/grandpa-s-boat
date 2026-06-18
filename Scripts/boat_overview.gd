@@ -8,6 +8,10 @@ extends Node2D
 @onready var end_game_button: Button = $EndGameButton
 
 func _ready() -> void:
+	# Testing flags.
+	#State.wheelComplete = true
+	#State.CB_Radio_complete = true
+	#State.engineFixed = true
 	wheel_sprite.hide()
 	if not State.bassCollected:
 		big_mouth_billy.show()
