@@ -24,49 +24,32 @@ func _ready() -> void:
 	sNote2.hide()
 	sNote3.hide()
 	sNote4.hide()
-	# Show collectibles that have been collected and not sold.
-	if State.cardCollected and not State.cardSold:
-		cards.show()
-	if State.coinCollected and not State.coinSold:
-		coin.show()
-	if State.ukuleleCollected and not State.ukuleleSold:
-		ukulele.show()
-	if State.bassCollected and not State.bassSold:
-		bass.show()
-	# Same, but for purchaseables.
-	if State.wheelPurchased and not State.wheelComplete:
-		new_wheel.show()
-	if State.enginePartsPurchased and not State.engineFixed:
-		new_wires.show()
-	# Show notes that have been discovered.
-	if State.noteCheck1:
-		sNote2.show()
-	if State.noteCheck2:
-		sNote3.show()
-	if State.noteCheck3:
-		sNote4.show()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("tab"):
+	if event.is_action_pressed("j"):
 		if is_open:
 			close()
 		else:
 			open()
-	# Duplicated checks from _ready, so they always work on opening the screen.
-	if State.noteCheck1:
-		sNote2.show()
-	if State.noteCheck2:
-		sNote3.show()
-	if State.noteCheck3:
-		sNote4.show()
-	if State.cardCollected and not State.cardSold:
-		cards.show()
-	if State.coinCollected and not State.coinSold:
-		coin.show()
-	if State.ukuleleCollected and not State.ukuleleSold:
-		ukulele.show()
-	if State.bassCollected and not State.bassSold:
-		bass.show()
+				# Checks whether notes and collectibles should be showing, when journal opened.
+			if State.noteCheck1:
+				sNote2.show()
+			if State.noteCheck2:
+				sNote3.show()
+			if State.noteCheck3:
+				sNote4.show()
+			if State.cardCollected and not State.cardSold:
+				cards.show()
+			if State.coinCollected and not State.coinSold:
+				coin.show()
+			if State.ukuleleCollected and not State.ukuleleSold:
+				ukulele.show()
+			if State.bassCollected and not State.bassSold:
+				bass.show()
+			if State.enginePartsPurchased and not State.engineFixed:
+				new_wires.show()
+			if State.wheelPurchased and not State.wheelComplete:
+				new_wheel.show()
 
 func open():
 	self.move_to_front()

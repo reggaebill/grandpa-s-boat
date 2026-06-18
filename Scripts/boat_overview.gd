@@ -4,8 +4,10 @@ extends Node2D
 @onready var radio_sparks: CPUParticles2D = $Sparks/RadioSparks
 @onready var engine_sparks: CPUParticles2D = $Sparks/EngineSparks
 @onready var wheel_sparks: CPUParticles2D = $Sparks/WheelSparks
+@onready var wheel_sprite: Sprite2D = $WheelSprite
 
 func _ready() -> void:
+	wheel_sprite.hide()
 	if not State.bassCollected:
 		big_mouth_billy.show()
 	else:
@@ -16,7 +18,7 @@ func _ready() -> void:
 		engine_sparks.hide()
 	if State.wheelComplete:
 		wheel_sparks.hide()
-
+		wheel_sprite.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

@@ -12,7 +12,17 @@ signal junkSold
 func _ready() -> void:
 	# When scene loads, set the money display to show whatever is stored in state.gd.
 	updateMoney()
+	wheel_button.show()
+	wheel_price.show()
+	wires_button.show()
+	wires_price.show()
 	sfx.play_sfx(sfx.shop_bell)
+	if State.wheelPurchased:
+		wheel_button.hide()
+		wheel_price.hide()
+	if State.enginePartsPurchased:
+		wires_button.hide()
+		wires_price.hide()
 	# Temp flag changing. Remove after shop debugging done.
 	#State.ukuleleCollected = true
 	#State.bassCollected = true
