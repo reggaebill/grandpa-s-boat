@@ -95,7 +95,6 @@ offset_right = 2450.0
 offset_bottom = 1477.0
 rotation = -0.18993104
 scale = Vector2(0.18, 0.08)
-texture_pressed = ExtResource("3_skust")
 
 [node name="Cabin" type="TextureButton" parent="Interactives" unique_id=388062359]
 layout_mode = 0
